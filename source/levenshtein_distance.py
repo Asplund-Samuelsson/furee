@@ -2,10 +2,6 @@
 import sys
 from Levenshtein import distance as LD
 
-# Testing
-fasta_a = "intermediate/jackhmmer_targets.split-0.fasta"
-fasta_b = "intermediate/jackhmmer_targets.split-1.fasta"
-
 # Read input arguments
 fasta_a  = sys.argv[1]
 fasta_b  = sys.argv[2]

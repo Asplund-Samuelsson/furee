@@ -20,3 +20,35 @@ ls intermediate/jackhmmer_targets.split-* | parallel --no-notice -j 8 '
   > >(grep -P "^#|^@" > intermediate/jackhmmer.{#}.stdout.txt) \
   2> intermediate/jackhmmer.{#}.error.txt
 ' &
+
+# Get all sequences that were identified
+ls intermediate/jackhmmer.*.tblout.txt | while read Infile; do
+  Outfile=`echo $Infile | sed -e 's/tblout/seqids/'`
+  source/filter_hmmer_output.R $Infile $Outfile
+done
+
+# Combine into one file with unique hits
+cat intermediate/jackhmmer.*.seqids.txt | sort | uniq \
+> intermediate/train.unfiltered.txt
+
+# Extract sequences from UniProt fasta
+source/filter_fasta_by_id.py \
+data/uniprot/uniprot.fasta \
+intermediate/train.unfiltered.txt \
+intermediate/train.unfiltered.fasta
+
+# Make sequences unique with CD-HIT
+cd-hit -c 1.0 -T 0 -i intermediate/train.unfiltered.fasta \
+-o intermediate/train.unique.fasta
+
+# Calculate Levenshtein distance to target sequence
+source/levenshtein_distance.py \
+data/Syn6803_P73922_FBPase.fasta \
+intermediate/train.unique.fasta \
+intermediate/train.unique.LD.tab
+
+# Calculate lengths of sequences
+cat intermediate/train.unique.fasta | source/lengths_of_sequences.py \
+> intermediate/train.unique.lengths.tab
+
+# Filter sequences by length and Levenshtein distance to target
