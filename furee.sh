@@ -41,19 +41,29 @@ intermediate/train.unfiltered.fasta
 cd-hit -c 1.0 -T 0 -i intermediate/train.unfiltered.fasta \
 -o intermediate/train.unique.fasta
 
+# Filter sequences to only standard amino acids
+source/filter_seqids_by_aa.py \
+intermediate/train.unique.fasta \
+intermediate/train.standard_aa.txt
+
+source/filter_fasta_by_id.py \
+intermediate/train.unique.fasta \
+intermediate/train.standard_aa.txt \
+intermediate/train.standard_aa.fasta
+
 # Calculate Levenshtein distance to target sequence
 source/levenshtein_distance.py \
 data/Syn6803_P73922_FBPase.fasta \
-intermediate/train.unique.fasta \
-intermediate/train.unique.LD.tab
+intermediate/train.standard_aa.fasta \
+intermediate/train.standard_aa.LD.tab
 
 # Calculate lengths of sequences
-cat intermediate/train.unique.fasta | source/lengths_of_sequences.py \
-> intermediate/train.unique.lengths.tab
+cat intermediate/train.standard_aa.fasta | source/lengths_of_sequences.py \
+> intermediate/train.standard_aa.lengths.tab
 
 # Filter sequences by length
 source/filter_sequences_by_length.R \
-intermediate/train.unique.lengths.tab \
+intermediate/train.standard_aa.lengths.tab \
 intermediate/train.length_filtered.txt
 
 # Filter sequences by Levenshtein distance to target
