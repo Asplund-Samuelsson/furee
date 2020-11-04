@@ -51,4 +51,9 @@ intermediate/train.unique.LD.tab
 cat intermediate/train.unique.fasta | source/lengths_of_sequences.py \
 > intermediate/train.unique.lengths.tab
 
-# Filter sequences by length and Levenshtein distance to target
+# Filter sequences by length
+source/filter_sequences_by_length.R \
+intermediate/train.unique.lengths.tab \
+intermediate/train.length_filtered.txt
+
+# Filter sequences by Levenshtein distance to target
