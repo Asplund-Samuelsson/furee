@@ -21,6 +21,52 @@ ls intermediate/jackhmmer_targets.split-* | parallel --no-notice -j 8 '
   2> intermediate/jackhmmer.{#}.error.txt
 ' &
 
+# Takes too long for second sequence of split 1 and 3, and first of 2
+# Remove output for splits 1, 2, and 3
+rm intermediate/jackhmmer.[123].*
+
+# Let first seq of 1 and 3, and second of 2 run to convergence:
+# tr|A0A1J0VRF6|A0A1J0VRF6_9NOCA
+# tr|A0A1Z3HIX0|A0A1Z3HIX0_9CYAN
+# tr|A0A6B8KC11|A0A6B8KC11_9RHIZ
+
+# Select the sequences to run to convergence
+source/filter_fasta_by_id.py \
+intermediate/kegg_uniprot_ids.FBPase.cdhit_0.5.fasta \
+<(echo -e "tr|A0A1J0VRF6|A0A1J0VRF6_9NOCA
+tr|A0A1Z3HIX0|A0A1Z3HIX0_9CYAN
+tr|A0A6B8KC11|A0A6B8KC11_9RHIZ") \
+intermediate/jackhmmer_targets.split-X0.fasta
+
+# Run jackhmmer to convergence for three sequences
+jackhmmer --cpu 8 -N 200 --noali \
+--tblout intermediate/jackhmmer.X0.tblout.txt \
+intermediate/jackhmmer_targets.split-X0.fasta data/uniprot/uniprot.fasta \
+> >(grep -P "^#|^@" > intermediate/jackhmmer.X0.stdout.txt) \
+2> intermediate/jackhmmer.X0.error.txt &
+
+# Let second seq of 1 and 3, and first of 2 only run for five rounds (default):
+# sp|P73922|FBSB_SYNY3
+# tr|A9HCQ2|A9HCQ2_GLUDA
+# tr|A0A075MIP8|A0A075MIP8_9PROT
+
+# Select sequences to run only for five rounds (default)
+source/filter_fasta_by_id.py \
+intermediate/kegg_uniprot_ids.FBPase.cdhit_0.5.fasta \
+<(echo -e "tr|A9HCQ2|A9HCQ2_GLUDA
+tr|A0A075MIP8|A0A075MIP8_9PROT") \
+intermediate/jackhmmer_targets.split-X1.fasta
+
+cat data/Syn6803_P73922_FBPase.fasta \
+>> intermediate/jackhmmer_targets.split-X1.fasta
+
+# Run jackhmmer for five rounds for three sequences
+jackhmmer --cpu 8 -N 5 --noali \
+--tblout intermediate/jackhmmer.X1.tblout.txt \
+intermediate/jackhmmer_targets.split-X1.fasta data/uniprot/uniprot.fasta \
+> >(grep -P "^#|^@" > intermediate/jackhmmer.X1.stdout.txt) \
+2> intermediate/jackhmmer.X1.error.txt &
+
 # Get all sequences that were identified
 ls intermediate/jackhmmer.*.tblout.txt | while read Infile; do
   Outfile=`echo $Infile | sed -e 's/tblout/seqids/'`
