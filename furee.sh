@@ -67,6 +67,47 @@ intermediate/jackhmmer_targets.split-X1.fasta data/uniprot/uniprot.fasta \
 > >(grep -P "^#|^@" > intermediate/jackhmmer.X1.stdout.txt) \
 2> intermediate/jackhmmer.X1.error.txt &
 
+# Takes too long for split X0 to finish (even though sequences converged before)
+# Make new split
+source/filter_fasta_by_id.py \
+intermediate/jackhmmer_targets.split-X0.fasta \
+<(echo -e "tr|A0A1J0VRF6|A0A1J0VRF6_9NOCA") \
+intermediate/jackhmmer_targets.split-Y0.fasta
+
+source/filter_fasta_by_id.py \
+intermediate/jackhmmer_targets.split-X0.fasta \
+<(echo -e "tr|A0A1Z3HIX0|A0A1Z3HIX0_9CYAN") \
+intermediate/jackhmmer_targets.split-Y1.fasta
+
+source/filter_fasta_by_id.py \
+intermediate/jackhmmer_targets.split-X0.fasta \
+<(echo -e "tr|A0A6B8KC11|A0A6B8KC11_9RHIZ") \
+intermediate/jackhmmer_targets.split-Y2.fasta
+
+# Remove X0 jackhmmer results
+rm intermediate/jackhmmer.X0.*
+
+# Run jackhmmer for five rounds for two sequences
+jackhmmer --cpu 12 -N 5 --noali \
+--tblout intermediate/jackhmmer.Y0.tblout.txt \
+intermediate/jackhmmer_targets.split-Y0.fasta data/uniprot/uniprot.fasta \
+> >(grep -P "^#|^@" > intermediate/jackhmmer.Y0.stdout.txt) \
+2> intermediate/jackhmmer.Y0.error.txt &
+
+jackhmmer --cpu 12 -N 5 --noali \
+--tblout intermediate/jackhmmer.Y1.tblout.txt \
+intermediate/jackhmmer_targets.split-Y1.fasta data/uniprot/uniprot.fasta \
+> >(grep -P "^#|^@" > intermediate/jackhmmer.Y1.stdout.txt) \
+2> intermediate/jackhmmer.Y1.error.txt &
+
+# Give one sequence a chance to run to convergence
+jackhmmer --cpu 12 -N 200 --noali \
+--tblout intermediate/jackhmmer.Y2.tblout.txt \
+intermediate/jackhmmer_targets.split-Y2.fasta data/uniprot/uniprot.fasta \
+> >(grep -P "^#|^@" > intermediate/jackhmmer.Y2.stdout.txt) \
+2> intermediate/jackhmmer.Y2.error.txt &
+
+
 # Get all sequences that were identified
 ls intermediate/jackhmmer.*.tblout.txt | while read Infile; do
   Outfile=`echo $Infile | sed -e 's/tblout/seqids/'`
