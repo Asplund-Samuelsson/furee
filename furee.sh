@@ -161,3 +161,16 @@ source/filter_fasta_by_id.py \
 intermediate/train.standard_aa.fasta \
 intermediate/train.filtered.txt \
 intermediate/train.filtered.fasta
+
+# Obtain taxonomy IDs and taxonomy information
+(grep ">" intermediate/train.filtered.fasta | tr " " "\n" | \
+grep -P "^>|^OX=" | sed -e 's/^OX=//' | tr ">" "&" | tr "\n" "\t" | \
+tr "&" "\n" | sed -e 's/\t$//' | grep -v "^$") > \
+results/train.taxids_from_fasta.tab
+
+# Getting full taxonomy information for the taxonomy IDs
+source/taxid-to-taxonomy.py \
+-i results/train.taxids_from_fasta.tab \
+-n data/ncbi/taxonomy/names.dmp \
+-d data/ncbi/taxonomy/nodes.dmp \
+-o results/train.filtered.taxonomy.tab
