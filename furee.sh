@@ -166,11 +166,15 @@ intermediate/train.filtered.fasta
 (grep ">" intermediate/train.filtered.fasta | tr " " "\n" | \
 grep -P "^>|^OX=" | sed -e 's/^OX=//' | tr ">" "&" | tr "\n" "\t" | \
 tr "&" "\n" | sed -e 's/\t$//' | grep -v "^$") > \
-results/train.taxids_from_fasta.tab
+intermediate/train.taxids_from_fasta.tab
 
 # Getting full taxonomy information for the taxonomy IDs
 source/taxid-to-taxonomy.py \
--i results/train.taxids_from_fasta.tab \
+-i intermediate/train.taxids_from_fasta.tab \
 -n data/ncbi/taxonomy/names.dmp \
 -d data/ncbi/taxonomy/nodes.dmp \
 -o results/train.filtered.taxonomy.tab
+
+# Plot taxonomic distribution and Levenshtein distances of training data
+source/taxonomic_distribution_of_train.R
+# Makes plot "results/taxonomic_distribution_of_train.pdf"
