@@ -12,8 +12,11 @@ goodlength = scan(goodlength_file, character())
 # Filter Levenshtein distances to length-filtered sequences
 levenshtein = filter(levenshtein, SeqA %in% goodlength, SeqB %in% goodlength)
 
-# Set distance threshold
+# Investigate length distribution
+# levenshtein$LD %>% hist(200)
 
+# Set distance threshold
+levenshtein = filter(levenshtein, LD <= 300)
 
 # Write filtered sequence IDs to outfile
 outfile = "intermediate/train.filtered.txt"

@@ -101,7 +101,8 @@ intermediate/jackhmmer_targets.split-Y1.fasta data/uniprot/uniprot.fasta \
 2> intermediate/jackhmmer.Y1.error.txt &
 
 # Give one sequence a chance to run to convergence
-jackhmmer --cpu 12 -N 200 --noali \
+# No, it doesn't work, limit it to 5 rounds
+jackhmmer --cpu 16 -N 5 --noali \
 --tblout intermediate/jackhmmer.Y2.tblout.txt \
 intermediate/jackhmmer_targets.split-Y2.fasta data/uniprot/uniprot.fasta \
 > >(grep -P "^#|^@" > intermediate/jackhmmer.Y2.stdout.txt) \
@@ -111,8 +112,8 @@ intermediate/jackhmmer_targets.split-Y2.fasta data/uniprot/uniprot.fasta \
 # Get all sequences that were identified
 ls intermediate/jackhmmer.*.tblout.txt | while read Infile; do
   Outfile=`echo $Infile | sed -e 's/tblout/seqids/'`
-  source/filter_hmmer_output.R $Infile $Outfile
-done
+  echo "source/filter_hmmer_output.R $Infile $Outfile"
+done | parallel --no-notice --jobs 9
 
 # Combine into one file with unique hits
 cat intermediate/jackhmmer.*.seqids.txt | sort | uniq \
@@ -154,3 +155,9 @@ intermediate/train.standard_aa.lengths.tab \
 intermediate/train.length_filtered.txt
 
 # Filter sequences by Levenshtein distance to target
+source/filter_sequences_by_distance.R
+
+source/filter_fasta_by_id.py \
+intermediate/train.standard_aa.fasta \
+intermediate/train.filtered.txt \
+intermediate/train.filtered.fasta
