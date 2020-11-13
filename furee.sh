@@ -183,3 +183,9 @@ source/taxonomic_distribution_of_train.R
 grep ">" intermediate/train.filtered.fasta | sed -e 's/ /\t/' -e 's/ OS=/\t/' \
 | cut -f 2 | sort | uniq -c | sort -nr | sed -e 's/ \+//' -e 's/ /\t/' \
 > intermediate/train.filtered.annotation_summary.tab
+
+# Prune sequences to length 274 by cutting off end and save in separate lines
+seqmagick convert --cut 1:274 --output-format fasta \
+intermediate/train.filtered.fasta - | sed -e '/^>/ s/^>/>\t/' | cut -f 1 \
+| tr -d "\n" | tr ">" "\n" | grep -vP "^$" \
+> intermediate/train.txt
