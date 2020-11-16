@@ -185,7 +185,12 @@ grep ">" intermediate/train.filtered.fasta | sed -e 's/ /\t/' -e 's/ OS=/\t/' \
 > intermediate/train.filtered.annotation_summary.tab
 
 # Prune sequences to length 274 by cutting off end and save in separate lines
-seqmagick convert --cut 1:274 --output-format fasta \
-intermediate/train.filtered.fasta - | sed -e '/^>/ s/^>/>\t/' | cut -f 1 \
+# seqmagick convert --cut 1:274 --output-format fasta \
+# intermediate/train.filtered.fasta - | sed -e '/^>/ s/^>/>\t/' | cut -f 1 \
+# | tr -d "\n" | tr ">" "\n" | grep -vP "^$" \
+# > intermediate/train.txt
+
+# Save sequences one per line
+cat intermediate/train.filtered.fasta | sed -e '/^>/ s/^>/>\t/' | cut -f 1 \
 | tr -d "\n" | tr ">" "\n" | grep -vP "^$" \
 > intermediate/train.txt
