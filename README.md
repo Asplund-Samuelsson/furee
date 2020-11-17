@@ -71,36 +71,17 @@ rm taxdump.tar.gz # Optional cleanup
 cd ../../..
 ```
 
-### 4. UniRep repository
+### 4. JAX-UniRep
 
-The analysis requires use of the original [UniRep](https://github.com/churchlab/UniRep) repository. Download it into the `unirep` folder as described below:
-
-```
-cd unirep
-
-git clone https://github.com/churchlab/UniRep.git
-```
-
-Furthermore, the analysis requires the pre-trained 1,900-unit UniRep model. Download the weights using `awscli` as described in the UniRep repository:
+The analysis uses the user-friendly JAX implementation of UniRep named [jax-unirep](https://github.com/ElArkk/jax-unirep). It may be installed from PyPI as described below (see the jax-unirep GitHub repository for more details):
 
 ```
-cd UniRep
-
-aws s3 sync --no-sign-request --quiet s3://unirep-public/1900_weights 1900_weights
-
-cd ../..
+pip install jax-unirep
 ```
 
-### 5. TensorFlow Docker images
+To enable CUDA GPU support, you may need to install the correct JAX packages; see [instructions in the JAX repository](https://github.com/google/jax#pip-installation).
 
-This analysis uses Docker images with specifications from UniRep, but running Python rather than Jupyter, and with a different directory structure compared to the original implementation. Install GPU and CPU Docker images as described below:
-
-```
-docker build -f unirep/Dockerfile.gpu -t unirep-gpu unirep/UniRep
-docker build -f unirep/Dockerfile.cpu -t unirep-cpu unirep/UniRep
-```
-
-### 6. Initial protein sequences
+## Data
 
 The Jackhmmer search for training sequences in UniProt begins with a set of known target sequence relatives. We obtain this set from KEGG orthologs K01086 and K11532 by following the instructions in this bash script:
 
