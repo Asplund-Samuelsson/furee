@@ -194,3 +194,21 @@ grep ">" intermediate/train.filtered.fasta | sed -e 's/ /\t/' -e 's/ OS=/\t/' \
 cat intermediate/train.filtered.fasta | sed -e '/^>/ s/^>/>\t/' | cut -f 1 \
 | tr -d "\n" | tr ">" "\n" | grep -vP "^$" \
 > intermediate/train.txt
+
+# Create directory in which to perform evotuning
+mkdir results/evotuned
+
+# Perform evotuning on GCP VM Nvidia Tesla T4 GPU (16 GB) or equivalent
+screen # Use "screen" to be able to disconnect
+
+source/evotune.py \
+  --epochs 100 \
+  --validation 0.05 \
+  --step 1e-5 \
+  --batch 128 \
+  --dumps 1 \
+  intermediate/train.txt results/evotuned/fbpase > /dev/null 2> /dev/null &
+
+# Move the log and validation sequence files
+mv evotuning.log intermediate/
+mv validation_sequences.txt intermediate/
