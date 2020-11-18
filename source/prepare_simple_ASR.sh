@@ -18,7 +18,11 @@ grep -P "^${CLUSTER}\t" intermediate/train.cdhit_0.85.tab | cut -f 2 \
 source/filter_fasta_by_id.py \
 intermediate/train.filtered.fasta \
 intermediate/train.cdhit_0.85.seqids.txt \
-intermediate/train.cdhit_0.85.Synechocystis.fasta
+intermediate/train.cdhit_0.85.Synechocystis.raw.fasta
+
+# Keep only ID in FASTA header in order to not mess up trees
+cat intermediate/train.cdhit_0.85.Synechocystis.raw.fasta | cut -f 1 -d \  \
+> intermediate/train.cdhit_0.85.Synechocystis.fasta
 
 # Align cluster sequences
 mafft --thread 16 intermediate/train.cdhit_0.85.Synechocystis.fasta \
