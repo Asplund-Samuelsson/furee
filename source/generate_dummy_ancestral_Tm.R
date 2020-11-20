@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 options(width=100)
 library(tidyverse)
 library(phytools)

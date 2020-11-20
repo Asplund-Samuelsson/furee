@@ -39,3 +39,20 @@ fasttreeMP intermediate/train.cdhit_0.85.Synechocystis.ali.fasta \
 # Save the ancestral sequences FASTA and tree files
 # data/FireProt_Syn6803_ASR.fasta
 # data/FireProt_Syn6803_ASR.tree
+
+# Generate dummy Tm data
+source/generate_dummy_ancestral_Tm.R
+# Produces:
+# data/dummy_ancestral_Tm_on_tree.pdf
+# data/dummy_ancestral_Tm.tab
+
+# Format dummy data for used with top model script
+tail -n +2 data/dummy_ancestral_Tm.tab | while read line; do
+  seqid=`echo -e "$line" | cut -f 2`
+  Tm=`echo -e "$line" | cut -f 1`
+  sequence=`
+    source/filter_fasta_by_id.py data/FireProt_Syn6803_ASR.fasta \
+    <(echo $seqid) /dev/stdout | grep -v ">" | tr -d "\-\n"
+  `
+  echo -e "${sequence}\t${Tm}"
+done > data/dummy.sequence_Tm.tab

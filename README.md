@@ -83,17 +83,38 @@ To enable CUDA GPU support, you may need to install the correct JAX packages; se
 
 ## Data
 
+### Jackhmmer reference sequences
+
 The Jackhmmer search for training sequences in UniProt begins with a set of known target sequence relatives. We obtain this set from KEGG orthologs K01086 and K11532 by following the instructions in this bash script:
 
 ```
 source/get_FBPase_sequences.sh
 ```
 
-...yielding this FASTA file with initial protein sequences:
+...yielding this FASTA file with initial reference protein sequences:
 
 ```
 data/kegg_uniprot.FBPase.fasta
 ```
+
+### Ancestral sequences with dummy stability values
+
+A set of dummy stability (_T<sub>m</sub>_) values were generated to facilitate development of the top model and _in silico_ evolution scripts. First, a phylogenetic tree was constructed based on 63 UniProt FBPase sequences (>85% identity) including the sequence in _Synechocystis_ sp. PCC 6803. Ancestral sequence reconstruction was performed using the [FireProt-ASR server](http://loschmidt.chemi.muni.cz/fireprotasr/). Changes in _T<sub>m</sub>_ were sampled going from the root sequence (_T<sub>m</sub>_ = 80°C) assuming decreasing stability with a target of _T<sub>m</sub>_ = 55°C at the furthest tip of the tree. The process was carried out as described in these scripts:
+
+```
+source/generate_dummy_Tm_data.sh
+source/generate_dummy_ancestral_Tm.R
+```
+
+...finally yielding this table of 125 sequence-to-dummy-stability associations:
+
+```
+data/dummy.sequence_Tm.tab
+```
+
+...which represents typical input for training a top model.
+
+The dummy _T<sub>m</sub>_ values are visualized in `data/dummy_ancestral_Tm_on_tree.pdf`.
 
 ## Method
 
