@@ -210,5 +210,5 @@ source/evotune.py \
   intermediate/train.txt results/evotuned/fbpase > /dev/null 2> /dev/null &
 
 # Move the log and validation sequence files
-mv evotuning.log intermediate/
-mv validation_sequences.txt intermediate/
+mv evotuning.log results/evotuned/fbpase/
+mv validation_sequences.txt intermediate/evotuned/fbpase/
