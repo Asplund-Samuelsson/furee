@@ -46,7 +46,10 @@ source/generate_dummy_ancestral_Tm.R
 # data/dummy_ancestral_Tm_on_tree.pdf
 # data/dummy_ancestral_Tm.tab
 
-# Format dummy data for used with top model script
+# Extract node heights
+source/ancestral_distance_from_root.R
+
+# Format data for used with top model script
 tail -n +2 data/dummy_ancestral_Tm.tab | while read line; do
   seqid=`echo -e "$line" | cut -f 2`
   Tm=`echo -e "$line" | cut -f 1`
@@ -56,3 +59,13 @@ tail -n +2 data/dummy_ancestral_Tm.tab | while read line; do
   `
   echo -e "${sequence}\t${Tm}"
 done > data/dummy.sequence_Tm.tab
+
+tail -n +2 data/ancestral_tree_heights.tab | while read line; do
+  seqid=`echo -e "$line" | cut -f 2`
+  height=`echo -e "$line" | cut -f 1`
+  sequence=`
+    source/filter_fasta_by_id.py data/FireProt_Syn6803_ASR.fasta \
+    <(echo $seqid) /dev/stdout | grep -v ">" | tr -d "\-\n"
+  `
+  echo -e "${sequence}\t${height}"
+done > data/dummy.sequence_height.tab
