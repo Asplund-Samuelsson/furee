@@ -116,7 +116,27 @@ data/dummy.sequence_Tm.tab
 
 The dummy _T<sub>m</sub>_ values are visualized in `data/dummy_ancestral_Tm_on_tree.pdf`.
 
-## Method
+### Tree height values of ancestral sequences
+
+The dummy stability values generated were purely noise and could not be used for development of the top model. Instead, the tree height (distance from the root) of each node (sequence) was used as detailed in these scripts:
+
+```
+source/evaluate_top_model.sh
+source/evaluate_top_model.R
+```
+
+...that generated and evaluated the following height data:
+
+```
+data/dummy.train.tab
+data/dummy.test.tab
+```
+
+Splitting the ancestral sequences into 63 training sequences and 62 testing sequences allowed development of a Ridge regression sparse refit (SR) top model. The top model showed test RMSE ≈ 0.0339 using original UniRep mLSTM parameters and test RMSE ≈ 0.0263 using evotuned parameters (100 epochs, ~99k FBPase sequences).
+
+![alt text](data/top_model_evaluation.png "Evaluation of top model using 125 FBPase sequences")
+
+## Evotuning: Acquisition FBPase sequences and training
 
 Follow the steps in `furee.sh`.
 
