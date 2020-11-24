@@ -184,12 +184,6 @@ grep ">" intermediate/train.filtered.fasta | sed -e 's/ /\t/' -e 's/ OS=/\t/' \
 | cut -f 2 | sort | uniq -c | sort -nr | sed -e 's/ \+//' -e 's/ /\t/' \
 > intermediate/train.filtered.annotation_summary.tab
 
-# Prune sequences to length 274 by cutting off end and save in separate lines
-# seqmagick convert --cut 1:274 --output-format fasta \
-# intermediate/train.filtered.fasta - | sed -e '/^>/ s/^>/>\t/' | cut -f 1 \
-# | tr -d "\n" | tr ">" "\n" | grep -vP "^$" \
-# > intermediate/train.txt
-
 # Save sequences one per line
 cat intermediate/train.filtered.fasta | sed -e '/^>/ s/^>/>\t/' | cut -f 1 \
 | tr -d "\n" | tr ">" "\n" | grep -vP "^$" \
@@ -212,3 +206,7 @@ source/evotune.py \
 # Move the log and validation sequence files
 mv evotuning.log results/evotuned/fbpase/
 mv validation_sequences.txt intermediate/evotuned/fbpase/
+
+# Perform PHATE evaluation of original and evotuned parameters
+bash source/phate_evaluation.sh
+# Makes PHATE visualization "data/phate_evaluation.png"

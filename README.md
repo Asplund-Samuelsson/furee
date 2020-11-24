@@ -5,6 +5,10 @@
 ## About
 Engineering of the Calvin cycle enzyme fructose-1,6-bisphosphatase/sedoheptulose-1,7-bisphosphatase (FBPase/SBPase) through [UniRep](https://github.com/churchlab/UniRep) machine learning and _in silico_ evolution.
 
+## Usage
+
+Instructions on how to fit a top model and perform _in silico_ evolution should go here.
+
 ## System requirements
 
 Linux operating system (Tested on Ubuntu 18.04.5 LTS and 20.04.1 LTS)
@@ -24,7 +28,6 @@ hmmer 3.1b2 (Tested with 3.1b2)
 Python libraries: ...
 
 R libraries: ...
-
 
 ## Installation
 
@@ -138,7 +141,11 @@ Splitting the ancestral sequences into 63 training sequences and 62 testing sequ
 
 ## Evotuning: Acquisition FBPase sequences and training
 
-Follow the steps in `furee.sh`.
+The steps to acquire 99327 example FBPase sequences and perform evotuning are described in `furee.sh`.
+
+The evotuning held out 4967 sequences for validation. The validation sequences were transformed into representations using the original UniRep parameters as well as the freshly evotuned FBPase-specific parameters. The representations were in turn used to visualize the sequence landscape using [PHATE](https://github.com/KrishnaswamyLab/PHATE). The evotuned landscape was distinct from the original UniRep landscape; Possibly smoother and hopefully more information rich.
+
+![alt text](data/phate_evaluation.png "Evaluation of evotuned FBPase sequence landscape")
 
 ## Author
 Johannes Asplund-Samuelsson, KTH (johannes.asplund.samuelsson@scilifelab.se)

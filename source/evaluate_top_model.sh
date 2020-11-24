@@ -43,3 +43,4 @@ intermediate/dummy.train.predictions.UniRep.tab
 ) > intermediate/top_model_evaluation.tab
 
 # Investigate data with R
+source/evaluate_top_model.R
