@@ -11,6 +11,8 @@ model_file = "intermediate/dummy.top_model.pkl"
 sequence_file = "data/Syn6803_P73922_FBPase.txt"
 parameter_dir = "results/evotuned/fbpase/iter_final"
 steps = 50
+trust = 7
+reverse = False
 
 # Read arguments from the commandline
 parser = argparse.ArgumentParser()
@@ -38,6 +40,14 @@ parser.add_argument(
     '-s', '--steps', type=int, default=10,
     help='Number of MCMC steps [10].'
 )
+parser.add_argument(
+    '-t', '--trust', type=int, default=7,
+    help='Trust radius [7].'
+)
+parser.add_argument(
+    '-r', '--reverse', action='store_true', default=False,
+    help='Reverse direction of evolution.'
+)
 
 # Parse arguments
 args = parser.parse_args()
@@ -47,6 +57,8 @@ parameter_dir = args.parameters
 model_file = args.model
 outfile = args.outfile
 steps = args.steps
+trust = args.trust
+reverse = args.reverse
 
 # Load target sequence
 with open(sequence_file) as s:
@@ -63,17 +75,32 @@ else:
     params = None
 
 # Define sequence scoring function
-def scoring_func(sequence: str):
+def scoring_func_forward(sequence: str):
     reps, _, _ = ju.get_reps(sequence, params=deepcopy(params))
     return top_model.predict(reps)
 
+def scoring_func_reverse(sequence: str):
+    reps, _, _ = ju.get_reps(sequence, params=deepcopy(params))
+    return 1/top_model.predict(reps)
+
+# Select scoring function based on reverse evolution status
+if reverse:
+    scoring_func = scoring_func_reverse
+else:
+    scoring_func = scoring_func_forward
+
 # Perform sampling
 sampled_sequences = ju.sample_one_chain(
-    starting_sequence, n_steps=steps, scoring_func=scoring_func
+    starting_sequence, n_steps=steps, scoring_func=scoring_func,
+    trust_radius=trust
 )
 
 sampled_seqs_df = pd.DataFrame(sampled_sequences)
 sampled_seqs_df['step'] = list(range(0, steps + 1))
+
+# Invert scores for reverse evolution
+if reverse:
+    sampled_seqs_df['scores'] = 1 / sampled_seqs_df['scores']
 
 # Save sampled sequences
 sampled_seqs_df.to_csv(outfile, '\t', index=False)
