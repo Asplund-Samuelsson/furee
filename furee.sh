@@ -196,7 +196,7 @@ mkdir results/evotuned
 screen # Use "screen" to be able to disconnect
 
 source/evotune.py \
-  --epochs 100 \
+  --epochs 200 \
   --validation 0.05 \
   --step 1e-5 \
   --batch 128 \
@@ -204,8 +204,23 @@ source/evotune.py \
   intermediate/train.txt results/evotuned/fbpase > /dev/null 2> /dev/null &
 
 # Move the log and validation sequence files
-mv evotuning.log results/evotuned/fbpase/
-mv validation_sequences.txt intermediate/evotuned/fbpase/
+mv evotuning.log validation_sequences.txt data/
+
+# Reformat the evotuning log for plotting
+(
+  echo -e "Epoch\tTraining\tValidation"
+  grep "Epoch" data/evotuning.log | sed -e 's/Epoch /:/' | tr ":" "\t" \
+  | cut -f 8,10 | sed -e 's/. Weights dumped.//' | paste - - | cut -f 1,2,4
+) > intermediate/evotuning.tab
+
+# Inspect the loss curves
+source/inspect_loss.R
+
+# Store final iteration parameters if accepted
+rsync -maP results/evotuned/fbpase/iter_final data/parameters
+
+# Evaluate top model on evotuned and original parameters
+bash source/evaluate_top_model.sh
 
 # Perform PHATE evaluation of original and evotuned parameters
 bash source/phate_evaluation.sh
