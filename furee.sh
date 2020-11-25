@@ -177,7 +177,7 @@ source/taxid-to-taxonomy.py \
 
 # Plot taxonomic distribution and Levenshtein distances of training data
 source/taxonomic_distribution_of_train.R
-# Makes plot "results/taxonomic_distribution_of_train.pdf"
+# Makes plot "data/taxonomic_distribution_of_train.png"
 
 # Count the number of different unique annotations from UniProt
 grep ">" intermediate/train.filtered.fasta | sed -e 's/ /\t/' -e 's/ OS=/\t/' \

@@ -121,8 +121,8 @@ gp2 = gp
 # Arrange plot
 library(egg)
 
-outfile = "results/taxonomic_distribution_of_train.pdf"
+outfile = "data/taxonomic_distribution_of_train.png"
 
-pdf(outfile, width=180/25.4, height=80/25.4, onefile=FALSE)
+png(outfile, width=180/25.4, height=80/25.4, res=200, units="in")
 ggarrange(gp1, gp2, ncol=2)
 garbage = dev.off()

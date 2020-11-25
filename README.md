@@ -30,7 +30,7 @@ R libraries: ...
 
 ## Installation
 
-### 1. This repository
+### This repository
 
 Download the FUREE repository from GitHub and enter the directory:
 ```
@@ -39,7 +39,17 @@ git clone https://github.com/Asplund-Samuelsson/furee.git
 cd furee
 ```
 
-### 2. UniProt database
+### JAX-UniRep
+
+The analysis uses the user-friendly JAX implementation of UniRep named [jax-unirep](https://github.com/ElArkk/jax-unirep). It may be installed from PyPI as described below (see the jax-unirep GitHub repository for more details):
+
+```
+pip install jax-unirep
+```
+
+To enable CUDA GPU support, you may need to install the correct JAX packages; see [instructions in the JAX repository](https://github.com/google/jax#pip-installation).
+
+### UniProt database (optional)
 
 Training sequences will be extracted from the UniProt database. Run these commands to download the necessary FASTA files for SwissProt and TrEMBL, constituting UniProt (may take several hours):
 
@@ -57,7 +67,7 @@ rm uniprot_sprot.fasta.gz uniprot_trembl.fasta.gz # Optional cleanup
 cd ../..
 ```
 
-### 3. NCBI taxonomy database
+### NCBI taxonomy database (optional)
 
 This analysis uses the NCBI taxonomy database to assign taxonomic classifications to UniProt sequences. Run these commands to download the necessary `names.dmp` and `nodes.dmp` files:
 
@@ -72,16 +82,6 @@ rm taxdump.tar.gz # Optional cleanup
 
 cd ../../..
 ```
-
-### 4. JAX-UniRep
-
-The analysis uses the user-friendly JAX implementation of UniRep named [jax-unirep](https://github.com/ElArkk/jax-unirep). It may be installed from PyPI as described below (see the jax-unirep GitHub repository for more details):
-
-```
-pip install jax-unirep
-```
-
-To enable CUDA GPU support, you may need to install the correct JAX packages; see [instructions in the JAX repository](https://github.com/google/jax#pip-installation).
 
 ## Data
 
@@ -136,14 +136,27 @@ data/dummy.test.tab
 
 ## Evotuning
 
-The steps to acquire 99,327 example FBPase sequences and perform evotuning are described in `furee.sh`. The evotuning held out 4,967 sequences for validation. The loss reported by the JAX-UniRep evotuning function for the training and validation sequences was plotted for 100 epochs of training with learning rate 1e-5 and batch size 128. The final iteration weights were accepted for future use since overfitting was not evident.
+The steps to acquire example FBPase sequences and perform evotuning are described in `furee.sh`.
+
+### Acquisition of example sequences
+
+Jackhmmer was used to find 99,327 example sequences in the UniProt database. These sequences were mostly bacterial.
+
+![alt text](data/taxonomic_distribution_of_train.png "Taxonomic distribution and distance to Synechocystis FBPase of training sequences")
+
+### Training
+
+The evotuning held out 4,967 sequences for validation and optimized parameters using the remaining 94,360 sequences. The losses reported by the JAX-UniRep _fit_ function for the training and validation sequences were plotted for 100 epochs of training with learning rate 1e-5 and batch size 128. The final iteration weights were accepted for future use since overfitting was not evident.
 
 ![alt text](data/evotuning_loss.png "Loss for training and validation sequences during evotuning")
+
+### Evaluation of a top model
 
 Splitting the set of ancestral and contemporary sequences into 63 training sequences and 62 testing sequences allowed development of a Ridge regression sparse refit (SR) top model. The top model showed test RMSE ≈ 0.0339 using original UniRep mLSTM parameters and test RMSE ≈ 0.0263 using evotuned parameters.
 
 ![alt text](data/top_model_evaluation.png "Evaluation of top model using 125 FBPase sequences")
 
+### Evaluation of sequence landscape
 
 The validation sequences were transformed into representations using the original UniRep parameters as well as the freshly evotuned FBPase-specific parameters. The representations were in turn used to visualize the sequence landscape using [PHATE](https://github.com/KrishnaswamyLab/PHATE). The evotuned landscape was distinct from the original UniRep landscape; Possibly smoother and hopefully more information rich.
 
