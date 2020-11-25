@@ -2,10 +2,9 @@
 
 # FBPase UniRep Enzyme Engineering
 
-## About
 Engineering of the Calvin cycle enzyme fructose-1,6-bisphosphatase/sedoheptulose-1,7-bisphosphatase (FBPase/SBPase) through [UniRep](https://github.com/churchlab/UniRep) machine learning and _in silico_ evolution.
 
-## Usage
+## Quickstart
 
 Instructions on how to fit a top model and perform _in silico_ evolution should go here.
 
@@ -135,15 +134,18 @@ data/dummy.train.tab
 data/dummy.test.tab
 ```
 
-Splitting the ancestral sequences into 63 training sequences and 62 testing sequences allowed development of a Ridge regression sparse refit (SR) top model. The top model showed test RMSE ≈ 0.0339 using original UniRep mLSTM parameters and test RMSE ≈ 0.0263 using evotuned parameters (100 epochs, ~99k FBPase sequences).
+## Evotuning
+
+The steps to acquire 99327 example FBPase sequences and perform evotuning are described in `furee.sh`. The evotuning held out 4967 sequences for validation. The loss reported by the JAX-UniRep evotuning function for the training and validation sequences was plotted for a 200 epochs long training session with learning rate 1e-5 and batch size 128. As no overfitting occurred, the final iteration weights were accepted for future use.
+
+![alt text](data/evotuning_loss.png "Loss for training and validation sequences during evotuning")
+
+Splitting the set of ancestral and contemporary sequences into 63 training sequences and 62 testing sequences allowed development of a Ridge regression sparse refit (SR) top model. The top model showed test RMSE ≈ 0.0339 using original UniRep mLSTM parameters and test RMSE ≈ 0.0263 using evotuned parameters (100 epochs, ~99k FBPase sequences).
 
 ![alt text](data/top_model_evaluation.png "Evaluation of top model using 125 FBPase sequences")
 
-## Evotuning: Acquisition FBPase sequences and training
 
-The steps to acquire 99327 example FBPase sequences and perform evotuning are described in `furee.sh`.
-
-The evotuning held out 4967 sequences for validation. The validation sequences were transformed into representations using the original UniRep parameters as well as the freshly evotuned FBPase-specific parameters. The representations were in turn used to visualize the sequence landscape using [PHATE](https://github.com/KrishnaswamyLab/PHATE). The evotuned landscape was distinct from the original UniRep landscape; Possibly smoother and hopefully more information rich.
+The validation sequences were transformed into representations using the original UniRep parameters as well as the freshly evotuned FBPase-specific parameters. The representations were in turn used to visualize the sequence landscape using [PHATE](https://github.com/KrishnaswamyLab/PHATE). The evotuned landscape was distinct from the original UniRep landscape; Possibly smoother and hopefully more information rich.
 
 ![alt text](data/phate_evaluation.png "Evaluation of evotuned FBPase sequence landscape")
 
