@@ -1,601 +1,301 @@
-2020-11-20 18:48:29,089 :: INFO :: Length-batching done: 1 unique lengths, with average length 94360.0, max length 94360 and min length 94360.
-2020-11-20 18:48:29,098 :: INFO :: Starting epoch 1
-2020-11-20 18:48:33,529 :: INFO :: Epoch 0: Estimated average training-set loss: 0.15091103315353394. Weights dumped.
-2020-11-20 18:48:34,823 :: INFO :: Epoch 0: Estimaged average holdout-set loss: 0.15363645553588867
-2020-11-20 19:20:55,159 :: INFO :: Starting epoch 2
-2020-11-20 19:20:56,503 :: INFO :: Epoch 1: Estimated average training-set loss: 0.08696553111076355. Weights dumped.
-2020-11-20 19:20:57,853 :: INFO :: Epoch 1: Estimaged average holdout-set loss: 0.08766648173332214
-2020-11-20 19:53:04,512 :: INFO :: Starting epoch 3
-2020-11-20 19:53:05,836 :: INFO :: Epoch 2: Estimated average training-set loss: 0.0781526118516922. Weights dumped.
-2020-11-20 19:53:07,159 :: INFO :: Epoch 2: Estimaged average holdout-set loss: 0.07921984046697617
-2020-11-20 20:25:06,589 :: INFO :: Starting epoch 4
-2020-11-20 20:25:07,909 :: INFO :: Epoch 3: Estimated average training-set loss: 0.07101099193096161. Weights dumped.
-2020-11-20 20:25:09,231 :: INFO :: Epoch 3: Estimaged average holdout-set loss: 0.07147952169179916
-2020-11-20 20:57:08,827 :: INFO :: Starting epoch 5
-2020-11-20 20:57:10,155 :: INFO :: Epoch 4: Estimated average training-set loss: 0.06464410573244095. Weights dumped.
-2020-11-20 20:57:11,462 :: INFO :: Epoch 4: Estimaged average holdout-set loss: 0.06779040396213531
-2020-11-20 21:29:09,215 :: INFO :: Starting epoch 6
-2020-11-20 21:29:10,540 :: INFO :: Epoch 5: Estimated average training-set loss: 0.06211550906300545. Weights dumped.
-2020-11-20 21:29:11,862 :: INFO :: Epoch 5: Estimaged average holdout-set loss: 0.06292611360549927
-2020-11-20 22:01:08,740 :: INFO :: Starting epoch 7
-2020-11-20 22:01:10,063 :: INFO :: Epoch 6: Estimated average training-set loss: 0.06116269901394844. Weights dumped.
-2020-11-20 22:01:11,402 :: INFO :: Epoch 6: Estimaged average holdout-set loss: 0.06138410419225693
-2020-11-20 22:33:10,913 :: INFO :: Starting epoch 8
-2020-11-20 22:33:12,226 :: INFO :: Epoch 7: Estimated average training-set loss: 0.05710548534989357. Weights dumped.
-2020-11-20 22:33:13,553 :: INFO :: Epoch 7: Estimaged average holdout-set loss: 0.05793900787830353
-2020-11-20 23:05:10,380 :: INFO :: Starting epoch 9
-2020-11-20 23:05:11,704 :: INFO :: Epoch 8: Estimated average training-set loss: 0.05884725600481033. Weights dumped.
-2020-11-20 23:05:13,021 :: INFO :: Epoch 8: Estimaged average holdout-set loss: 0.05997798591852188
-2020-11-20 23:37:08,795 :: INFO :: Starting epoch 10
-2020-11-20 23:37:10,116 :: INFO :: Epoch 9: Estimated average training-set loss: 0.05701465159654617. Weights dumped.
-2020-11-20 23:37:11,437 :: INFO :: Epoch 9: Estimaged average holdout-set loss: 0.058996591717004776
-2020-11-21 00:09:13,449 :: INFO :: Starting epoch 11
-2020-11-21 00:09:14,793 :: INFO :: Epoch 10: Estimated average training-set loss: 0.05581732094287872. Weights dumped.
-2020-11-21 00:09:16,124 :: INFO :: Epoch 10: Estimaged average holdout-set loss: 0.05697460472583771
-2020-11-21 00:41:20,180 :: INFO :: Starting epoch 12
-2020-11-21 00:41:21,504 :: INFO :: Epoch 11: Estimated average training-set loss: 0.05174477770924568. Weights dumped.
-2020-11-21 00:41:22,830 :: INFO :: Epoch 11: Estimaged average holdout-set loss: 0.054625675082206726
-2020-11-21 01:13:26,330 :: INFO :: Starting epoch 13
-2020-11-21 01:13:27,654 :: INFO :: Epoch 12: Estimated average training-set loss: 0.05036897212266922. Weights dumped.
-2020-11-21 01:13:28,982 :: INFO :: Epoch 12: Estimaged average holdout-set loss: 0.05266837403178215
-2020-11-21 01:45:30,827 :: INFO :: Starting epoch 14
-2020-11-21 01:45:32,154 :: INFO :: Epoch 13: Estimated average training-set loss: 0.050754614174366. Weights dumped.
-2020-11-21 01:45:33,479 :: INFO :: Epoch 13: Estimaged average holdout-set loss: 0.05523650348186493
-2020-11-21 02:17:30,053 :: INFO :: Starting epoch 15
-2020-11-21 02:17:31,376 :: INFO :: Epoch 14: Estimated average training-set loss: 0.04979819431900978. Weights dumped.
-2020-11-21 02:17:32,704 :: INFO :: Epoch 14: Estimaged average holdout-set loss: 0.05186792463064194
-2020-11-21 02:49:29,984 :: INFO :: Starting epoch 16
-2020-11-21 02:49:31,311 :: INFO :: Epoch 15: Estimated average training-set loss: 0.05248852074146271. Weights dumped.
-2020-11-21 02:49:32,638 :: INFO :: Epoch 15: Estimaged average holdout-set loss: 0.05448002368211746
-2020-11-21 03:21:27,739 :: INFO :: Starting epoch 17
-2020-11-21 03:21:29,066 :: INFO :: Epoch 16: Estimated average training-set loss: 0.048081688582897186. Weights dumped.
-2020-11-21 03:21:30,379 :: INFO :: Epoch 16: Estimaged average holdout-set loss: 0.04962124675512314
-2020-11-21 03:53:22,725 :: INFO :: Starting epoch 18
-2020-11-21 03:53:24,049 :: INFO :: Epoch 17: Estimated average training-set loss: 0.04860609024763107. Weights dumped.
-2020-11-21 03:53:25,362 :: INFO :: Epoch 17: Estimaged average holdout-set loss: 0.0483974888920784
-2020-11-21 04:25:18,609 :: INFO :: Starting epoch 19
-2020-11-21 04:25:19,943 :: INFO :: Epoch 18: Estimated average training-set loss: 0.04853763058781624. Weights dumped.
-2020-11-21 04:25:21,239 :: INFO :: Epoch 18: Estimaged average holdout-set loss: 0.050499267876148224
-2020-11-21 04:57:17,424 :: INFO :: Starting epoch 20
-2020-11-21 04:57:18,753 :: INFO :: Epoch 19: Estimated average training-set loss: 0.047947198152542114. Weights dumped.
-2020-11-21 04:57:20,062 :: INFO :: Epoch 19: Estimaged average holdout-set loss: 0.0455685555934906
-2020-11-21 05:29:12,541 :: INFO :: Starting epoch 21
-2020-11-21 05:29:13,866 :: INFO :: Epoch 20: Estimated average training-set loss: 0.04562617838382721. Weights dumped.
-2020-11-21 05:29:15,190 :: INFO :: Epoch 20: Estimaged average holdout-set loss: 0.0512651763856411
-2020-11-21 06:01:11,085 :: INFO :: Starting epoch 22
-2020-11-21 06:01:12,405 :: INFO :: Epoch 21: Estimated average training-set loss: 0.04468848928809166. Weights dumped.
-2020-11-21 06:01:13,754 :: INFO :: Epoch 21: Estimaged average holdout-set loss: 0.047717902809381485
-2020-11-21 06:33:07,531 :: INFO :: Starting epoch 23
-2020-11-21 06:33:08,860 :: INFO :: Epoch 22: Estimated average training-set loss: 0.046790797263383865. Weights dumped.
-2020-11-21 06:33:10,190 :: INFO :: Epoch 22: Estimaged average holdout-set loss: 0.049824897199869156
-2020-11-21 07:05:06,481 :: INFO :: Starting epoch 24
-2020-11-21 07:05:07,807 :: INFO :: Epoch 23: Estimated average training-set loss: 0.048576101660728455. Weights dumped.
-2020-11-21 07:05:09,109 :: INFO :: Epoch 23: Estimaged average holdout-set loss: 0.048115115612745285
-2020-11-21 07:37:04,452 :: INFO :: Starting epoch 25
-2020-11-21 07:37:05,777 :: INFO :: Epoch 24: Estimated average training-set loss: 0.04786725714802742. Weights dumped.
-2020-11-21 07:37:07,081 :: INFO :: Epoch 24: Estimaged average holdout-set loss: 0.0481535941362381
-2020-11-21 08:09:03,256 :: INFO :: Starting epoch 26
-2020-11-21 08:09:04,596 :: INFO :: Epoch 25: Estimated average training-set loss: 0.04713209718465805. Weights dumped.
-2020-11-21 08:09:05,908 :: INFO :: Epoch 25: Estimaged average holdout-set loss: 0.04871236905455589
-2020-11-21 08:41:02,655 :: INFO :: Starting epoch 27
-2020-11-21 08:41:03,985 :: INFO :: Epoch 26: Estimated average training-set loss: 0.04436061531305313. Weights dumped.
-2020-11-21 08:41:05,303 :: INFO :: Epoch 26: Estimaged average holdout-set loss: 0.0487445592880249
-2020-11-21 09:13:01,303 :: INFO :: Starting epoch 28
-2020-11-21 09:13:02,619 :: INFO :: Epoch 27: Estimated average training-set loss: 0.043478455394506454. Weights dumped.
-2020-11-21 09:13:03,938 :: INFO :: Epoch 27: Estimaged average holdout-set loss: 0.04782881215214729
-2020-11-21 09:45:02,480 :: INFO :: Starting epoch 29
-2020-11-21 09:45:03,806 :: INFO :: Epoch 28: Estimated average training-set loss: 0.04492977261543274. Weights dumped.
-2020-11-21 09:45:05,130 :: INFO :: Epoch 28: Estimaged average holdout-set loss: 0.04318275675177574
-2020-11-21 10:17:01,174 :: INFO :: Starting epoch 30
-2020-11-21 10:17:02,492 :: INFO :: Epoch 29: Estimated average training-set loss: 0.04566197842359543. Weights dumped.
-2020-11-21 10:17:03,831 :: INFO :: Epoch 29: Estimaged average holdout-set loss: 0.04923602566123009
-2020-11-21 10:48:59,656 :: INFO :: Starting epoch 31
-2020-11-21 10:49:00,968 :: INFO :: Epoch 30: Estimated average training-set loss: 0.044396232813596725. Weights dumped.
-2020-11-21 10:49:02,277 :: INFO :: Epoch 30: Estimaged average holdout-set loss: 0.043728314340114594
-2020-11-21 11:20:57,850 :: INFO :: Starting epoch 32
-2020-11-21 11:20:59,171 :: INFO :: Epoch 31: Estimated average training-set loss: 0.044873449951410294. Weights dumped.
-2020-11-21 11:21:00,508 :: INFO :: Epoch 31: Estimaged average holdout-set loss: 0.046490833163261414
-2020-11-21 11:53:01,738 :: INFO :: Starting epoch 33
-2020-11-21 11:53:03,068 :: INFO :: Epoch 32: Estimated average training-set loss: 0.044729046523571014. Weights dumped.
-2020-11-21 11:53:04,401 :: INFO :: Epoch 32: Estimaged average holdout-set loss: 0.045545876026153564
-2020-11-21 12:25:06,577 :: INFO :: Starting epoch 34
-2020-11-21 12:25:07,902 :: INFO :: Epoch 33: Estimated average training-set loss: 0.04469461739063263. Weights dumped.
-2020-11-21 12:25:09,206 :: INFO :: Epoch 33: Estimaged average holdout-set loss: 0.0465310662984848
-2020-11-21 12:57:12,160 :: INFO :: Starting epoch 35
-2020-11-21 12:57:13,479 :: INFO :: Epoch 34: Estimated average training-set loss: 0.045620642602443695. Weights dumped.
-2020-11-21 12:57:14,805 :: INFO :: Epoch 34: Estimaged average holdout-set loss: 0.04617936909198761
-2020-11-21 13:29:16,896 :: INFO :: Starting epoch 36
-2020-11-21 13:29:18,220 :: INFO :: Epoch 35: Estimated average training-set loss: 0.044128529727458954. Weights dumped.
-2020-11-21 13:29:19,525 :: INFO :: Epoch 35: Estimaged average holdout-set loss: 0.04764941707253456
-2020-11-21 14:01:24,104 :: INFO :: Starting epoch 37
-2020-11-21 14:01:25,425 :: INFO :: Epoch 36: Estimated average training-set loss: 0.04417038708925247. Weights dumped.
-2020-11-21 14:01:26,743 :: INFO :: Epoch 36: Estimaged average holdout-set loss: 0.045007213950157166
-2020-11-21 14:33:42,965 :: INFO :: Starting epoch 38
-2020-11-21 14:33:44,290 :: INFO :: Epoch 37: Estimated average training-set loss: 0.044113434851169586. Weights dumped.
-2020-11-21 14:33:45,616 :: INFO :: Epoch 37: Estimaged average holdout-set loss: 0.045925963670015335
-2020-11-21 15:05:58,676 :: INFO :: Starting epoch 39
-2020-11-21 15:06:00,024 :: INFO :: Epoch 38: Estimated average training-set loss: 0.04421841353178024. Weights dumped.
-2020-11-21 15:06:01,380 :: INFO :: Epoch 38: Estimaged average holdout-set loss: 0.048400700092315674
-2020-11-21 15:38:15,399 :: INFO :: Starting epoch 40
-2020-11-21 15:38:16,733 :: INFO :: Epoch 39: Estimated average training-set loss: 0.04199473187327385. Weights dumped.
-2020-11-21 15:38:18,070 :: INFO :: Epoch 39: Estimaged average holdout-set loss: 0.04533544182777405
-2020-11-21 16:10:30,611 :: INFO :: Starting epoch 41
-2020-11-21 16:10:31,940 :: INFO :: Epoch 40: Estimated average training-set loss: 0.045393459498882294. Weights dumped.
-2020-11-21 16:10:33,290 :: INFO :: Epoch 40: Estimaged average holdout-set loss: 0.04438110813498497
-2020-11-21 16:42:46,882 :: INFO :: Starting epoch 42
-2020-11-21 16:42:48,224 :: INFO :: Epoch 41: Estimated average training-set loss: 0.04455353319644928. Weights dumped.
-2020-11-21 16:42:49,573 :: INFO :: Epoch 41: Estimaged average holdout-set loss: 0.04783330857753754
-2020-11-21 17:15:02,357 :: INFO :: Starting epoch 43
-2020-11-21 17:15:03,692 :: INFO :: Epoch 42: Estimated average training-set loss: 0.043096620589494705. Weights dumped.
-2020-11-21 17:15:05,046 :: INFO :: Epoch 42: Estimaged average holdout-set loss: 0.04796144366264343
-2020-11-21 17:47:20,060 :: INFO :: Starting epoch 44
-2020-11-21 17:47:21,398 :: INFO :: Epoch 43: Estimated average training-set loss: 0.042702872306108475. Weights dumped.
-2020-11-21 17:47:22,739 :: INFO :: Epoch 43: Estimaged average holdout-set loss: 0.045147258788347244
-2020-11-21 18:19:35,626 :: INFO :: Starting epoch 45
-2020-11-21 18:19:36,954 :: INFO :: Epoch 44: Estimated average training-set loss: 0.0411376915872097. Weights dumped.
-2020-11-21 18:19:38,278 :: INFO :: Epoch 44: Estimaged average holdout-set loss: 0.045311059802770615
-2020-11-21 18:51:48,282 :: INFO :: Starting epoch 46
-2020-11-21 18:51:49,607 :: INFO :: Epoch 45: Estimated average training-set loss: 0.04198574647307396. Weights dumped.
-2020-11-21 18:51:50,942 :: INFO :: Epoch 45: Estimaged average holdout-set loss: 0.04767005145549774
-2020-11-21 19:24:01,157 :: INFO :: Starting epoch 47
-2020-11-21 19:24:02,494 :: INFO :: Epoch 46: Estimated average training-set loss: 0.04100968688726425. Weights dumped.
-2020-11-21 19:24:03,838 :: INFO :: Epoch 46: Estimaged average holdout-set loss: 0.04515121132135391
-2020-11-21 19:56:15,466 :: INFO :: Starting epoch 48
-2020-11-21 19:56:16,801 :: INFO :: Epoch 47: Estimated average training-set loss: 0.04485892131924629. Weights dumped.
-2020-11-21 19:56:18,152 :: INFO :: Epoch 47: Estimaged average holdout-set loss: 0.04279130697250366
-2020-11-21 20:28:32,088 :: INFO :: Starting epoch 49
-2020-11-21 20:28:33,429 :: INFO :: Epoch 48: Estimated average training-set loss: 0.04382292553782463. Weights dumped.
-2020-11-21 20:28:34,769 :: INFO :: Epoch 48: Estimaged average holdout-set loss: 0.04271369054913521
-2020-11-21 21:00:41,347 :: INFO :: Starting epoch 50
-2020-11-21 21:00:42,662 :: INFO :: Epoch 49: Estimated average training-set loss: 0.03963322192430496. Weights dumped.
-2020-11-21 21:00:43,984 :: INFO :: Epoch 49: Estimaged average holdout-set loss: 0.044312167912721634
-2020-11-21 21:32:40,898 :: INFO :: Starting epoch 51
-2020-11-21 21:32:42,228 :: INFO :: Epoch 50: Estimated average training-set loss: 0.04136807098984718. Weights dumped.
-2020-11-21 21:32:43,567 :: INFO :: Epoch 50: Estimaged average holdout-set loss: 0.04518449679017067
-2020-11-21 22:04:41,952 :: INFO :: Starting epoch 52
-2020-11-21 22:04:43,286 :: INFO :: Epoch 51: Estimated average training-set loss: 0.03989357128739357. Weights dumped.
-2020-11-21 22:04:44,588 :: INFO :: Epoch 51: Estimaged average holdout-set loss: 0.044402822852134705
-2020-11-21 22:36:41,297 :: INFO :: Starting epoch 53
-2020-11-21 22:36:42,615 :: INFO :: Epoch 52: Estimated average training-set loss: 0.04013841599225998. Weights dumped.
-2020-11-21 22:36:43,929 :: INFO :: Epoch 52: Estimaged average holdout-set loss: 0.04038114845752716
-2020-11-21 23:08:35,131 :: INFO :: Starting epoch 54
-2020-11-21 23:08:36,448 :: INFO :: Epoch 53: Estimated average training-set loss: 0.04218117147684097. Weights dumped.
-2020-11-21 23:08:37,775 :: INFO :: Epoch 53: Estimaged average holdout-set loss: 0.0421871542930603
-2020-11-21 23:40:32,860 :: INFO :: Starting epoch 55
-2020-11-21 23:40:34,193 :: INFO :: Epoch 54: Estimated average training-set loss: 0.04141487181186676. Weights dumped.
-2020-11-21 23:40:35,526 :: INFO :: Epoch 54: Estimaged average holdout-set loss: 0.039916396141052246
-2020-11-22 00:12:32,065 :: INFO :: Starting epoch 56
-2020-11-22 00:12:33,386 :: INFO :: Epoch 55: Estimated average training-set loss: 0.036747463047504425. Weights dumped.
-2020-11-22 00:12:34,695 :: INFO :: Epoch 55: Estimaged average holdout-set loss: 0.04535919800400734
-2020-11-22 00:44:33,946 :: INFO :: Starting epoch 57
-2020-11-22 00:44:35,270 :: INFO :: Epoch 56: Estimated average training-set loss: 0.03832993283867836. Weights dumped.
-2020-11-22 00:44:36,596 :: INFO :: Epoch 56: Estimaged average holdout-set loss: 0.0397149883210659
-2020-11-22 01:16:35,540 :: INFO :: Starting epoch 58
-2020-11-22 01:16:36,878 :: INFO :: Epoch 57: Estimated average training-set loss: 0.03597913682460785. Weights dumped.
-2020-11-22 01:16:38,195 :: INFO :: Epoch 57: Estimaged average holdout-set loss: 0.04129115492105484
-2020-11-22 01:48:33,701 :: INFO :: Starting epoch 59
-2020-11-22 01:48:35,017 :: INFO :: Epoch 58: Estimated average training-set loss: 0.0413990244269371. Weights dumped.
-2020-11-22 01:48:36,338 :: INFO :: Epoch 58: Estimaged average holdout-set loss: 0.04522810876369476
-2020-11-22 02:20:28,744 :: INFO :: Starting epoch 60
-2020-11-22 02:20:30,077 :: INFO :: Epoch 59: Estimated average training-set loss: 0.038735583424568176. Weights dumped.
-2020-11-22 02:20:31,409 :: INFO :: Epoch 59: Estimaged average holdout-set loss: 0.04117176681756973
-2020-11-22 02:52:24,213 :: INFO :: Starting epoch 61
-2020-11-22 02:52:25,536 :: INFO :: Epoch 60: Estimated average training-set loss: 0.0379190631210804. Weights dumped.
-2020-11-22 02:52:26,859 :: INFO :: Epoch 60: Estimaged average holdout-set loss: 0.040713608264923096
-2020-11-22 03:24:19,212 :: INFO :: Starting epoch 62
-2020-11-22 03:24:20,533 :: INFO :: Epoch 61: Estimated average training-set loss: 0.03670816496014595. Weights dumped.
-2020-11-22 03:24:21,839 :: INFO :: Epoch 61: Estimaged average holdout-set loss: 0.043322183191776276
-2020-11-22 03:56:18,834 :: INFO :: Starting epoch 63
-2020-11-22 03:56:20,172 :: INFO :: Epoch 62: Estimated average training-set loss: 0.039200857281684875. Weights dumped.
-2020-11-22 03:56:21,526 :: INFO :: Epoch 62: Estimaged average holdout-set loss: 0.04321753978729248
-2020-11-22 04:28:37,843 :: INFO :: Starting epoch 64
-2020-11-22 04:28:39,173 :: INFO :: Epoch 63: Estimated average training-set loss: 0.03403036296367645. Weights dumped.
-2020-11-22 04:28:40,483 :: INFO :: Epoch 63: Estimaged average holdout-set loss: 0.043948352336883545
-2020-11-22 05:00:46,416 :: INFO :: Starting epoch 65
-2020-11-22 05:00:47,742 :: INFO :: Epoch 64: Estimated average training-set loss: 0.03838560730218887. Weights dumped.
-2020-11-22 05:00:49,080 :: INFO :: Epoch 64: Estimaged average holdout-set loss: 0.038862135261297226
-2020-11-22 05:32:42,416 :: INFO :: Starting epoch 66
-2020-11-22 05:32:43,756 :: INFO :: Epoch 65: Estimated average training-set loss: 0.03773830085992813. Weights dumped.
-2020-11-22 05:32:45,071 :: INFO :: Epoch 65: Estimaged average holdout-set loss: 0.03658480942249298
-2020-11-22 06:04:37,569 :: INFO :: Starting epoch 67
-2020-11-22 06:04:38,896 :: INFO :: Epoch 66: Estimated average training-set loss: 0.03438042104244232. Weights dumped.
-2020-11-22 06:04:40,204 :: INFO :: Epoch 66: Estimaged average holdout-set loss: 0.04162058234214783
-2020-11-22 06:36:38,144 :: INFO :: Starting epoch 68
-2020-11-22 06:36:39,474 :: INFO :: Epoch 67: Estimated average training-set loss: 0.03928595781326294. Weights dumped.
-2020-11-22 06:36:40,823 :: INFO :: Epoch 67: Estimaged average holdout-set loss: 0.03742792829871178
-2020-11-22 07:08:52,823 :: INFO :: Starting epoch 69
-2020-11-22 07:08:54,156 :: INFO :: Epoch 68: Estimated average training-set loss: 0.03912054002285004. Weights dumped.
-2020-11-22 07:08:55,481 :: INFO :: Epoch 68: Estimaged average holdout-set loss: 0.042711470276117325
-2020-11-22 07:41:10,445 :: INFO :: Starting epoch 70
-2020-11-22 07:41:11,765 :: INFO :: Epoch 69: Estimated average training-set loss: 0.039798736572265625. Weights dumped.
-2020-11-22 07:41:13,090 :: INFO :: Epoch 69: Estimaged average holdout-set loss: 0.04085993021726608
-2020-11-22 08:13:19,247 :: INFO :: Starting epoch 71
-2020-11-22 08:13:20,594 :: INFO :: Epoch 70: Estimated average training-set loss: 0.03897655010223389. Weights dumped.
-2020-11-22 08:13:21,936 :: INFO :: Epoch 70: Estimaged average holdout-set loss: 0.03792119026184082
-2020-11-22 08:45:29,881 :: INFO :: Starting epoch 72
-2020-11-22 08:45:31,211 :: INFO :: Epoch 71: Estimated average training-set loss: 0.03817782923579216. Weights dumped.
-2020-11-22 08:45:32,544 :: INFO :: Epoch 71: Estimaged average holdout-set loss: 0.038758452981710434
-2020-11-22 09:17:47,446 :: INFO :: Starting epoch 73
-2020-11-22 09:17:48,766 :: INFO :: Epoch 72: Estimated average training-set loss: 0.038832224905490875. Weights dumped.
-2020-11-22 09:17:50,118 :: INFO :: Epoch 72: Estimaged average holdout-set loss: 0.043421149253845215
-2020-11-22 09:49:55,083 :: INFO :: Starting epoch 74
-2020-11-22 09:49:56,403 :: INFO :: Epoch 73: Estimated average training-set loss: 0.03483886271715164. Weights dumped.
-2020-11-22 09:49:57,708 :: INFO :: Epoch 73: Estimaged average holdout-set loss: 0.04191786050796509
-2020-11-22 10:22:07,817 :: INFO :: Starting epoch 75
-2020-11-22 10:22:09,164 :: INFO :: Epoch 74: Estimated average training-set loss: 0.03822612389922142. Weights dumped.
-2020-11-22 10:22:10,477 :: INFO :: Epoch 74: Estimaged average holdout-set loss: 0.039183445274829865
-2020-11-22 10:54:17,640 :: INFO :: Starting epoch 76
-2020-11-22 10:54:18,960 :: INFO :: Epoch 75: Estimated average training-set loss: 0.03676387295126915. Weights dumped.
-2020-11-22 10:54:20,263 :: INFO :: Epoch 75: Estimaged average holdout-set loss: 0.04000065475702286
-2020-11-22 11:26:29,392 :: INFO :: Starting epoch 77
-2020-11-22 11:26:30,706 :: INFO :: Epoch 76: Estimated average training-set loss: 0.04031631350517273. Weights dumped.
-2020-11-22 11:26:32,029 :: INFO :: Epoch 76: Estimaged average holdout-set loss: 0.04024529084563255
-2020-11-22 11:58:37,598 :: INFO :: Starting epoch 78
-2020-11-22 11:58:38,931 :: INFO :: Epoch 77: Estimated average training-set loss: 0.03754234313964844. Weights dumped.
-2020-11-22 11:58:40,264 :: INFO :: Epoch 77: Estimaged average holdout-set loss: 0.03653972968459129
-2020-11-22 12:30:52,441 :: INFO :: Starting epoch 79
-2020-11-22 12:30:53,780 :: INFO :: Epoch 78: Estimated average training-set loss: 0.038036733865737915. Weights dumped.
-2020-11-22 12:30:55,143 :: INFO :: Epoch 78: Estimaged average holdout-set loss: 0.0406065434217453
-2020-11-22 13:03:14,984 :: INFO :: Starting epoch 80
-2020-11-22 13:03:16,322 :: INFO :: Epoch 79: Estimated average training-set loss: 0.03609602525830269. Weights dumped.
-2020-11-22 13:03:17,652 :: INFO :: Epoch 79: Estimaged average holdout-set loss: 0.037242475897073746
-2020-11-22 13:35:34,237 :: INFO :: Starting epoch 81
-2020-11-22 13:35:35,585 :: INFO :: Epoch 80: Estimated average training-set loss: 0.03773932904005051. Weights dumped.
-2020-11-22 13:35:36,959 :: INFO :: Epoch 80: Estimaged average holdout-set loss: 0.04097655788064003
-2020-11-22 14:07:54,243 :: INFO :: Starting epoch 82
-2020-11-22 14:07:55,590 :: INFO :: Epoch 81: Estimated average training-set loss: 0.03330617398023605. Weights dumped.
-2020-11-22 14:07:56,937 :: INFO :: Epoch 81: Estimaged average holdout-set loss: 0.03913486376404762
-2020-11-22 14:40:12,914 :: INFO :: Starting epoch 83
-2020-11-22 14:40:14,256 :: INFO :: Epoch 82: Estimated average training-set loss: 0.03412985801696777. Weights dumped.
-2020-11-22 14:40:15,631 :: INFO :: Epoch 82: Estimaged average holdout-set loss: 0.04053466394543648
-2020-11-22 15:12:32,854 :: INFO :: Starting epoch 84
-2020-11-22 15:12:34,209 :: INFO :: Epoch 83: Estimated average training-set loss: 0.034565411508083344. Weights dumped.
-2020-11-22 15:12:35,561 :: INFO :: Epoch 83: Estimaged average holdout-set loss: 0.037226468324661255
-2020-11-22 15:44:53,323 :: INFO :: Starting epoch 85
-2020-11-22 15:44:54,652 :: INFO :: Epoch 84: Estimated average training-set loss: 0.035010166466236115. Weights dumped.
-2020-11-22 15:44:56,001 :: INFO :: Epoch 84: Estimaged average holdout-set loss: 0.04089723154902458
-2020-11-22 16:17:15,433 :: INFO :: Starting epoch 86
-2020-11-22 16:17:16,766 :: INFO :: Epoch 85: Estimated average training-set loss: 0.03863871097564697. Weights dumped.
-2020-11-22 16:17:18,123 :: INFO :: Epoch 85: Estimaged average holdout-set loss: 0.03707556426525116
-2020-11-22 16:49:32,676 :: INFO :: Starting epoch 87
-2020-11-22 16:49:34,015 :: INFO :: Epoch 86: Estimated average training-set loss: 0.03544658049941063. Weights dumped.
-2020-11-22 16:49:35,368 :: INFO :: Epoch 86: Estimaged average holdout-set loss: 0.03850150853395462
-2020-11-22 17:21:49,911 :: INFO :: Starting epoch 88
-2020-11-22 17:21:51,232 :: INFO :: Epoch 87: Estimated average training-set loss: 0.037950802594423294. Weights dumped.
-2020-11-22 17:21:52,556 :: INFO :: Epoch 87: Estimaged average holdout-set loss: 0.041152190417051315
-2020-11-22 17:53:48,152 :: INFO :: Starting epoch 89
-2020-11-22 17:53:49,477 :: INFO :: Epoch 88: Estimated average training-set loss: 0.031773701310157776. Weights dumped.
-2020-11-22 17:53:50,806 :: INFO :: Epoch 88: Estimaged average holdout-set loss: 0.037572138011455536
-2020-11-22 18:25:52,632 :: INFO :: Starting epoch 90
-2020-11-22 18:25:53,975 :: INFO :: Epoch 89: Estimated average training-set loss: 0.039471790194511414. Weights dumped.
-2020-11-22 18:25:55,328 :: INFO :: Epoch 89: Estimaged average holdout-set loss: 0.03906744346022606
-2020-11-22 18:58:13,140 :: INFO :: Starting epoch 91
-2020-11-22 18:58:14,475 :: INFO :: Epoch 90: Estimated average training-set loss: 0.03574059531092644. Weights dumped.
-2020-11-22 18:58:15,819 :: INFO :: Epoch 90: Estimaged average holdout-set loss: 0.040330227464437485
-2020-11-22 19:30:26,315 :: INFO :: Starting epoch 92
-2020-11-22 19:30:27,644 :: INFO :: Epoch 91: Estimated average training-set loss: 0.035506971180438995. Weights dumped.
-2020-11-22 19:30:28,946 :: INFO :: Epoch 91: Estimaged average holdout-set loss: 0.039573028683662415
-2020-11-22 20:02:33,521 :: INFO :: Starting epoch 93
-2020-11-22 20:02:34,857 :: INFO :: Epoch 92: Estimated average training-set loss: 0.03586328402161598. Weights dumped.
-2020-11-22 20:02:36,172 :: INFO :: Epoch 92: Estimaged average holdout-set loss: 0.04183605685830116
-2020-11-22 20:34:51,887 :: INFO :: Starting epoch 94
-2020-11-22 20:34:53,232 :: INFO :: Epoch 93: Estimated average training-set loss: 0.035581380128860474. Weights dumped.
-2020-11-22 20:34:54,576 :: INFO :: Epoch 93: Estimaged average holdout-set loss: 0.041271790862083435
-2020-11-22 21:07:08,047 :: INFO :: Starting epoch 95
-2020-11-22 21:07:09,375 :: INFO :: Epoch 94: Estimated average training-set loss: 0.03781181573867798. Weights dumped.
-2020-11-22 21:07:10,711 :: INFO :: Epoch 94: Estimaged average holdout-set loss: 0.038719289004802704
-2020-11-22 21:39:04,473 :: INFO :: Starting epoch 96
-2020-11-22 21:39:05,803 :: INFO :: Epoch 95: Estimated average training-set loss: 0.03641268610954285. Weights dumped.
-2020-11-22 21:39:07,110 :: INFO :: Epoch 95: Estimaged average holdout-set loss: 0.037455882877111435
-2020-11-22 22:11:09,176 :: INFO :: Starting epoch 97
-2020-11-22 22:11:10,527 :: INFO :: Epoch 96: Estimated average training-set loss: 0.036476049572229385. Weights dumped.
-2020-11-22 22:11:11,901 :: INFO :: Epoch 96: Estimaged average holdout-set loss: 0.03962445259094238
-2020-11-22 22:43:35,047 :: INFO :: Starting epoch 98
-2020-11-22 22:43:36,400 :: INFO :: Epoch 97: Estimated average training-set loss: 0.029704350978136063. Weights dumped.
-2020-11-22 22:43:37,739 :: INFO :: Epoch 97: Estimaged average holdout-set loss: 0.03921152278780937
-2020-11-22 23:16:04,524 :: INFO :: Starting epoch 99
-2020-11-22 23:16:05,876 :: INFO :: Epoch 98: Estimated average training-set loss: 0.03155376389622688. Weights dumped.
-2020-11-22 23:16:07,231 :: INFO :: Epoch 98: Estimaged average holdout-set loss: 0.042238473892211914
-2020-11-22 23:48:36,342 :: INFO :: Starting epoch 100
-2020-11-22 23:48:37,689 :: INFO :: Epoch 99: Estimated average training-set loss: 0.03592507541179657. Weights dumped.
-2020-11-22 23:48:39,041 :: INFO :: Epoch 99: Estimaged average holdout-set loss: 0.03872283548116684
-2020-11-23 00:21:01,965 :: INFO :: Starting epoch 101
-2020-11-23 00:21:03,317 :: INFO :: Epoch 100: Estimated average training-set loss: 0.03795557841658592. Weights dumped.
-2020-11-23 00:21:04,680 :: INFO :: Epoch 100: Estimaged average holdout-set loss: 0.041255101561546326
-2020-11-23 00:53:29,194 :: INFO :: Starting epoch 102
-2020-11-23 00:53:30,549 :: INFO :: Epoch 101: Estimated average training-set loss: 0.034078337252140045. Weights dumped.
-2020-11-23 00:53:31,897 :: INFO :: Epoch 101: Estimaged average holdout-set loss: 0.04221794754266739
-2020-11-23 01:25:55,341 :: INFO :: Starting epoch 103
-2020-11-23 01:25:56,695 :: INFO :: Epoch 102: Estimated average training-set loss: 0.03475632518529892. Weights dumped.
-2020-11-23 01:25:58,058 :: INFO :: Epoch 102: Estimaged average holdout-set loss: 0.03685920685529709
-2020-11-23 01:58:21,259 :: INFO :: Starting epoch 104
-2020-11-23 01:58:22,597 :: INFO :: Epoch 103: Estimated average training-set loss: 0.034591011703014374. Weights dumped.
-2020-11-23 01:58:23,940 :: INFO :: Epoch 103: Estimaged average holdout-set loss: 0.03941499814391136
-2020-11-23 02:30:46,077 :: INFO :: Starting epoch 105
-2020-11-23 02:30:47,432 :: INFO :: Epoch 104: Estimated average training-set loss: 0.033796850591897964. Weights dumped.
-2020-11-23 02:30:48,780 :: INFO :: Epoch 104: Estimaged average holdout-set loss: 0.03945666551589966
-2020-11-23 03:03:12,616 :: INFO :: Starting epoch 106
-2020-11-23 03:03:13,955 :: INFO :: Epoch 105: Estimated average training-set loss: 0.034337323158979416. Weights dumped.
-2020-11-23 03:03:15,320 :: INFO :: Epoch 105: Estimaged average holdout-set loss: 0.03864900767803192
-2020-11-23 03:35:42,370 :: INFO :: Starting epoch 107
-2020-11-23 03:35:43,729 :: INFO :: Epoch 106: Estimated average training-set loss: 0.035276301205158234. Weights dumped.
-2020-11-23 03:35:45,076 :: INFO :: Epoch 106: Estimaged average holdout-set loss: 0.04018186777830124
-2020-11-23 04:08:09,158 :: INFO :: Starting epoch 108
-2020-11-23 04:08:10,506 :: INFO :: Epoch 107: Estimated average training-set loss: 0.034356798976659775. Weights dumped.
-2020-11-23 04:08:11,833 :: INFO :: Epoch 107: Estimaged average holdout-set loss: 0.037088774144649506
-2020-11-23 04:40:33,127 :: INFO :: Starting epoch 109
-2020-11-23 04:40:34,475 :: INFO :: Epoch 108: Estimated average training-set loss: 0.037298187613487244. Weights dumped.
-2020-11-23 04:40:35,845 :: INFO :: Epoch 108: Estimaged average holdout-set loss: 0.03788786381483078
-2020-11-23 05:13:00,341 :: INFO :: Starting epoch 110
-2020-11-23 05:13:01,695 :: INFO :: Epoch 109: Estimated average training-set loss: 0.0317716971039772. Weights dumped.
-2020-11-23 05:13:03,044 :: INFO :: Epoch 109: Estimaged average holdout-set loss: 0.041089337319135666
-2020-11-23 05:45:30,631 :: INFO :: Starting epoch 111
-2020-11-23 05:45:31,973 :: INFO :: Epoch 110: Estimated average training-set loss: 0.03691987693309784. Weights dumped.
-2020-11-23 05:45:33,315 :: INFO :: Epoch 110: Estimaged average holdout-set loss: 0.042419783771038055
-2020-11-23 06:17:56,296 :: INFO :: Starting epoch 112
-2020-11-23 06:17:57,653 :: INFO :: Epoch 111: Estimated average training-set loss: 0.034517768770456314. Weights dumped.
-2020-11-23 06:17:58,997 :: INFO :: Epoch 111: Estimaged average holdout-set loss: 0.04040323570370674
-2020-11-23 06:50:24,600 :: INFO :: Starting epoch 113
-2020-11-23 06:50:25,939 :: INFO :: Epoch 112: Estimated average training-set loss: 0.03727656975388527. Weights dumped.
-2020-11-23 06:50:27,320 :: INFO :: Epoch 112: Estimaged average holdout-set loss: 0.03779401630163193
-2020-11-23 07:22:31,657 :: INFO :: Starting epoch 114
-2020-11-23 07:22:32,989 :: INFO :: Epoch 113: Estimated average training-set loss: 0.038507550954818726. Weights dumped.
-2020-11-23 07:22:34,316 :: INFO :: Epoch 113: Estimaged average holdout-set loss: 0.03796306997537613
-2020-11-23 07:54:32,384 :: INFO :: Starting epoch 115
-2020-11-23 07:54:33,721 :: INFO :: Epoch 114: Estimated average training-set loss: 0.036859579384326935. Weights dumped.
-2020-11-23 07:54:35,025 :: INFO :: Epoch 114: Estimaged average holdout-set loss: 0.03718092665076256
-2020-11-23 08:26:38,814 :: INFO :: Starting epoch 116
-2020-11-23 08:26:40,132 :: INFO :: Epoch 115: Estimated average training-set loss: 0.03079567477107048. Weights dumped.
-2020-11-23 08:26:41,459 :: INFO :: Epoch 115: Estimaged average holdout-set loss: 0.03814364969730377
-2020-11-23 08:58:49,767 :: INFO :: Starting epoch 117
-2020-11-23 08:58:51,099 :: INFO :: Epoch 116: Estimated average training-set loss: 0.0331692136824131. Weights dumped.
-2020-11-23 08:58:52,438 :: INFO :: Epoch 116: Estimaged average holdout-set loss: 0.041196271777153015
-2020-11-23 09:31:03,309 :: INFO :: Starting epoch 118
-2020-11-23 09:31:04,663 :: INFO :: Epoch 117: Estimated average training-set loss: 0.034381065517663956. Weights dumped.
-2020-11-23 09:31:05,986 :: INFO :: Epoch 117: Estimaged average holdout-set loss: 0.03971431031823158
-2020-11-23 10:03:30,520 :: INFO :: Starting epoch 119
-2020-11-23 10:03:31,861 :: INFO :: Epoch 118: Estimated average training-set loss: 0.032136090099811554. Weights dumped.
-2020-11-23 10:03:33,223 :: INFO :: Epoch 118: Estimaged average holdout-set loss: 0.03956439346075058
-2020-11-23 10:35:51,552 :: INFO :: Starting epoch 120
-2020-11-23 10:35:52,896 :: INFO :: Epoch 119: Estimated average training-set loss: 0.03791636601090431. Weights dumped.
-2020-11-23 10:35:54,239 :: INFO :: Epoch 119: Estimaged average holdout-set loss: 0.03889739513397217
-2020-11-23 11:08:00,290 :: INFO :: Starting epoch 121
-2020-11-23 11:08:01,613 :: INFO :: Epoch 120: Estimated average training-set loss: 0.0326094776391983. Weights dumped.
-2020-11-23 11:08:02,943 :: INFO :: Epoch 120: Estimaged average holdout-set loss: 0.03670033439993858
-2020-11-23 11:40:00,001 :: INFO :: Starting epoch 122
-2020-11-23 11:40:01,333 :: INFO :: Epoch 121: Estimated average training-set loss: 0.0325513556599617. Weights dumped.
-2020-11-23 11:40:02,643 :: INFO :: Epoch 121: Estimaged average holdout-set loss: 0.03850604593753815
-2020-11-23 12:12:06,636 :: INFO :: Starting epoch 123
-2020-11-23 12:12:07,952 :: INFO :: Epoch 122: Estimated average training-set loss: 0.035884324461221695. Weights dumped.
-2020-11-23 12:12:09,256 :: INFO :: Epoch 122: Estimaged average holdout-set loss: 0.03778780251741409
-2020-11-23 12:44:04,161 :: INFO :: Starting epoch 124
-2020-11-23 12:44:05,496 :: INFO :: Epoch 123: Estimated average training-set loss: 0.032755378633737564. Weights dumped.
-2020-11-23 12:44:06,814 :: INFO :: Epoch 123: Estimaged average holdout-set loss: 0.03791797533631325
-2020-11-23 13:16:14,548 :: INFO :: Starting epoch 125
-2020-11-23 13:16:15,885 :: INFO :: Epoch 124: Estimated average training-set loss: 0.0325392447412014. Weights dumped.
-2020-11-23 13:16:17,248 :: INFO :: Epoch 124: Estimaged average holdout-set loss: 0.036462534219026566
-2020-11-23 13:48:30,561 :: INFO :: Starting epoch 126
-2020-11-23 13:48:31,892 :: INFO :: Epoch 125: Estimated average training-set loss: 0.034996867179870605. Weights dumped.
-2020-11-23 13:48:33,188 :: INFO :: Epoch 125: Estimaged average holdout-set loss: 0.03846779838204384
-2020-11-23 14:20:32,030 :: INFO :: Starting epoch 127
-2020-11-23 14:20:33,345 :: INFO :: Epoch 126: Estimated average training-set loss: 0.033647406846284866. Weights dumped.
-2020-11-23 14:20:34,684 :: INFO :: Epoch 126: Estimaged average holdout-set loss: 0.04141984507441521
-2020-11-23 14:52:34,236 :: INFO :: Starting epoch 128
-2020-11-23 14:52:35,554 :: INFO :: Epoch 127: Estimated average training-set loss: 0.03229457512497902. Weights dumped.
-2020-11-23 14:52:36,887 :: INFO :: Epoch 127: Estimaged average holdout-set loss: 0.04121606796979904
-2020-11-23 15:24:32,285 :: INFO :: Starting epoch 129
-2020-11-23 15:24:33,611 :: INFO :: Epoch 128: Estimated average training-set loss: 0.03786340355873108. Weights dumped.
-2020-11-23 15:24:34,945 :: INFO :: Epoch 128: Estimaged average holdout-set loss: 0.03934115171432495
-2020-11-23 15:56:37,608 :: INFO :: Starting epoch 130
-2020-11-23 15:56:38,940 :: INFO :: Epoch 129: Estimated average training-set loss: 0.030826065689325333. Weights dumped.
-2020-11-23 15:56:40,248 :: INFO :: Epoch 129: Estimaged average holdout-set loss: 0.03828514739871025
-2020-11-23 16:28:50,908 :: INFO :: Starting epoch 131
-2020-11-23 16:28:52,240 :: INFO :: Epoch 130: Estimated average training-set loss: 0.034499794244766235. Weights dumped.
-2020-11-23 16:28:53,550 :: INFO :: Epoch 130: Estimaged average holdout-set loss: 0.03929755091667175
-2020-11-23 17:00:58,917 :: INFO :: Starting epoch 132
-2020-11-23 17:01:00,244 :: INFO :: Epoch 131: Estimated average training-set loss: 0.03388749063014984. Weights dumped.
-2020-11-23 17:01:01,570 :: INFO :: Epoch 131: Estimaged average holdout-set loss: 0.039374906569719315
-2020-11-23 17:33:03,758 :: INFO :: Starting epoch 133
-2020-11-23 17:33:05,082 :: INFO :: Epoch 132: Estimated average training-set loss: 0.03495289012789726. Weights dumped.
-2020-11-23 17:33:06,386 :: INFO :: Epoch 132: Estimaged average holdout-set loss: 0.03709433600306511
-2020-11-23 18:05:01,208 :: INFO :: Starting epoch 134
-2020-11-23 18:05:02,545 :: INFO :: Epoch 133: Estimated average training-set loss: 0.035195887088775635. Weights dumped.
-2020-11-23 18:05:03,880 :: INFO :: Epoch 133: Estimaged average holdout-set loss: 0.03857453167438507
-2020-11-23 18:37:05,837 :: INFO :: Starting epoch 135
-2020-11-23 18:37:07,150 :: INFO :: Epoch 134: Estimated average training-set loss: 0.03260032460093498. Weights dumped.
-2020-11-23 18:37:08,453 :: INFO :: Epoch 134: Estimaged average holdout-set loss: 0.03658057749271393
-2020-11-23 19:09:11,897 :: INFO :: Starting epoch 136
-2020-11-23 19:09:13,238 :: INFO :: Epoch 135: Estimated average training-set loss: 0.033586420118808746. Weights dumped.
-2020-11-23 19:09:14,588 :: INFO :: Epoch 135: Estimaged average holdout-set loss: 0.04066791385412216
-2020-11-23 19:41:23,948 :: INFO :: Starting epoch 137
-2020-11-23 19:41:25,273 :: INFO :: Epoch 136: Estimated average training-set loss: 0.034365423023700714. Weights dumped.
-2020-11-23 19:41:26,604 :: INFO :: Epoch 136: Estimaged average holdout-set loss: 0.03538427874445915
-2020-11-23 20:13:38,029 :: INFO :: Starting epoch 138
-2020-11-23 20:13:39,362 :: INFO :: Epoch 137: Estimated average training-set loss: 0.03303002566099167. Weights dumped.
-2020-11-23 20:13:40,730 :: INFO :: Epoch 137: Estimaged average holdout-set loss: 0.039164431393146515
-2020-11-23 20:45:52,061 :: INFO :: Starting epoch 139
-2020-11-23 20:45:53,379 :: INFO :: Epoch 138: Estimated average training-set loss: 0.028293460607528687. Weights dumped.
-2020-11-23 20:45:54,693 :: INFO :: Epoch 138: Estimaged average holdout-set loss: 0.03890290483832359
-2020-11-23 21:17:53,486 :: INFO :: Starting epoch 140
-2020-11-23 21:17:54,811 :: INFO :: Epoch 139: Estimated average training-set loss: 0.03340008482336998. Weights dumped.
-2020-11-23 21:17:56,128 :: INFO :: Epoch 139: Estimaged average holdout-set loss: 0.038075320422649384
-2020-11-23 21:49:50,334 :: INFO :: Starting epoch 141
-2020-11-23 21:49:51,665 :: INFO :: Epoch 140: Estimated average training-set loss: 0.031192615628242493. Weights dumped.
-2020-11-23 21:49:52,986 :: INFO :: Epoch 140: Estimaged average holdout-set loss: 0.03761395812034607
-2020-11-23 22:21:48,299 :: INFO :: Starting epoch 142
-2020-11-23 22:21:49,632 :: INFO :: Epoch 141: Estimated average training-set loss: 0.03656323626637459. Weights dumped.
-2020-11-23 22:21:50,966 :: INFO :: Epoch 141: Estimaged average holdout-set loss: 0.039136387407779694
-2020-11-23 22:53:40,727 :: INFO :: Starting epoch 143
-2020-11-23 22:53:42,044 :: INFO :: Epoch 142: Estimated average training-set loss: 0.03293384239077568. Weights dumped.
-2020-11-23 22:53:43,352 :: INFO :: Epoch 142: Estimaged average holdout-set loss: 0.03777699917554855
-2020-11-23 23:25:33,491 :: INFO :: Starting epoch 144
-2020-11-23 23:25:34,822 :: INFO :: Epoch 143: Estimated average training-set loss: 0.030231118202209473. Weights dumped.
-2020-11-23 23:25:36,135 :: INFO :: Epoch 143: Estimaged average holdout-set loss: 0.03994368016719818
-2020-11-23 23:57:25,918 :: INFO :: Starting epoch 145
-2020-11-23 23:57:27,239 :: INFO :: Epoch 144: Estimated average training-set loss: 0.03374612703919411. Weights dumped.
-2020-11-23 23:57:28,559 :: INFO :: Epoch 144: Estimaged average holdout-set loss: 0.038947343826293945
-2020-11-24 00:29:17,197 :: INFO :: Starting epoch 146
-2020-11-24 00:29:18,522 :: INFO :: Epoch 145: Estimated average training-set loss: 0.033745646476745605. Weights dumped.
-2020-11-24 00:29:19,835 :: INFO :: Epoch 145: Estimaged average holdout-set loss: 0.039417512714862823
-2020-11-24 01:01:07,239 :: INFO :: Starting epoch 147
-2020-11-24 01:01:08,565 :: INFO :: Epoch 146: Estimated average training-set loss: 0.03398589789867401. Weights dumped.
-2020-11-24 01:01:09,879 :: INFO :: Epoch 146: Estimaged average holdout-set loss: 0.0401981957256794
-2020-11-24 01:32:55,257 :: INFO :: Starting epoch 148
-2020-11-24 01:32:56,591 :: INFO :: Epoch 147: Estimated average training-set loss: 0.03592260554432869. Weights dumped.
-2020-11-24 01:32:57,910 :: INFO :: Epoch 147: Estimaged average holdout-set loss: 0.03887196630239487
-2020-11-24 02:04:50,230 :: INFO :: Starting epoch 149
-2020-11-24 02:04:51,550 :: INFO :: Epoch 148: Estimated average training-set loss: 0.03204839676618576. Weights dumped.
-2020-11-24 02:04:52,849 :: INFO :: Epoch 148: Estimaged average holdout-set loss: 0.03916047886013985
-2020-11-24 02:36:48,024 :: INFO :: Starting epoch 150
-2020-11-24 02:36:49,360 :: INFO :: Epoch 149: Estimated average training-set loss: 0.032358571887016296. Weights dumped.
-2020-11-24 02:36:50,653 :: INFO :: Epoch 149: Estimaged average holdout-set loss: 0.03671699017286301
-2020-11-24 03:08:48,456 :: INFO :: Starting epoch 151
-2020-11-24 03:08:49,806 :: INFO :: Epoch 150: Estimated average training-set loss: 0.033839572221040726. Weights dumped.
-2020-11-24 03:08:51,160 :: INFO :: Epoch 150: Estimaged average holdout-set loss: 0.04037921875715256
-2020-11-24 03:41:02,253 :: INFO :: Starting epoch 152
-2020-11-24 03:41:03,604 :: INFO :: Epoch 151: Estimated average training-set loss: 0.02919270098209381. Weights dumped.
-2020-11-24 03:41:04,938 :: INFO :: Epoch 151: Estimaged average holdout-set loss: 0.03804606571793556
-2020-11-24 04:13:15,824 :: INFO :: Starting epoch 153
-2020-11-24 04:13:17,162 :: INFO :: Epoch 152: Estimated average training-set loss: 0.03486359119415283. Weights dumped.
-2020-11-24 04:13:18,512 :: INFO :: Epoch 152: Estimaged average holdout-set loss: 0.04197583347558975
-2020-11-24 04:45:28,790 :: INFO :: Starting epoch 154
-2020-11-24 04:45:30,109 :: INFO :: Epoch 153: Estimated average training-set loss: 0.03177742287516594. Weights dumped.
-2020-11-24 04:45:31,421 :: INFO :: Epoch 153: Estimaged average holdout-set loss: 0.039479631930589676
-2020-11-24 05:17:43,936 :: INFO :: Starting epoch 155
-2020-11-24 05:17:45,288 :: INFO :: Epoch 154: Estimated average training-set loss: 0.03179100155830383. Weights dumped.
-2020-11-24 05:17:46,629 :: INFO :: Epoch 154: Estimaged average holdout-set loss: 0.03707544133067131
-2020-11-24 05:49:56,844 :: INFO :: Starting epoch 156
-2020-11-24 05:49:58,184 :: INFO :: Epoch 155: Estimated average training-set loss: 0.03540082648396492. Weights dumped.
-2020-11-24 05:49:59,539 :: INFO :: Epoch 155: Estimaged average holdout-set loss: 0.043665990233421326
-2020-11-24 06:22:12,083 :: INFO :: Starting epoch 157
-2020-11-24 06:22:13,415 :: INFO :: Epoch 156: Estimated average training-set loss: 0.032455071806907654. Weights dumped.
-2020-11-24 06:22:14,758 :: INFO :: Epoch 156: Estimaged average holdout-set loss: 0.041041113436222076
-2020-11-24 06:54:20,271 :: INFO :: Starting epoch 158
-2020-11-24 06:54:21,585 :: INFO :: Epoch 157: Estimated average training-set loss: 0.03276531398296356. Weights dumped.
-2020-11-24 06:54:22,902 :: INFO :: Epoch 157: Estimaged average holdout-set loss: 0.03846164420247078
-2020-11-24 07:26:29,573 :: INFO :: Starting epoch 159
-2020-11-24 07:26:30,907 :: INFO :: Epoch 158: Estimated average training-set loss: 0.033985935151576996. Weights dumped.
-2020-11-24 07:26:32,233 :: INFO :: Epoch 158: Estimaged average holdout-set loss: 0.037637583911418915
-2020-11-24 07:58:49,207 :: INFO :: Starting epoch 160
-2020-11-24 07:58:50,544 :: INFO :: Epoch 159: Estimated average training-set loss: 0.03457505628466606. Weights dumped.
-2020-11-24 07:58:51,868 :: INFO :: Epoch 159: Estimaged average holdout-set loss: 0.036788247525691986
-2020-11-24 08:31:10,964 :: INFO :: Starting epoch 161
-2020-11-24 08:31:12,302 :: INFO :: Epoch 160: Estimated average training-set loss: 0.02686142548918724. Weights dumped.
-2020-11-24 08:31:13,656 :: INFO :: Epoch 160: Estimaged average holdout-set loss: 0.039664968848228455
-2020-11-24 09:03:18,952 :: INFO :: Starting epoch 162
-2020-11-24 09:03:20,283 :: INFO :: Epoch 161: Estimated average training-set loss: 0.02979455702006817. Weights dumped.
-2020-11-24 09:03:21,631 :: INFO :: Epoch 161: Estimaged average holdout-set loss: 0.040922366082668304
-2020-11-24 09:35:35,028 :: INFO :: Starting epoch 163
-2020-11-24 09:35:36,368 :: INFO :: Epoch 162: Estimated average training-set loss: 0.030299939215183258. Weights dumped.
-2020-11-24 09:35:37,717 :: INFO :: Epoch 162: Estimaged average holdout-set loss: 0.036178115755319595
-2020-11-24 10:07:49,613 :: INFO :: Starting epoch 164
-2020-11-24 10:07:50,946 :: INFO :: Epoch 163: Estimated average training-set loss: 0.03112078085541725. Weights dumped.
-2020-11-24 10:07:52,309 :: INFO :: Epoch 163: Estimaged average holdout-set loss: 0.03993290290236473
-2020-11-24 10:40:06,412 :: INFO :: Starting epoch 165
-2020-11-24 10:40:07,767 :: INFO :: Epoch 164: Estimated average training-set loss: 0.03492583706974983. Weights dumped.
-2020-11-24 10:40:09,085 :: INFO :: Epoch 164: Estimaged average holdout-set loss: 0.03984510153532028
-2020-11-24 11:12:19,373 :: INFO :: Starting epoch 166
-2020-11-24 11:12:20,695 :: INFO :: Epoch 165: Estimated average training-set loss: 0.030923182144761086. Weights dumped.
-2020-11-24 11:12:22,012 :: INFO :: Epoch 165: Estimaged average holdout-set loss: 0.042327895760536194
-2020-11-24 11:44:32,639 :: INFO :: Starting epoch 167
-2020-11-24 11:44:33,981 :: INFO :: Epoch 166: Estimated average training-set loss: 0.03073159232735634. Weights dumped.
-2020-11-24 11:44:35,335 :: INFO :: Epoch 166: Estimaged average holdout-set loss: 0.04031694680452347
-2020-11-24 12:16:51,013 :: INFO :: Starting epoch 168
-2020-11-24 12:16:52,359 :: INFO :: Epoch 167: Estimated average training-set loss: 0.031359922140836716. Weights dumped.
-2020-11-24 12:16:53,707 :: INFO :: Epoch 167: Estimaged average holdout-set loss: 0.03621736168861389
-2020-11-24 12:48:57,596 :: INFO :: Starting epoch 169
-2020-11-24 12:48:58,921 :: INFO :: Epoch 168: Estimated average training-set loss: 0.03244933485984802. Weights dumped.
-2020-11-24 12:49:00,270 :: INFO :: Epoch 168: Estimaged average holdout-set loss: 0.03281782940030098
-2020-11-24 13:21:05,058 :: INFO :: Starting epoch 170
-2020-11-24 13:21:06,360 :: INFO :: Epoch 169: Estimated average training-set loss: 0.03396197035908699. Weights dumped.
-2020-11-24 13:21:07,675 :: INFO :: Epoch 169: Estimaged average holdout-set loss: 0.034645289182662964
-2020-11-24 13:53:14,781 :: INFO :: Starting epoch 171
-2020-11-24 13:53:16,118 :: INFO :: Epoch 170: Estimated average training-set loss: 0.030826356261968613. Weights dumped.
-2020-11-24 13:53:17,482 :: INFO :: Epoch 170: Estimaged average holdout-set loss: 0.03852027654647827
-2020-11-24 14:25:21,878 :: INFO :: Starting epoch 172
-2020-11-24 14:25:23,226 :: INFO :: Epoch 171: Estimated average training-set loss: 0.03318082168698311. Weights dumped.
-2020-11-24 14:25:24,564 :: INFO :: Epoch 171: Estimaged average holdout-set loss: 0.04066838324069977
-2020-11-24 14:57:28,516 :: INFO :: Starting epoch 173
-2020-11-24 14:57:29,839 :: INFO :: Epoch 172: Estimated average training-set loss: 0.03362026438117027. Weights dumped.
-2020-11-24 14:57:31,187 :: INFO :: Epoch 172: Estimaged average holdout-set loss: 0.0354393906891346
-2020-11-24 15:29:32,930 :: INFO :: Starting epoch 174
-2020-11-24 15:29:34,277 :: INFO :: Epoch 173: Estimated average training-set loss: 0.031920552253723145. Weights dumped.
-2020-11-24 15:29:35,625 :: INFO :: Epoch 173: Estimaged average holdout-set loss: 0.04185104742646217
-2020-11-24 16:01:39,550 :: INFO :: Starting epoch 175
-2020-11-24 16:01:40,881 :: INFO :: Epoch 174: Estimated average training-set loss: 0.029018931090831757. Weights dumped.
-2020-11-24 16:01:42,196 :: INFO :: Epoch 174: Estimaged average holdout-set loss: 0.03958771377801895
-2020-11-24 16:33:45,909 :: INFO :: Starting epoch 176
-2020-11-24 16:33:47,235 :: INFO :: Epoch 175: Estimated average training-set loss: 0.0337098091840744. Weights dumped.
-2020-11-24 16:33:48,581 :: INFO :: Epoch 175: Estimaged average holdout-set loss: 0.03423241898417473
-2020-11-24 17:05:49,115 :: INFO :: Starting epoch 177
-2020-11-24 17:05:50,431 :: INFO :: Epoch 176: Estimated average training-set loss: 0.02874092012643814. Weights dumped.
-2020-11-24 17:05:51,753 :: INFO :: Epoch 176: Estimaged average holdout-set loss: 0.038115244358778
-2020-11-24 17:37:52,729 :: INFO :: Starting epoch 178
-2020-11-24 17:37:54,064 :: INFO :: Epoch 177: Estimated average training-set loss: 0.03376360982656479. Weights dumped.
-2020-11-24 17:37:55,409 :: INFO :: Epoch 177: Estimaged average holdout-set loss: 0.03835911303758621
-2020-11-24 18:10:03,564 :: INFO :: Starting epoch 179
-2020-11-24 18:10:04,885 :: INFO :: Epoch 178: Estimated average training-set loss: 0.03364918380975723. Weights dumped.
-2020-11-24 18:10:06,198 :: INFO :: Epoch 178: Estimaged average holdout-set loss: 0.03577333316206932
-2020-11-24 18:42:08,856 :: INFO :: Starting epoch 180
-2020-11-24 18:42:10,199 :: INFO :: Epoch 179: Estimated average training-set loss: 0.029842885211110115. Weights dumped.
-2020-11-24 18:42:11,533 :: INFO :: Epoch 179: Estimaged average holdout-set loss: 0.03533811867237091
-2020-11-24 19:14:11,734 :: INFO :: Starting epoch 181
-2020-11-24 19:14:13,075 :: INFO :: Epoch 180: Estimated average training-set loss: 0.032909899950027466. Weights dumped.
-2020-11-24 19:14:14,400 :: INFO :: Epoch 180: Estimaged average holdout-set loss: 0.04036992788314819
-2020-11-24 19:46:17,350 :: INFO :: Starting epoch 182
-2020-11-24 19:46:18,662 :: INFO :: Epoch 181: Estimated average training-set loss: 0.02933668904006481. Weights dumped.
-2020-11-24 19:46:19,967 :: INFO :: Epoch 181: Estimaged average holdout-set loss: 0.035534102469682693
-2020-11-24 20:18:22,929 :: INFO :: Starting epoch 183
-2020-11-24 20:18:24,264 :: INFO :: Epoch 182: Estimated average training-set loss: 0.03424755111336708. Weights dumped.
-2020-11-24 20:18:25,586 :: INFO :: Epoch 182: Estimaged average holdout-set loss: 0.04074835777282715
-2020-11-24 20:50:23,913 :: INFO :: Starting epoch 184
-2020-11-24 20:50:25,231 :: INFO :: Epoch 183: Estimated average training-set loss: 0.03366563469171524. Weights dumped.
-2020-11-24 20:50:26,548 :: INFO :: Epoch 183: Estimaged average holdout-set loss: 0.03733595833182335
-2020-11-24 21:22:37,932 :: INFO :: Starting epoch 185
-2020-11-24 21:22:39,256 :: INFO :: Epoch 184: Estimated average training-set loss: 0.030325504019856453. Weights dumped.
-2020-11-24 21:22:40,560 :: INFO :: Epoch 184: Estimaged average holdout-set loss: 0.03461606055498123
-2020-11-24 21:54:37,506 :: INFO :: Starting epoch 186
-2020-11-24 21:54:38,839 :: INFO :: Epoch 185: Estimated average training-set loss: 0.028746619820594788. Weights dumped.
-2020-11-24 21:54:40,154 :: INFO :: Epoch 185: Estimaged average holdout-set loss: 0.03607219085097313
-2020-11-24 22:26:46,925 :: INFO :: Starting epoch 187
-2020-11-24 22:26:48,257 :: INFO :: Epoch 186: Estimated average training-set loss: 0.02999066561460495. Weights dumped.
-2020-11-24 22:26:49,581 :: INFO :: Epoch 186: Estimaged average holdout-set loss: 0.03661178797483444
-2020-11-24 22:59:04,206 :: INFO :: Starting epoch 188
-2020-11-24 22:59:05,548 :: INFO :: Epoch 187: Estimated average training-set loss: 0.03117440454661846. Weights dumped.
-2020-11-24 22:59:06,897 :: INFO :: Epoch 187: Estimaged average holdout-set loss: 0.042680416256189346
-2020-11-24 23:31:29,478 :: INFO :: Starting epoch 189
-2020-11-24 23:31:30,868 :: INFO :: Epoch 188: Estimated average training-set loss: 0.031005997210741043. Weights dumped.
-2020-11-24 23:31:32,203 :: INFO :: Epoch 188: Estimaged average holdout-set loss: 0.03650740534067154
-2020-11-25 00:03:50,388 :: INFO :: Starting epoch 190
-2020-11-25 00:03:51,735 :: INFO :: Epoch 189: Estimated average training-set loss: 0.03128689527511597. Weights dumped.
-2020-11-25 00:03:53,101 :: INFO :: Epoch 189: Estimaged average holdout-set loss: 0.03571690246462822
-2020-11-25 00:36:08,659 :: INFO :: Starting epoch 191
-2020-11-25 00:36:09,990 :: INFO :: Epoch 190: Estimated average training-set loss: 0.02755974791944027. Weights dumped.
-2020-11-25 00:36:11,337 :: INFO :: Epoch 190: Estimaged average holdout-set loss: 0.03848393261432648
-2020-11-25 01:08:17,121 :: INFO :: Starting epoch 192
-2020-11-25 01:08:18,444 :: INFO :: Epoch 191: Estimated average training-set loss: 0.02778550609946251. Weights dumped.
-2020-11-25 01:08:19,762 :: INFO :: Epoch 191: Estimaged average holdout-set loss: 0.04008525237441063
-2020-11-25 01:40:31,354 :: INFO :: Starting epoch 193
-2020-11-25 01:40:32,684 :: INFO :: Epoch 192: Estimated average training-set loss: 0.02784954570233822. Weights dumped.
-2020-11-25 01:40:34,012 :: INFO :: Epoch 192: Estimaged average holdout-set loss: 0.04021168127655983
-2020-11-25 02:12:50,999 :: INFO :: Starting epoch 194
-2020-11-25 02:12:52,330 :: INFO :: Epoch 193: Estimated average training-set loss: 0.03566553443670273. Weights dumped.
-2020-11-25 02:12:53,680 :: INFO :: Epoch 193: Estimaged average holdout-set loss: 0.03353114426136017
-2020-11-25 02:45:08,110 :: INFO :: Starting epoch 195
-2020-11-25 02:45:09,453 :: INFO :: Epoch 194: Estimated average training-set loss: 0.03189487010240555. Weights dumped.
-2020-11-25 02:45:10,811 :: INFO :: Epoch 194: Estimaged average holdout-set loss: 0.037647638469934464
-2020-11-25 03:17:29,829 :: INFO :: Starting epoch 196
-2020-11-25 03:17:31,171 :: INFO :: Epoch 195: Estimated average training-set loss: 0.027876539155840874. Weights dumped.
-2020-11-25 03:17:32,540 :: INFO :: Epoch 195: Estimaged average holdout-set loss: 0.03658777475357056
-2020-11-25 03:49:52,058 :: INFO :: Starting epoch 197
-2020-11-25 03:49:53,395 :: INFO :: Epoch 196: Estimated average training-set loss: 0.030248206108808517. Weights dumped.
-2020-11-25 03:49:54,762 :: INFO :: Epoch 196: Estimaged average holdout-set loss: 0.03905308246612549
-2020-11-25 04:22:03,070 :: INFO :: Starting epoch 198
-2020-11-25 04:22:04,397 :: INFO :: Epoch 197: Estimated average training-set loss: 0.030204666778445244. Weights dumped.
-2020-11-25 04:22:05,721 :: INFO :: Epoch 197: Estimaged average holdout-set loss: 0.038896992802619934
-2020-11-25 04:54:06,063 :: INFO :: Starting epoch 199
-2020-11-25 04:54:07,390 :: INFO :: Epoch 198: Estimated average training-set loss: 0.03253909945487976. Weights dumped.
-2020-11-25 04:54:08,682 :: INFO :: Epoch 198: Estimaged average holdout-set loss: 0.03798035532236099
-2020-11-25 05:26:00,078 :: INFO :: Starting epoch 200
-2020-11-25 05:26:01,397 :: INFO :: Epoch 199: Estimated average training-set loss: 0.027845652773976326. Weights dumped.
-2020-11-25 05:26:02,717 :: INFO :: Epoch 199: Estimaged average holdout-set loss: 0.03699934855103493
+2020-11-17 18:29:07,640 :: INFO :: Length-batching done: 1 unique lengths, with average length 94360.0, max length 94360 and min length 94360.
+2020-11-17 18:29:07,648 :: INFO :: Starting epoch 1
+2020-11-17 18:29:13,277 :: INFO :: Epoch 0: Estimated average training-set loss: 0.15199129283428192. Weights dumped.
+2020-11-17 18:29:15,845 :: INFO :: Epoch 0: Estimaged average holdout-set loss: 0.15390828251838684
+2020-11-17 19:11:46,418 :: INFO :: Starting epoch 2
+2020-11-17 19:11:49,119 :: INFO :: Epoch 1: Estimated average training-set loss: 0.08623699098825455. Weights dumped.
+2020-11-17 19:11:51,800 :: INFO :: Epoch 1: Estimaged average holdout-set loss: 0.08637145161628723
+2020-11-17 19:54:16,212 :: INFO :: Starting epoch 3
+2020-11-17 19:54:18,894 :: INFO :: Epoch 2: Estimated average training-set loss: 0.0767037570476532. Weights dumped.
+2020-11-17 19:54:21,573 :: INFO :: Epoch 2: Estimaged average holdout-set loss: 0.07586406171321869
+2020-11-17 20:36:46,989 :: INFO :: Starting epoch 4
+2020-11-17 20:36:49,676 :: INFO :: Epoch 3: Estimated average training-set loss: 0.06581462174654007. Weights dumped.
+2020-11-17 20:36:52,360 :: INFO :: Epoch 3: Estimaged average holdout-set loss: 0.06758522987365723
+2020-11-17 21:19:17,928 :: INFO :: Starting epoch 5
+2020-11-17 21:19:20,599 :: INFO :: Epoch 4: Estimated average training-set loss: 0.06590177118778229. Weights dumped.
+2020-11-17 21:19:23,275 :: INFO :: Epoch 4: Estimaged average holdout-set loss: 0.0640762597322464
+2020-11-17 22:01:48,292 :: INFO :: Starting epoch 6
+2020-11-17 22:01:50,952 :: INFO :: Epoch 5: Estimated average training-set loss: 0.06093263998627663. Weights dumped.
+2020-11-17 22:01:53,610 :: INFO :: Epoch 5: Estimaged average holdout-set loss: 0.0607917383313179
+2020-11-17 22:44:22,699 :: INFO :: Starting epoch 7
+2020-11-17 22:44:25,364 :: INFO :: Epoch 6: Estimated average training-set loss: 0.05773647129535675. Weights dumped.
+2020-11-17 22:44:28,039 :: INFO :: Epoch 6: Estimaged average holdout-set loss: 0.05859198421239853
+2020-11-17 23:26:53,522 :: INFO :: Starting epoch 8
+2020-11-17 23:26:56,195 :: INFO :: Epoch 7: Estimated average training-set loss: 0.06256010383367538. Weights dumped.
+2020-11-17 23:26:58,884 :: INFO :: Epoch 7: Estimaged average holdout-set loss: 0.05647025629878044
+2020-11-18 00:09:27,423 :: INFO :: Starting epoch 9
+2020-11-18 00:09:30,094 :: INFO :: Epoch 8: Estimated average training-set loss: 0.055430006235837936. Weights dumped.
+2020-11-18 00:09:32,793 :: INFO :: Epoch 8: Estimaged average holdout-set loss: 0.05621887743473053
+2020-11-18 00:51:56,277 :: INFO :: Starting epoch 10
+2020-11-18 00:51:58,960 :: INFO :: Epoch 9: Estimated average training-set loss: 0.05342213809490204. Weights dumped.
+2020-11-18 00:52:01,650 :: INFO :: Epoch 9: Estimaged average holdout-set loss: 0.05570537596940994
+2020-11-18 01:34:39,385 :: INFO :: Starting epoch 11
+2020-11-18 01:34:42,075 :: INFO :: Epoch 10: Estimated average training-set loss: 0.053459636867046356. Weights dumped.
+2020-11-18 01:34:44,764 :: INFO :: Epoch 10: Estimaged average holdout-set loss: 0.053806815296411514
+2020-11-18 02:17:09,183 :: INFO :: Starting epoch 12
+2020-11-18 02:17:11,869 :: INFO :: Epoch 11: Estimated average training-set loss: 0.05251851677894592. Weights dumped.
+2020-11-18 02:17:14,549 :: INFO :: Epoch 11: Estimaged average holdout-set loss: 0.055067989975214005
+2020-11-18 02:59:34,242 :: INFO :: Starting epoch 13
+2020-11-18 02:59:36,899 :: INFO :: Epoch 12: Estimated average training-set loss: 0.05157771334052086. Weights dumped.
+2020-11-18 02:59:39,561 :: INFO :: Epoch 12: Estimaged average holdout-set loss: 0.05208322033286095
+2020-11-18 03:42:06,275 :: INFO :: Starting epoch 14
+2020-11-18 03:42:08,942 :: INFO :: Epoch 13: Estimated average training-set loss: 0.050382718443870544. Weights dumped.
+2020-11-18 03:42:11,625 :: INFO :: Epoch 13: Estimaged average holdout-set loss: 0.051886186003685
+2020-11-18 04:24:33,209 :: INFO :: Starting epoch 15
+2020-11-18 04:24:35,908 :: INFO :: Epoch 14: Estimated average training-set loss: 0.04868919402360916. Weights dumped.
+2020-11-18 04:24:38,604 :: INFO :: Epoch 14: Estimaged average holdout-set loss: 0.05225086957216263
+2020-11-18 05:07:12,648 :: INFO :: Starting epoch 16
+2020-11-18 05:07:15,331 :: INFO :: Epoch 15: Estimated average training-set loss: 0.04876505956053734. Weights dumped.
+2020-11-18 05:07:18,009 :: INFO :: Epoch 15: Estimaged average holdout-set loss: 0.049665775150060654
+2020-11-18 05:49:46,813 :: INFO :: Starting epoch 17
+2020-11-18 05:49:49,502 :: INFO :: Epoch 16: Estimated average training-set loss: 0.04669056460261345. Weights dumped.
+2020-11-18 05:49:52,191 :: INFO :: Epoch 16: Estimaged average holdout-set loss: 0.04949547350406647
+2020-11-18 06:32:24,949 :: INFO :: Starting epoch 18
+2020-11-18 06:32:27,635 :: INFO :: Epoch 17: Estimated average training-set loss: 0.04871850460767746. Weights dumped.
+2020-11-18 06:32:30,318 :: INFO :: Epoch 17: Estimaged average holdout-set loss: 0.0477135144174099
+2020-11-18 07:14:57,067 :: INFO :: Starting epoch 19
+2020-11-18 07:14:59,740 :: INFO :: Epoch 18: Estimated average training-set loss: 0.049512915313243866. Weights dumped.
+2020-11-18 07:15:02,437 :: INFO :: Epoch 18: Estimaged average holdout-set loss: 0.04996875673532486
+2020-11-18 07:57:20,805 :: INFO :: Starting epoch 20
+2020-11-18 07:57:23,467 :: INFO :: Epoch 19: Estimated average training-set loss: 0.04936516284942627. Weights dumped.
+2020-11-18 07:57:26,136 :: INFO :: Epoch 19: Estimaged average holdout-set loss: 0.04559221863746643
+2020-11-18 08:39:50,057 :: INFO :: Starting epoch 21
+2020-11-18 08:39:52,718 :: INFO :: Epoch 20: Estimated average training-set loss: 0.046079982072114944. Weights dumped.
+2020-11-18 08:39:55,379 :: INFO :: Epoch 20: Estimaged average holdout-set loss: 0.04811211675405502
+2020-11-18 09:22:10,815 :: INFO :: Starting epoch 22
+2020-11-18 09:22:13,484 :: INFO :: Epoch 21: Estimated average training-set loss: 0.04836826026439667. Weights dumped.
+2020-11-18 09:22:16,151 :: INFO :: Epoch 21: Estimaged average holdout-set loss: 0.05292931944131851
+2020-11-18 10:04:46,598 :: INFO :: Starting epoch 23
+2020-11-18 10:04:49,274 :: INFO :: Epoch 22: Estimated average training-set loss: 0.047752100974321365. Weights dumped.
+2020-11-18 10:04:51,933 :: INFO :: Epoch 22: Estimaged average holdout-set loss: 0.04594267159700394
+2020-11-18 10:47:19,529 :: INFO :: Starting epoch 24
+2020-11-18 10:47:22,223 :: INFO :: Epoch 23: Estimated average training-set loss: 0.046668294817209244. Weights dumped.
+2020-11-18 10:47:24,905 :: INFO :: Epoch 23: Estimaged average holdout-set loss: 0.04756272956728935
+2020-11-18 11:29:48,857 :: INFO :: Starting epoch 25
+2020-11-18 11:29:51,526 :: INFO :: Epoch 24: Estimated average training-set loss: 0.04425511136651039. Weights dumped.
+2020-11-18 11:29:54,186 :: INFO :: Epoch 24: Estimaged average holdout-set loss: 0.0466185137629509
+2020-11-18 12:12:20,766 :: INFO :: Starting epoch 26
+2020-11-18 12:12:23,445 :: INFO :: Epoch 25: Estimated average training-set loss: 0.04655860736966133. Weights dumped.
+2020-11-18 12:12:26,130 :: INFO :: Epoch 25: Estimaged average holdout-set loss: 0.048712357878685
+2020-11-18 12:54:55,303 :: INFO :: Starting epoch 27
+2020-11-18 12:54:57,978 :: INFO :: Epoch 26: Estimated average training-set loss: 0.04922156035900116. Weights dumped.
+2020-11-18 12:55:00,667 :: INFO :: Epoch 26: Estimaged average holdout-set loss: 0.04655667394399643
+2020-11-18 13:37:34,626 :: INFO :: Starting epoch 28
+2020-11-18 13:37:37,306 :: INFO :: Epoch 27: Estimated average training-set loss: 0.04666948318481445. Weights dumped.
+2020-11-18 13:37:39,993 :: INFO :: Epoch 27: Estimaged average holdout-set loss: 0.04640394449234009
+2020-11-18 14:20:07,554 :: INFO :: Starting epoch 29
+2020-11-18 14:20:10,192 :: INFO :: Epoch 28: Estimated average training-set loss: 0.0451325885951519. Weights dumped.
+2020-11-18 14:20:12,824 :: INFO :: Epoch 28: Estimaged average holdout-set loss: 0.04978399723768234
+2020-11-18 15:02:44,601 :: INFO :: Starting epoch 30
+2020-11-18 15:02:47,292 :: INFO :: Epoch 29: Estimated average training-set loss: 0.04232141748070717. Weights dumped.
+2020-11-18 15:02:49,978 :: INFO :: Epoch 29: Estimaged average holdout-set loss: 0.046406202018260956
+2020-11-18 15:45:19,852 :: INFO :: Starting epoch 31
+2020-11-18 15:45:22,554 :: INFO :: Epoch 30: Estimated average training-set loss: 0.045145053416490555. Weights dumped.
+2020-11-18 15:45:25,260 :: INFO :: Epoch 30: Estimaged average holdout-set loss: 0.04626445472240448
+2020-11-18 16:28:04,648 :: INFO :: Starting epoch 32
+2020-11-18 16:28:07,403 :: INFO :: Epoch 31: Estimated average training-set loss: 0.04532371088862419. Weights dumped.
+2020-11-18 16:28:10,113 :: INFO :: Epoch 31: Estimaged average holdout-set loss: 0.04489116743206978
+2020-11-18 17:10:52,976 :: INFO :: Starting epoch 33
+2020-11-18 17:10:55,655 :: INFO :: Epoch 32: Estimated average training-set loss: 0.0478401854634285. Weights dumped.
+2020-11-18 17:10:58,349 :: INFO :: Epoch 32: Estimaged average holdout-set loss: 0.04775175824761391
+2020-11-18 17:53:39,348 :: INFO :: Starting epoch 34
+2020-11-18 17:53:42,051 :: INFO :: Epoch 33: Estimated average training-set loss: 0.04284181445837021. Weights dumped.
+2020-11-18 17:53:44,732 :: INFO :: Epoch 33: Estimaged average holdout-set loss: 0.04777473211288452
+2020-11-18 18:36:38,806 :: INFO :: Starting epoch 35
+2020-11-18 18:36:41,492 :: INFO :: Epoch 34: Estimated average training-set loss: 0.04302196204662323. Weights dumped.
+2020-11-18 18:36:44,159 :: INFO :: Epoch 34: Estimaged average holdout-set loss: 0.042382270097732544
+2020-11-18 19:19:02,088 :: INFO :: Starting epoch 36
+2020-11-18 19:19:04,753 :: INFO :: Epoch 35: Estimated average training-set loss: 0.04446319118142128. Weights dumped.
+2020-11-18 19:19:07,400 :: INFO :: Epoch 35: Estimaged average holdout-set loss: 0.044284846633672714
+2020-11-18 20:01:20,397 :: INFO :: Starting epoch 37
+2020-11-18 20:01:23,065 :: INFO :: Epoch 36: Estimated average training-set loss: 0.042574524879455566. Weights dumped.
+2020-11-18 20:01:25,723 :: INFO :: Epoch 36: Estimaged average holdout-set loss: 0.04647258296608925
+2020-11-18 20:43:36,213 :: INFO :: Starting epoch 38
+2020-11-18 20:43:38,870 :: INFO :: Epoch 37: Estimated average training-set loss: 0.04186202958226204. Weights dumped.
+2020-11-18 20:43:41,524 :: INFO :: Epoch 37: Estimaged average holdout-set loss: 0.04752472788095474
+2020-11-18 21:25:53,646 :: INFO :: Starting epoch 39
+2020-11-18 21:25:56,288 :: INFO :: Epoch 38: Estimated average training-set loss: 0.04563542455434799. Weights dumped.
+2020-11-18 21:25:58,928 :: INFO :: Epoch 38: Estimaged average holdout-set loss: 0.04365573823451996
+2020-11-18 22:08:11,354 :: INFO :: Starting epoch 40
+2020-11-18 22:08:14,032 :: INFO :: Epoch 39: Estimated average training-set loss: 0.04232574254274368. Weights dumped.
+2020-11-18 22:08:16,688 :: INFO :: Epoch 39: Estimaged average holdout-set loss: 0.04518336430191994
+2020-11-18 22:50:29,631 :: INFO :: Starting epoch 41
+2020-11-18 22:50:32,274 :: INFO :: Epoch 40: Estimated average training-set loss: 0.04208254814147949. Weights dumped.
+2020-11-18 22:50:34,924 :: INFO :: Epoch 40: Estimaged average holdout-set loss: 0.044170789420604706
+2020-11-18 23:32:47,616 :: INFO :: Starting epoch 42
+2020-11-18 23:32:50,258 :: INFO :: Epoch 41: Estimated average training-set loss: 0.042290233075618744. Weights dumped.
+2020-11-18 23:32:52,896 :: INFO :: Epoch 41: Estimaged average holdout-set loss: 0.04531504958868027
+2020-11-19 00:15:05,970 :: INFO :: Starting epoch 43
+2020-11-19 00:15:08,620 :: INFO :: Epoch 42: Estimated average training-set loss: 0.04317934066057205. Weights dumped.
+2020-11-19 00:15:11,260 :: INFO :: Epoch 42: Estimaged average holdout-set loss: 0.04439487308263779
+2020-11-19 00:57:23,866 :: INFO :: Starting epoch 44
+2020-11-19 00:57:26,507 :: INFO :: Epoch 43: Estimated average training-set loss: 0.040081851184368134. Weights dumped.
+2020-11-19 00:57:29,138 :: INFO :: Epoch 43: Estimaged average holdout-set loss: 0.04330650344491005
+2020-11-19 01:39:38,965 :: INFO :: Starting epoch 45
+2020-11-19 01:39:41,625 :: INFO :: Epoch 44: Estimated average training-set loss: 0.04339969903230667. Weights dumped.
+2020-11-19 01:39:44,260 :: INFO :: Epoch 44: Estimaged average holdout-set loss: 0.041341815143823624
+2020-11-19 02:21:53,099 :: INFO :: Starting epoch 46
+2020-11-19 02:21:55,746 :: INFO :: Epoch 45: Estimated average training-set loss: 0.04305119067430496. Weights dumped.
+2020-11-19 02:21:58,371 :: INFO :: Epoch 45: Estimaged average holdout-set loss: 0.04489808529615402
+2020-11-19 03:04:10,869 :: INFO :: Starting epoch 47
+2020-11-19 03:04:13,535 :: INFO :: Epoch 46: Estimated average training-set loss: 0.0400141142308712. Weights dumped.
+2020-11-19 03:04:16,191 :: INFO :: Epoch 46: Estimaged average holdout-set loss: 0.04211323335766792
+2020-11-19 03:46:27,676 :: INFO :: Starting epoch 48
+2020-11-19 03:46:30,332 :: INFO :: Epoch 47: Estimated average training-set loss: 0.04116902872920036. Weights dumped.
+2020-11-19 03:46:32,999 :: INFO :: Epoch 47: Estimaged average holdout-set loss: 0.04424530267715454
+2020-11-19 04:28:45,553 :: INFO :: Starting epoch 49
+2020-11-19 04:28:48,223 :: INFO :: Epoch 48: Estimated average training-set loss: 0.04316136986017227. Weights dumped.
+2020-11-19 04:28:50,884 :: INFO :: Epoch 48: Estimaged average holdout-set loss: 0.04493296891450882
+2020-11-19 05:11:02,973 :: INFO :: Starting epoch 50
+2020-11-19 05:11:05,619 :: INFO :: Epoch 49: Estimated average training-set loss: 0.0429362952709198. Weights dumped.
+2020-11-19 05:11:08,268 :: INFO :: Epoch 49: Estimaged average holdout-set loss: 0.04422052577137947
+2020-11-19 05:53:31,038 :: INFO :: Starting epoch 51
+2020-11-19 05:53:33,704 :: INFO :: Epoch 50: Estimated average training-set loss: 0.04251441732048988. Weights dumped.
+2020-11-19 05:53:36,368 :: INFO :: Epoch 50: Estimaged average holdout-set loss: 0.043763384222984314
+2020-11-19 06:35:58,731 :: INFO :: Starting epoch 52
+2020-11-19 06:36:01,390 :: INFO :: Epoch 51: Estimated average training-set loss: 0.044853031635284424. Weights dumped.
+2020-11-19 06:36:04,039 :: INFO :: Epoch 51: Estimaged average holdout-set loss: 0.04069855809211731
+2020-11-19 07:18:21,002 :: INFO :: Starting epoch 53
+2020-11-19 07:18:23,678 :: INFO :: Epoch 52: Estimated average training-set loss: 0.042457215487957. Weights dumped.
+2020-11-19 07:18:26,354 :: INFO :: Epoch 52: Estimaged average holdout-set loss: 0.04468315839767456
+2020-11-19 08:00:51,895 :: INFO :: Starting epoch 54
+2020-11-19 08:00:54,559 :: INFO :: Epoch 53: Estimated average training-set loss: 0.03587658330798149. Weights dumped.
+2020-11-19 08:00:57,249 :: INFO :: Epoch 53: Estimaged average holdout-set loss: 0.04491502046585083
+2020-11-19 08:43:36,841 :: INFO :: Starting epoch 55
+2020-11-19 08:43:39,500 :: INFO :: Epoch 54: Estimated average training-set loss: 0.04167872294783592. Weights dumped.
+2020-11-19 08:43:42,170 :: INFO :: Epoch 54: Estimaged average holdout-set loss: 0.044503092765808105
+2020-11-19 09:26:10,905 :: INFO :: Starting epoch 56
+2020-11-19 09:26:13,577 :: INFO :: Epoch 55: Estimated average training-set loss: 0.04238077998161316. Weights dumped.
+2020-11-19 09:26:16,260 :: INFO :: Epoch 55: Estimaged average holdout-set loss: 0.04552188515663147
+2020-11-19 10:08:56,481 :: INFO :: Starting epoch 57
+2020-11-19 10:08:59,195 :: INFO :: Epoch 56: Estimated average training-set loss: 0.04062197357416153. Weights dumped.
+2020-11-19 10:09:01,883 :: INFO :: Epoch 56: Estimaged average holdout-set loss: 0.043802663683891296
+2020-11-19 10:51:39,162 :: INFO :: Starting epoch 58
+2020-11-19 10:51:41,856 :: INFO :: Epoch 57: Estimated average training-set loss: 0.03934586048126221. Weights dumped.
+2020-11-19 10:51:44,517 :: INFO :: Epoch 57: Estimaged average holdout-set loss: 0.04259283095598221
+2020-11-19 11:34:27,493 :: INFO :: Starting epoch 59
+2020-11-19 11:34:30,177 :: INFO :: Epoch 58: Estimated average training-set loss: 0.039225660264492035. Weights dumped.
+2020-11-19 11:34:32,882 :: INFO :: Epoch 58: Estimaged average holdout-set loss: 0.04043113812804222
+2020-11-19 12:17:18,421 :: INFO :: Starting epoch 60
+2020-11-19 12:17:21,107 :: INFO :: Epoch 59: Estimated average training-set loss: 0.04004025086760521. Weights dumped.
+2020-11-19 12:17:23,794 :: INFO :: Epoch 59: Estimaged average holdout-set loss: 0.04081043601036072
+2020-11-19 13:00:09,847 :: INFO :: Starting epoch 61
+2020-11-19 13:00:12,536 :: INFO :: Epoch 60: Estimated average training-set loss: 0.03765888139605522. Weights dumped.
+2020-11-19 13:00:15,231 :: INFO :: Epoch 60: Estimaged average holdout-set loss: 0.039951831102371216
+2020-11-19 13:42:56,998 :: INFO :: Starting epoch 62
+2020-11-19 13:42:59,683 :: INFO :: Epoch 61: Estimated average training-set loss: 0.03998907655477524. Weights dumped.
+2020-11-19 13:43:02,375 :: INFO :: Epoch 61: Estimaged average holdout-set loss: 0.04114263877272606
+2020-11-19 14:25:41,885 :: INFO :: Starting epoch 63
+2020-11-19 14:25:44,566 :: INFO :: Epoch 62: Estimated average training-set loss: 0.03916923701763153. Weights dumped.
+2020-11-19 14:25:47,256 :: INFO :: Epoch 62: Estimaged average holdout-set loss: 0.0391576886177063
+2020-11-19 15:08:18,633 :: INFO :: Starting epoch 64
+2020-11-19 15:08:21,312 :: INFO :: Epoch 63: Estimated average training-set loss: 0.04219622164964676. Weights dumped.
+2020-11-19 15:08:23,978 :: INFO :: Epoch 63: Estimaged average holdout-set loss: 0.038608428090810776
+2020-11-19 15:51:00,146 :: INFO :: Starting epoch 65
+2020-11-19 15:51:02,829 :: INFO :: Epoch 64: Estimated average training-set loss: 0.03633129224181175. Weights dumped.
+2020-11-19 15:51:05,522 :: INFO :: Epoch 64: Estimaged average holdout-set loss: 0.04042268171906471
+2020-11-19 16:33:35,221 :: INFO :: Starting epoch 66
+2020-11-19 16:33:37,889 :: INFO :: Epoch 65: Estimated average training-set loss: 0.039493925869464874. Weights dumped.
+2020-11-19 16:33:40,564 :: INFO :: Epoch 65: Estimaged average holdout-set loss: 0.04318574070930481
+2020-11-19 17:16:13,811 :: INFO :: Starting epoch 67
+2020-11-19 17:16:16,495 :: INFO :: Epoch 66: Estimated average training-set loss: 0.04056781902909279. Weights dumped.
+2020-11-19 17:16:19,201 :: INFO :: Epoch 66: Estimaged average holdout-set loss: 0.041447658091783524
+2020-11-19 17:58:48,270 :: INFO :: Starting epoch 68
+2020-11-19 17:58:50,954 :: INFO :: Epoch 67: Estimated average training-set loss: 0.03737742081284523. Weights dumped.
+2020-11-19 17:58:53,631 :: INFO :: Epoch 67: Estimaged average holdout-set loss: 0.04272294417023659
+2020-11-19 18:41:25,384 :: INFO :: Starting epoch 69
+2020-11-19 18:41:28,055 :: INFO :: Epoch 68: Estimated average training-set loss: 0.03538111597299576. Weights dumped.
+2020-11-19 18:41:30,734 :: INFO :: Epoch 68: Estimaged average holdout-set loss: 0.041066259145736694
+2020-11-19 19:24:00,477 :: INFO :: Starting epoch 70
+2020-11-19 19:24:03,152 :: INFO :: Epoch 69: Estimated average training-set loss: 0.03509504720568657. Weights dumped.
+2020-11-19 19:24:05,839 :: INFO :: Epoch 69: Estimaged average holdout-set loss: 0.04028772935271263
+2020-11-19 20:06:31,481 :: INFO :: Starting epoch 71
+2020-11-19 20:06:34,151 :: INFO :: Epoch 70: Estimated average training-set loss: 0.038984715938568115. Weights dumped.
+2020-11-19 20:06:36,828 :: INFO :: Epoch 70: Estimaged average holdout-set loss: 0.04145394638180733
+2020-11-19 20:49:06,980 :: INFO :: Starting epoch 72
+2020-11-19 20:49:09,657 :: INFO :: Epoch 71: Estimated average training-set loss: 0.03728275001049042. Weights dumped.
+2020-11-19 20:49:12,316 :: INFO :: Epoch 71: Estimaged average holdout-set loss: 0.04271974042057991
+2020-11-19 21:31:50,173 :: INFO :: Starting epoch 73
+2020-11-19 21:31:52,854 :: INFO :: Epoch 72: Estimated average training-set loss: 0.04082266241312027. Weights dumped.
+2020-11-19 21:31:55,517 :: INFO :: Epoch 72: Estimaged average holdout-set loss: 0.04050222784280777
+2020-11-19 22:14:38,570 :: INFO :: Starting epoch 74
+2020-11-19 22:14:41,259 :: INFO :: Epoch 73: Estimated average training-set loss: 0.034220919013023376. Weights dumped.
+2020-11-19 22:14:43,924 :: INFO :: Epoch 73: Estimaged average holdout-set loss: 0.0370103158056736
+2020-11-19 22:57:23,999 :: INFO :: Starting epoch 75
+2020-11-19 22:57:26,705 :: INFO :: Epoch 74: Estimated average training-set loss: 0.03561737388372421. Weights dumped.
+2020-11-19 22:57:29,393 :: INFO :: Epoch 74: Estimaged average holdout-set loss: 0.038966722786426544
+2020-11-19 23:40:09,437 :: INFO :: Starting epoch 76
+2020-11-19 23:40:12,138 :: INFO :: Epoch 75: Estimated average training-set loss: 0.03914451226592064. Weights dumped.
+2020-11-19 23:40:14,846 :: INFO :: Epoch 75: Estimaged average holdout-set loss: 0.041153986006975174
+2020-11-20 00:22:56,067 :: INFO :: Starting epoch 77
+2020-11-20 00:22:58,798 :: INFO :: Epoch 76: Estimated average training-set loss: 0.03482316434383392. Weights dumped.
+2020-11-20 00:23:01,491 :: INFO :: Epoch 76: Estimaged average holdout-set loss: 0.03933500498533249
+2020-11-20 01:05:47,439 :: INFO :: Starting epoch 78
+2020-11-20 01:05:50,132 :: INFO :: Epoch 77: Estimated average training-set loss: 0.03774942457675934. Weights dumped.
+2020-11-20 01:05:52,826 :: INFO :: Epoch 77: Estimaged average holdout-set loss: 0.03830135241150856
+2020-11-20 01:48:34,932 :: INFO :: Starting epoch 79
+2020-11-20 01:48:37,624 :: INFO :: Epoch 78: Estimated average training-set loss: 0.037571363151073456. Weights dumped.
+2020-11-20 01:48:40,322 :: INFO :: Epoch 78: Estimaged average holdout-set loss: 0.03722263500094414
+2020-11-20 02:31:19,237 :: INFO :: Starting epoch 80
+2020-11-20 02:31:21,914 :: INFO :: Epoch 79: Estimated average training-set loss: 0.033511120826005936. Weights dumped.
+2020-11-20 02:31:24,594 :: INFO :: Epoch 79: Estimaged average holdout-set loss: 0.04201558977365494
+2020-11-20 03:14:05,331 :: INFO :: Starting epoch 81
+2020-11-20 03:14:08,018 :: INFO :: Epoch 80: Estimated average training-set loss: 0.03493236377835274. Weights dumped.
+2020-11-20 03:14:10,711 :: INFO :: Epoch 80: Estimaged average holdout-set loss: 0.03829792141914368
+2020-11-20 03:56:53,394 :: INFO :: Starting epoch 82
+2020-11-20 03:56:56,090 :: INFO :: Epoch 81: Estimated average training-set loss: 0.039241597056388855. Weights dumped.
+2020-11-20 03:56:58,781 :: INFO :: Epoch 81: Estimaged average holdout-set loss: 0.037292663007974625
+2020-11-20 04:39:37,803 :: INFO :: Starting epoch 83
+2020-11-20 04:39:40,500 :: INFO :: Epoch 82: Estimated average training-set loss: 0.036420680582523346. Weights dumped.
+2020-11-20 04:39:43,205 :: INFO :: Epoch 82: Estimaged average holdout-set loss: 0.03838624060153961
+2020-11-20 05:22:25,757 :: INFO :: Starting epoch 84
+2020-11-20 05:22:28,427 :: INFO :: Epoch 83: Estimated average training-set loss: 0.03691014647483826. Weights dumped.
+2020-11-20 05:22:31,106 :: INFO :: Epoch 83: Estimaged average holdout-set loss: 0.03768649697303772
+2020-11-20 06:05:12,338 :: INFO :: Starting epoch 85
+2020-11-20 06:05:15,055 :: INFO :: Epoch 84: Estimated average training-set loss: 0.03469657525420189. Weights dumped.
+2020-11-20 06:05:17,730 :: INFO :: Epoch 84: Estimaged average holdout-set loss: 0.04115195944905281
+2020-11-20 06:47:59,977 :: INFO :: Starting epoch 86
+2020-11-20 06:48:02,673 :: INFO :: Epoch 85: Estimated average training-set loss: 0.037896960973739624. Weights dumped.
+2020-11-20 06:48:05,367 :: INFO :: Epoch 85: Estimaged average holdout-set loss: 0.041238933801651
+2020-11-20 07:30:48,833 :: INFO :: Starting epoch 87
+2020-11-20 07:30:51,537 :: INFO :: Epoch 86: Estimated average training-set loss: 0.0382772758603096. Weights dumped.
+2020-11-20 07:30:54,222 :: INFO :: Epoch 86: Estimaged average holdout-set loss: 0.040701188147068024
+2020-11-20 08:13:41,710 :: INFO :: Starting epoch 88
+2020-11-20 08:13:44,408 :: INFO :: Epoch 87: Estimated average training-set loss: 0.03377923369407654. Weights dumped.
+2020-11-20 08:13:47,111 :: INFO :: Epoch 87: Estimaged average holdout-set loss: 0.04001593589782715
+2020-11-20 08:56:36,968 :: INFO :: Starting epoch 89
+2020-11-20 08:56:39,665 :: INFO :: Epoch 88: Estimated average training-set loss: 0.03567122295498848. Weights dumped.
+2020-11-20 08:56:42,365 :: INFO :: Epoch 88: Estimaged average holdout-set loss: 0.04082672670483589
+2020-11-20 09:39:33,433 :: INFO :: Starting epoch 90
+2020-11-20 09:39:36,137 :: INFO :: Epoch 89: Estimated average training-set loss: 0.036096327006816864. Weights dumped.
+2020-11-20 09:39:38,841 :: INFO :: Epoch 89: Estimaged average holdout-set loss: 0.039007510989904404
+2020-11-20 10:22:30,283 :: INFO :: Starting epoch 91
+2020-11-20 10:22:32,972 :: INFO :: Epoch 90: Estimated average training-set loss: 0.03554299473762512. Weights dumped.
+2020-11-20 10:22:35,672 :: INFO :: Epoch 90: Estimaged average holdout-set loss: 0.03656638786196709
+2020-11-20 11:05:24,935 :: INFO :: Starting epoch 92
+2020-11-20 11:05:27,627 :: INFO :: Epoch 91: Estimated average training-set loss: 0.037092939019203186. Weights dumped.
+2020-11-20 11:05:30,343 :: INFO :: Epoch 91: Estimaged average holdout-set loss: 0.043035730719566345
+2020-11-20 11:48:11,364 :: INFO :: Starting epoch 93
+2020-11-20 11:48:14,045 :: INFO :: Epoch 92: Estimated average training-set loss: 0.03863264620304108. Weights dumped.
+2020-11-20 11:48:16,744 :: INFO :: Epoch 92: Estimaged average holdout-set loss: 0.04111041873693466
+2020-11-20 12:30:59,913 :: INFO :: Starting epoch 94
+2020-11-20 12:31:02,612 :: INFO :: Epoch 93: Estimated average training-set loss: 0.03495065122842789. Weights dumped.
+2020-11-20 12:31:05,308 :: INFO :: Epoch 93: Estimaged average holdout-set loss: 0.03816996514797211
+2020-11-20 13:13:43,606 :: INFO :: Starting epoch 95
+2020-11-20 13:13:46,283 :: INFO :: Epoch 94: Estimated average training-set loss: 0.036306969821453094. Weights dumped.
+2020-11-20 13:13:48,975 :: INFO :: Epoch 94: Estimaged average holdout-set loss: 0.04096224159002304
+2020-11-20 13:56:26,290 :: INFO :: Starting epoch 96
+2020-11-20 13:56:28,993 :: INFO :: Epoch 95: Estimated average training-set loss: 0.035909172147512436. Weights dumped.
+2020-11-20 13:56:31,687 :: INFO :: Epoch 95: Estimaged average holdout-set loss: 0.038871534168720245
+2020-11-20 14:39:08,989 :: INFO :: Starting epoch 97
+2020-11-20 14:39:11,668 :: INFO :: Epoch 96: Estimated average training-set loss: 0.0363733172416687. Weights dumped.
+2020-11-20 14:39:14,353 :: INFO :: Epoch 96: Estimaged average holdout-set loss: 0.03842625394463539
+2020-11-20 15:21:50,584 :: INFO :: Starting epoch 98
+2020-11-20 15:21:53,269 :: INFO :: Epoch 97: Estimated average training-set loss: 0.03998396545648575. Weights dumped.
+2020-11-20 15:21:55,958 :: INFO :: Epoch 97: Estimaged average holdout-set loss: 0.03999931737780571
+2020-11-20 16:04:33,592 :: INFO :: Starting epoch 99
+2020-11-20 16:04:36,277 :: INFO :: Epoch 98: Estimated average training-set loss: 0.036763597279787064. Weights dumped.
+2020-11-20 16:04:38,968 :: INFO :: Epoch 98: Estimaged average holdout-set loss: 0.03904129937291145
+2020-11-20 16:47:18,262 :: INFO :: Starting epoch 100
+2020-11-20 16:47:20,923 :: INFO :: Epoch 99: Estimated average training-set loss: 0.031796686351299286. Weights dumped.
+2020-11-20 16:47:23,587 :: INFO :: Epoch 99: Estimaged average holdout-set loss: 0.03926367685198784

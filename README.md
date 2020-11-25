@@ -136,11 +136,11 @@ data/dummy.test.tab
 
 ## Evotuning
 
-The steps to acquire 99327 example FBPase sequences and perform evotuning are described in `furee.sh`. The evotuning held out 4967 sequences for validation. The loss reported by the JAX-UniRep evotuning function for the training and validation sequences was plotted for a 200 epochs long training session with learning rate 1e-5 and batch size 128. As no overfitting occurred, the final iteration weights were accepted for future use.
+The steps to acquire 99,327 example FBPase sequences and perform evotuning are described in `furee.sh`. The evotuning held out 4,967 sequences for validation. The loss reported by the JAX-UniRep evotuning function for the training and validation sequences was plotted for 100 epochs of training with learning rate 1e-5 and batch size 128. The final iteration weights were accepted for future use since overfitting was not evident.
 
 ![alt text](data/evotuning_loss.png "Loss for training and validation sequences during evotuning")
 
-Splitting the set of ancestral and contemporary sequences into 63 training sequences and 62 testing sequences allowed development of a Ridge regression sparse refit (SR) top model. The top model showed test RMSE ≈ 0.0339 using original UniRep mLSTM parameters and test RMSE ≈ 0.0263 using evotuned parameters (100 epochs, ~99k FBPase sequences).
+Splitting the set of ancestral and contemporary sequences into 63 training sequences and 62 testing sequences allowed development of a Ridge regression sparse refit (SR) top model. The top model showed test RMSE ≈ 0.0339 using original UniRep mLSTM parameters and test RMSE ≈ 0.0263 using evotuned parameters.
 
 ![alt text](data/top_model_evaluation.png "Evaluation of top model using 125 FBPase sequences")
 

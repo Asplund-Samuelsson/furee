@@ -4,7 +4,7 @@ shuf data/dummy.sequence_height.tab | tee \
 > /dev/null
 
 # Train top model with evotuned and original UniRep parameters
-source/train_top_model.py -p results/evotuned/fbpase/iter_final \
+source/train_top_model.py -p data/parameters/iter_final \
 data/dummy.train.tab intermediate/dummy.top_model.pkl
 
 source/train_top_model.py \
@@ -15,11 +15,11 @@ cut -f 1 data/dummy.test.tab > intermediate/dummy.test.txt
 cut -f 1 data/dummy.train.tab > intermediate/dummy.train.txt
 
 # Make predictions with evotuned and original UniRep parameters
-source/top_model_prediction.py -p results/evotuned/fbpase/iter_final \
+source/top_model_prediction.py -p data/parameters/iter_final \
 intermediate/dummy.test.txt intermediate/dummy.top_model.pkl \
 intermediate/dummy.test.predictions.tab
 
-source/top_model_prediction.py -p results/evotuned/fbpase/iter_final \
+source/top_model_prediction.py -p data/parameters/iter_final \
 intermediate/dummy.train.txt intermediate/dummy.top_model.pkl \
 intermediate/dummy.train.predictions.tab
 

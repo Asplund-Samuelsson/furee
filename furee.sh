@@ -196,7 +196,7 @@ mkdir results/evotuned
 screen # Use "screen" to be able to disconnect
 
 source/evotune.py \
-  --epochs 200 \
+  --epochs 100 \
   --validation 0.05 \
   --step 1e-5 \
   --batch 128 \
