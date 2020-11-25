@@ -9,7 +9,7 @@ taxonomy_file = "results/train.filtered.taxonomy.tab"
 seqidseq_file = "intermediate/train.seqid_seq.tab"
 unireps_file = "intermediate/validation_reps.unirep.tab.gz"
 evoreps_file = "intermediate/validation_reps.evotuned.tab.gz"
-valseqs_file = "results/evotuned/fbpase/validation_sequences.txt"
+valseqs_file = "data/validation_sequences.txt"
 
 # Load data
 colours = scan(colour_file, character())
