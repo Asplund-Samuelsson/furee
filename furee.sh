@@ -215,13 +215,19 @@ mv evotuning.log validation_sequences.txt data/
 
 # Inspect the loss curves
 source/inspect_loss.R
+# Makes plot "data/evotuning_loss.png"
 
 # Store final iteration parameters if accepted
 rsync -maP results/evotuned/fbpase/iter_final data/parameters
 
 # Evaluate top model on evotuned and original parameters
 bash source/evaluate_top_model.sh
+# Makes plot "data/top_model_evaluation.png"
 
 # Perform PHATE evaluation of original and evotuned parameters
 bash source/phate_evaluation.sh
 # Makes PHATE visualization "data/phate_evaluation.png"
+
+# Evolve heights and investigate performance
+bash source/evolve_heights.sh
+# Makes plot "data/evolution_evaluation.png"
