@@ -118,13 +118,13 @@ R ≥ 3.6.3 (Tested with 3.6.3)
 
 GNU parallel 20161222 (Tested with 20161222)
 
-seqmagick 0.6.2 (Tested with 0.6.2)
-
 hmmer 3.1b2 (Tested with 3.1b2)
 
-Python libraries: ...
+fasttreeMP 2.1.11 (Tested with 2.1.11)
 
-R libraries: ...
+Python libraries: BioPython, Levenshtein, jax-unirep, numpy, pandas, scipy, sklearn
+
+R libraries: tidyverse, phateR, phytools, ggtree, egg
 
 <a name="installation"></a>
 ## Installation
