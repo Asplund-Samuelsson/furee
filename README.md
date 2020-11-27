@@ -4,10 +4,108 @@
 
 Engineering of the Calvin cycle enzyme fructose-1,6-bisphosphatase/sedoheptulose-1,7-bisphosphatase (FBPase/SBPase) through [UniRep](https://github.com/churchlab/UniRep) machine learning and _in silico_ evolution.
 
-## Quickstart
+### Contents
 
-Instructions on how to fit a top model and perform _in silico_ evolution should go here.
+**1. [Usage](#usage)**
 
+**2. [System requirements](#requirements)**
+
+**3. [Installation](#installation)**
+
+**4. [Data](#data)**
+
+**5. [Evotuning](#evotuning)**
+
+**6. [Author](#author)**
+
+<a name="usage"></a>
+## Usage
+
+This guide describes how to fit a top model and perform _in silico_ evolution using FUREE.
+
+### Fitting a top model
+
+To fit a top model, it is necessary to provide sequences and associated values that are to be improved through directed evolution. Sequences and values should be saved in a tab-delimited format as in _e.g._ `data/dummy.train.tab` (here we look only at the last 60 characters of each line to save space):
+
+```
+head -5 data/dummy.train.tab | rev | cut -c 1-60 | rev
+```
+
+```
+CGITPGTLMQGVQFFHNGARTQSLVISSQSRTARFVDTIHMFDKLEYVQLR	0.161198
+CGITPGTLMEGVRFFHGGARTQSLVISSQSKTARFVDTVHMTDQPKTIQLK	0.078044
+CGITPGTLMEGVRFFHGGARTQSLVISSQSKTARFVDTIHMFDQPKSIQLR	0.017744
+CGITPGSLMEGVRFFGGGARTQSLVISNQSQTARFVDTIHLFDNVKSLQLR	0.173089
+CGITPGTLMEGVRFFKGGARTQSLVISSQSQTARFVDTIHMFEEPKVLQLR	0.246331
+```
+
+To fit the Ridge Regression Sparse Refit top model using evotuned FBPase-specific UniRep parameters for the underlying representations, use the following command:
+
+```
+source/train_top_model.py -p data/parameters/iter_final \
+data/dummy.train.tab intermediate/dummy.top_model.pkl
+```
+
+_NOTE: Using too many input sequences may exhaust the available memory!_
+
+For additional options, refer to the help:
+
+```
+source/train_top_model.py --help
+```
+
+### Making predictions with the top model
+
+Predictions can be made on sequences in a file with one sequence per line (`data/Syn6803_P73922_FBPase.txt` has only one line, but more are allowed):
+
+```
+cat data/Syn6803_P73922_FBPase.txt | cut -c 1-80
+```
+
+```
+MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRERMNKIHMRGRIVIGEGERDDAPMLYIGEEVGICTREDA
+```
+
+To make predictions using an already fitted top model, use the following command:
+
+```
+source/top_model_prediction.py -p data/parameters/iter_final \
+data/Syn6803_P73922_FBPase.txt intermediate/dummy.top_model.pkl \
+results/Syn6803_P73922_FBPase.prediction.tab
+```
+
+_NOTE: Using too many input sequences may exhaust the available memory!_
+
+The prediction for `data/Syn6803_P73922_FBPase.txt` is in `results/Syn6803_P73922_FBPase.prediction.tab` and should be `0.20583862000895214`.
+
+For additional options, refer to the help:
+
+```
+source/top_model_prediction.py --help
+```
+
+### Performing _in silico_ evolution
+
+The _in silico_ evolution is carried out using a set of evotuned parameters, a top model, and one starting sequence:
+
+```
+source/in_silico_evolution.py -s 50 -t 15 -p data/parameters/iter_final \
+data/Syn6803_P73922_FBPase.txt \
+intermediate/dummy.top_model.pkl \
+results/Syn6803_P73922_FBPase.evolved.tab
+```
+
+_NOTE: Using too many steps may exhaust the available memory!_
+
+The output `results/Syn6803_P73922_FBPase.evolved.tab` contains evolved sequences (column `sequences`), predicted values for each sequence (`scores`), status of acceptance for the next iteration in the evolution algorithm (`accept`), and the step (`step`).
+
+For additional options, refer to the help:
+
+```
+source/in_silico_evolution.py --help
+```
+
+<a name="requirements"></a>
 ## System requirements
 
 Linux operating system (Tested on Ubuntu 18.04.5 LTS and 20.04.1 LTS)
@@ -28,6 +126,7 @@ Python libraries: ...
 
 R libraries: ...
 
+<a name="installation"></a>
 ## Installation
 
 ### This repository
@@ -83,6 +182,7 @@ rm taxdump.tar.gz # Optional cleanup
 cd ../../..
 ```
 
+<a name="data"></a>
 ## Data
 
 ### Jackhmmer reference sequences
@@ -134,6 +234,7 @@ data/dummy.train.tab
 data/dummy.test.tab
 ```
 
+<a name="evotuning"></a>
 ## Evotuning
 
 The steps to acquire example FBPase sequences and perform evotuning are described in `furee.sh`.
@@ -174,5 +275,6 @@ Representations were obtained for five FBPase sequences using original and evotu
 
 ![alt text](data/representation_photos.png "A few FBPases viewed through the UniRep lens")
 
+<a name="author"></a>
 ## Author
 Johannes Asplund-Samuelsson, KTH (johannes.asplund.samuelsson@scilifelab.se)
