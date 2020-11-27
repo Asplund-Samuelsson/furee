@@ -231,3 +231,19 @@ bash source/phate_evaluation.sh
 # Evolve heights and investigate performance
 bash source/evolve_heights.sh
 # Makes plot "data/evolution_evaluation.png"
+
+# Get representations for example FBPases
+cat data/*_FBPase.fasta | cut -f 1 -d \  | sed -e '/^>/ s/$/\t/' | tr -d "\n" \
+| tr ">" "\n" | grep -v "^$" > intermediate/example_fbpase.seqid_seq.tab
+
+cut -f 2 intermediate/example_fbpase.seqid_seq.tab \
+> intermediate/example_fbpase.txt
+
+source/get_representations.py -p data/parameters/iter_final \
+intermediate/example_fbpase.txt intermediate/example_fbpase_evoreps.tab
+
+source/get_representations.py \
+intermediate/example_fbpase.txt intermediate/example_fbpase_unireps.tab
+
+# Visualize represenations of example FBPases
+source/visualize_representations.R
