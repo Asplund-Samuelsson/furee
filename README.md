@@ -168,5 +168,11 @@ The _Synechocystis_ sp. PCC 6803 FBPase sequence was subjected to _in silico_ ev
 
 ![alt text](data/evolution_evaluation.png "Evaluation of evotuned in silico FBPase evolution")
 
+### Visualization of example FBPase representations
+
+Representations were obtained for five FBPase sequences using original and evotuned UniRep parameters. The sequences are _Oligotropha carboxidovorans_ OM5 [_cbbF_](https://www.kegg.jp/dbget-bin/www_bget?ocg:OCA5_pHCG300410) and [_glpX_](https://www.kegg.jp/dbget-bin/www_bget?ocg:OCA5_c20090), _Ralstonia eutropha_ H16 [_cbbF2_](https://www.kegg.jp/dbget-bin/www_bget?reh:H16_B1390) and [_fbp_](https://www.kegg.jp/dbget-bin/www_bget?reh:H16_A0999), and _Synechocystis_ sp. PCC 6803 FBPase. The 1,900 representation values were ordered and plotted so that large standard deviations were located to the center of one 38 by 50 pixel image per sequence.
+
+![alt text](data/representation_photos.png "A few FBPases viewed through the UniRep lens")
+
 ## Author
 Johannes Asplund-Samuelsson, KTH (johannes.asplund.samuelsson@scilifelab.se)

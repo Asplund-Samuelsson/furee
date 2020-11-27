@@ -50,12 +50,22 @@ reps = reps %>%
 # Create position and order it by average value
 reps = reps %>% mutate(Position = as.integer(str_replace(Feature, "X", "")) - 1)
 
+quadrant = bind_rows(lapply(
+      0:18,
+      function(l){
+        distinct(
+          bind_rows(lapply(0:l, function(o){tibble(X=c(l,l-o), Y=c(l-o,l))}))
+        ) %>% arrange(X+Y)
+      }
+  )) %>%
+  bind_rows(tibble(X = rep(0:18, 25-19), Y = rep(19:24, 19, each=T))) %>%
+  mutate(Order = 0:(1900/4-1))
+
 mean_value = reps %>%
   group_by(Position) %>%
   summarise(SD = sd(Value), Value = mean(Value)) %>%
   mutate(
     Value_order = rank(Value)-1,
-    SD_order = rank(SD)-1,
     Quadrant = case_when(
       (Value_order >= 950) & ((Value_order %% 2) == 0) ~ 1,
       (Value_order >= 950) & ((Value_order %% 2) != 0) ~ 2,
@@ -64,19 +74,26 @@ mean_value = reps %>%
     )
   ) %>%
   group_by(Quadrant) %>%
+  mutate(Order = rank(-SD) - 1) %>%
+  inner_join(quadrant) %>%
   mutate(
-    Order = case_when(
-      Quadrant == 1 ~ (rank(SD_order)-1)%%19+floor((rank(SD_order)-1)/19)*38,
-      Quadrant == 2 ~ (rank(-SD_order)-1)%%19+floor((rank(SD_order)-1)/19)*38+19,
-      Quadrant == 3 ~ (rank(-SD_order)-1)%%19+floor((rank(-SD_order)-1)/19)*38+950,
-      Quadrant == 4 ~ (rank(SD_order)-1)%%19+floor((rank(-SD_order)-1)/19)*38+950+19
+    X = case_when(
+      Quadrant == 1 ~ 18 - X,
+      Quadrant == 2 ~ X + 19,
+      Quadrant == 3 ~ 18 - X,
+      Quadrant == 4 ~ X + 19
+    ),
+    Y = case_when(
+      Quadrant == 1 ~ 24 - Y,
+      Quadrant == 2 ~ 24 - Y,
+      Quadrant == 3 ~ Y + 25,
+      Quadrant == 4 ~ Y + 25
     )
   )
 
+
 # Determine x and y position of feature
-reps = reps %>%
-  inner_join(select(mean_value, Position, Order)) %>%
-  mutate(X = Order %% 38, Y = floor(Order / 38))
+reps = reps %>% inner_join(select(mean_value, Position, X, Y))
 
 # Plot it
 gp = ggplot(reps, aes(x=X, y=Y, fill=Value))
@@ -93,9 +110,10 @@ gp = gp + theme(
 )
 gp = gp + scale_fill_distiller(palette="PuOr")
 gp = gp + coord_equal()
-gp
+gp = gp + scale_y_reverse()
 
 # Save as PNG
-
+ggsave("data/representation_photos.png", gp, w=6.5, h=3.1, dpi=200)
 
 # Save as PDF
+ggsave("results/representation_photos.pdf", gp, w=6.5, h=3.1)

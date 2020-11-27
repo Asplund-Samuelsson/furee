@@ -247,3 +247,4 @@ intermediate/example_fbpase.txt intermediate/example_fbpase_unireps.tab
 
 # Visualize represenations of example FBPases
 source/visualize_representations.R
+# Produces "data/representation_photo.png"
