@@ -20,9 +20,9 @@ while read KO; do
 
   # Get UniProt links from KEGG
   wget -qO - https://www.genome.jp/kegg-bin/uniprot_list?ko=${KO} |
-  grep "www.uniprot.org" | cut -f 2 -d \' | sed -e 's/$/.fasta/' |
-  # Download sequences from UniProt
-  sed -e 's/^/wget -qO - /' | parallel --no-notice --jobs 16
+  grep "www.uniprot.org" | cut -f 2 -d \' | sed -e 's/$/.fasta/'
 
-# Save sequences in OUTFILE
-done > $OUTFILE
+done | sort | uniq |
+
+# Download sequences from UniProt
+sed -e 's/^/wget -qO - /' | parallel --no-notice --jobs 16 > $OUTFILE
