@@ -102,23 +102,17 @@ source/in_silico_evolution.py --help
 <a name="requirements"></a>
 ## System requirements
 
-Linux operating system (Tested on Ubuntu 18.04.5 LTS and 20.04.1 LTS)
+Evotuning was performed on a GCP VM with two vCPUs, 13 GB RAM, and one NVIDIA Tesla T4 GPU with 16 GB VRAM. Other tasks were performed on Linux systems with 16 cores and 128 GB RAM (Ubuntu 18.04.5 LTS) and 12 cores, 32 GB RAM, and an NVIDIA RTX 2070 SUPER GPU with 8 GB VRAM (Ubuntu 20.04.1 LTS).
 
-bash 4.0 (Tested with 4.4.20(1)-release and 5.0.17(1)-release)
-
-Python 3.7 (Tested with 3.7.6 and 3.8.3)
-
-R ≥ 3.6.3 (Tested with 3.6.3)
-
-GNU parallel 20161222 (Tested with 20161222)
-
-hmmer 3.1b2 (Tested with 3.1b2)
-
-fasttreeMP 2.1.11 (Tested with 2.1.11)
-
-Python libraries: BioPython, Levenshtein, jax-unirep, numpy, pandas, scipy, sklearn
-
-R libraries: tidyverse, phateR, phytools, ggtree, egg
+| Software | Version | Tested version | Libraries |
+| -------- | ------- | -------------- | --------- |
+| Linux OS | | Ubuntu 18.04.5 LTS and 20.04.1 LTS | |
+| Bash | 4.0 | 4.4.20, 5.0.17 | |
+| Python | 3.7 | 3.7.6, 3.8.3 | BioPython, Levenshtein, jax-unirep, numpy, pandas, scipy, sklearn |
+| R | 3.6.3 | 3.6.3 | tidyverse, phateR, phytools, ggtree, egg |
+| GNU parallel | 20161222 | 20161222 | |
+| hmmer | 3.1b2 | 3.1b2 | |
+| fasttreeMP | 2.1.11 | 2.1.11 | |
 
 <a name="installation"></a>
 ## Installation
