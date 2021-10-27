@@ -6,17 +6,11 @@ Engineering of the Calvin cycle enzyme fructose-1,6-bisphosphatase/sedoheptulose
 
 ### Contents
 
-**1. [Usage](#usage)**
-
-**2. [System requirements](#requirements)**
-
-**3. [Installation](#installation)**
-
-**4. [Data](#data)**
-
-**5. [Evotuning](#evotuning)**
-
-**6. [Author](#author)**
+1. [Usage](#usage)
+2. [System requirements](#requirements)
+3. [Installation](#installation)
+4. [Exploring evotuning of FBPase](#exploring)
+5. [Author](#author)
 
 <a name="usage"></a>
 ## Usage
@@ -182,8 +176,10 @@ rm taxdump.tar.gz # Optional cleanup
 cd ../../..
 ```
 
-<a name="data"></a>
-## Data
+<a name="exploring"></a>
+## Exploring evotuning of FBPase
+
+Evotuning using FBPase sequences was performed and evaluated in order to get acquainted with the JAX-UniRep framework and develop the tools in this repository. The steps to acquire example FBPase sequences and then evotune the UniRep model are described in `source/fbpase_evotuning_example.sh`.
 
 ### Jackhmmer reference sequences
 
@@ -199,7 +195,21 @@ source/get_FBPase_sequences.sh
 data/kegg_uniprot.FBPase.fasta
 ```
 
-### Ancestral sequences with dummy stability values
+### Acquisition of example sequences
+
+Jackhmmer was used to find 99,327 example sequences in the UniProt database. These sequences were mostly bacterial.
+
+![alt text](data/taxonomic_distribution_of_train.png "Taxonomic distribution and distance to Synechocystis FBPase of training sequences")
+
+### Training
+
+The evotuning held out 4,967 sequences for validation and optimized parameters using the remaining 94,360 sequences. The losses reported by the JAX-UniRep _fit_ function for the training and validation sequences were plotted for 100 epochs of training with learning rate 1e-5 and batch size 128. The final iteration weights were accepted for future use since overfitting was not evident.
+
+![alt text](data/evotuning_loss.png "Loss for training and validation sequences during evotuning")
+
+### Evaluation of a top model
+
+#### Ancestral sequences and failed dummy data
 
 A set of dummy stability (_T<sub>m</sub>_) values were generated to facilitate development of the top model and _in silico_ evolution scripts. First, a phylogenetic tree was constructed based on 63 UniProt FBPase sequences (>85% identity) including the sequence in _Synechocystis_ sp. PCC 6803. Ancestral sequence reconstruction was performed using the [FireProt-ASR server](http://loschmidt.chemi.muni.cz/fireprotasr/). Changes in _T<sub>m</sub>_ were sampled going from the root sequence (_T<sub>m</sub>_ = 80°C) assuming decreasing stability with a target of _T<sub>m</sub>_ = 55°C at the furthest tip of the tree. The process was carried out as described in these scripts:
 
@@ -216,11 +226,11 @@ data/dummy.sequence_Tm.tab
 
 ...which represents typical input for training a top model.
 
-The dummy _T<sub>m</sub>_ values are visualized in `data/dummy_ancestral_Tm_on_tree.pdf`.
+The dummy _T<sub>m</sub>_ values are visualized in `data/dummy_ancestral_Tm_on_tree.pdf`. Unfortunately, it turned out that the dummy stability values generated were purely noise and could not be used for development of the top model.
 
-### Tree height values of ancestral sequences
+#### Better luck with tree height values
 
-The dummy stability values generated were purely noise and could not be used for development of the top model. Instead, the tree height (distance from the root) of each node (sequence) was used as detailed in these scripts:
+Instead of the failed stability values, the tree height (distance from the root) of each node (sequence) was used as detailed in these scripts:
 
 ```
 source/evaluate_top_model.sh
@@ -234,24 +244,7 @@ data/dummy.train.tab
 data/dummy.test.tab
 ```
 
-<a name="evotuning"></a>
-## Evotuning
-
-The steps to acquire example FBPase sequences and perform evotuning are described in `furee.sh`.
-
-### Acquisition of example sequences
-
-Jackhmmer was used to find 99,327 example sequences in the UniProt database. These sequences were mostly bacterial.
-
-![alt text](data/taxonomic_distribution_of_train.png "Taxonomic distribution and distance to Synechocystis FBPase of training sequences")
-
-### Training
-
-The evotuning held out 4,967 sequences for validation and optimized parameters using the remaining 94,360 sequences. The losses reported by the JAX-UniRep _fit_ function for the training and validation sequences were plotted for 100 epochs of training with learning rate 1e-5 and batch size 128. The final iteration weights were accepted for future use since overfitting was not evident.
-
-![alt text](data/evotuning_loss.png "Loss for training and validation sequences during evotuning")
-
-### Evaluation of a top model
+#### Top model performance
 
 Splitting the set of ancestral and contemporary sequences into 63 training sequences and 62 testing sequences allowed development of a Ridge regression sparse refit (SR) top model used to predict height in the phylogenetic tree. The top model showed test RMSE ≈ 0.0339 using original UniRep mLSTM parameters and test RMSE ≈ 0.0263 using evotuned parameters.
 

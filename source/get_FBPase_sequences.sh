@@ -15,4 +15,4 @@ data/kegg_uniprot_ids.K11532_FBPase.txt
 ) | sort | uniq > data/kegg_uniprot_ids.FBPase.txt
 
 # Manually download FASTA file from UniProt based on IDs obtained from KEGG
-# data/kegg_uniprot.FBPase.fasta
+# data/kegg_uniprot_ids.FBPase.fasta
