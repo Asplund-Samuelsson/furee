@@ -1,9 +1,6 @@
 #!/usr/bin/env Rscript
 library(tidyverse)
 
-infile = "intermediate/evotuning.tab"
-outfile = "data/evotuning_loss.png"
-
 # Read infile and outfile
 args = commandArgs(trailingOnly=T)
 infile  = args[1] # Evotuning loss development in tab-delimited format
