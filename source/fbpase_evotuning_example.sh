@@ -221,8 +221,7 @@ mv evotuning.log validation_sequences.txt data/
 ) > intermediate/evotuning.tab
 
 # Inspect the loss curves
-source/inspect_loss.R
-# Makes plot "data/evotuning_loss.png"
+source/inspect_loss.R intermediate/evotuning.tab data/evotuning_loss.png
 
 # Store final iteration parameters if accepted
 rsync -maP results/evotuned/fbpase/iter_final data/parameters
