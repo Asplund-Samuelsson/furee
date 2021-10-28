@@ -92,6 +92,48 @@ Next, we supply the prepared training sequences to the evotuning script to adapt
 
 ### 3. Evotuning
 
+The UniRep model weights, or parameters, must be re-trained, or evotuned, to the local evolutionary context of our _in silico_ evolution target sequence. We supply our meticulously prepared training sequences to the evotuning script as such:
+
+```
+source/evotune.py \
+  --epochs 100 \
+  --validation 0.05 \
+  --step 1e-5 \
+  --batch 32 \
+  --dumps 1 \
+  results/FBPase/results/train.txt results/FBPase/evotuned
+```
+
+The new parameters are stored in `results/FBPase/evotuned/iter_final/model_weights.pkl`, and the validation sequences are saved in
+`results/FBPase/evotuned/validation_sequences.txt`.
+
+There is also an `evotuning.log` file that is hardcoded in JAX-UniRep, so we need to move it to save it for the current evotuning (otherwise it will get overwritten):
+
+```
+mv evotuning.log results/FBPase/evotuned/
+```
+
+Additionally, we may parse the evotuning log to get loss development information that can subsequently be plotted:
+
+```
+(
+  echo -e "Epoch\tTraining\tValidation"
+  grep "Epoch" results/FBPase/evotuned/evotuning.log | sed -e 's/Epoch /:/' \
+  | tr ":" "\t" | cut -f 8,10 | sed -e 's/. $//' | paste - - | cut -f 1,2,4
+) \
+> results/FBPase/evotuned/evotuning.tab
+```
+
+We then plot the loss development during training:
+
+```
+source/inspect_loss.R \
+results/FBPase/evotuned/evotuning.tab \
+results/FBPase/evotuned/evotuning.png
+```
+
+With a finished set of evotuned UniRep parameters, we can now move on to fitting a top model, which will allow us to perform the _in silico_ evolution.
+
 <a name="topmodel"></a>
 ### 4. Fitting a top model
 

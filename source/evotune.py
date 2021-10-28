@@ -3,6 +3,7 @@ import jax_unirep as ju
 import sys
 from random import shuffle
 import argparse
+import os
 
 # Read arguments from the commandline
 parser = argparse.ArgumentParser()
@@ -60,6 +61,9 @@ sequences = [x.strip() for x in open(args.infile).readlines()]
 # Randomize sequence order
 shuffle(sequences)
 
+# Create output directory
+os.mkdir(args.outdir)
+
 # Select subset of sequences if desired
 if args.fraction:
     break_point = int(len(sequences) * args.fraction)
@@ -72,7 +76,8 @@ if args.validation:
     train_sequences = sequences[0:break_point]
     holdout_sequences = sequences[break_point:]
     # Save validation sequences
-    with open("validation_sequences.txt", "w") as holdout_file:
+    with open(os.path.join(args.outdir, "validation_sequences.txt"), "w") \
+    as holdout_file:
         for seq in holdout_sequences:
             holdout_file.write(seq + "\n")
 else:
