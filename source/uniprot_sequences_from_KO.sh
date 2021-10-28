@@ -14,7 +14,7 @@ while getopts k:i:o: flag
 (
   if [ "$KOS" ]; then echo $KOS | tr "," "\n"; fi
   if [ -f "$INFILE" ]; then cat $INFILE; fi
-) |
+) | sort | uniq |
 
 while read KO; do
 

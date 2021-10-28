@@ -15,9 +15,85 @@ Engineering of the Calvin cycle enzyme fructose-1,6-bisphosphatase/sedoheptulose
 <a name="usage"></a>
 ## Usage
 
-This guide describes how to fit a top model and perform _in silico_ evolution using FUREE.
+This guide describes how to get training data, carry out evotuning, fit a top model, and perform _in silico_ evolution using FUREE.
 
-### Fitting a top model
+An already evotuned model for FBPase is provided (`data/parameters/iter_final/`), so if you wish you may skip the first three steps and go directly to [Fitting a top model](#topmodel).
+
+### 1. Obtain target sequences
+
+The evotuning training data are UniProt sequences extracted through iterative JackHMMer searches against a small, but diverse, set of target sequences related to the protein to be evolved _in silico_. When preparing the training data in the next step, the input is a FASTA file with such target sequences.
+
+FUREE offers a programmatic approach to obtaining target sequence suggestions in the form of UniProt sequences representing KEGG orthologs (KOs). The program takes a comma-separated list of KOs (option `-k`) and/or a file with one KO per line (option `-i`) and saves the corresponding UniProt sequences to a FASTA file:
+
+```
+source/uniprot_sequences_from_KO.sh \
+-i data/FBPase_KOs.txt \
+-o intermediate/FBPase_KOs.fasta
+```
+
+Since we want to have a manageable number of sequences as targets for the JackHMMer search, we need to reduce them to cluster representatives based on 40% sequence identity:
+
+```
+cd-hit -c 0.4 -n 2 \
+-i intermediate/FBPase_KOs.fasta \
+-o intermediate/FBPase_KOs.cdhit.fasta
+```
+
+Finally, we add other target sequences that we think might be particularly important, such as FBPases from _Synechocystis_, _Oligotropha_, and _Ralstonia_:
+
+```
+cat \
+intermediate/FBPase_KOs.cdhit.fasta \
+data/Oligotropha_OM5_c20090_FBPase.fasta \
+data/Oligotropha_OM5_pHCG300410_FBPase.fasta \
+data/Ralstonia_H16_A0999_FBPase.fasta \
+data/Ralstonia_H16_B1390_FBPase.fasta \
+data/Syn6803_P73922_FBPase.fasta \
+> intermediate/FBPase_targets.fasta
+```
+
+We are now ready to use the target sequences to prepare the evotuning training data.
+
+### 2. Prepare training data
+
+The target sequences are used for JackHMMer searches against the UniProt sequence database and subsequently filtered (see table below for more details). We run a preparation script with the target sequences, the _in silico_ evolution target sequence, and direct the output to a directory of choice:
+
+```
+source/preparation.sh \
+intermediate/FBPase_targets.fasta \
+data/Syn6803_P73922_FBPase.fasta \
+results/FBPase
+```
+
+Output from the preparation steps are saved into a log file:
+
+```
+results/FBPase/preparation.log
+```
+
+Preparation of the training sequences involves the following:
+
+| # | Description |
+| --- | --- |
+| 1 | JackHMMer at default settings and a maximum of five rounds is used to find candidate UniProt sequences for evotuning. Require full sequence E-value < 0.01 and best 1-domain E-value < 0.03. |
+| 2 | Use CD-HIT to make identified sequences unique. |
+| 3 | Require that sequences consist of only standard amino acids. |
+| 4 | Require that sequences show length within two standard deviations from the mean, and then Levenshtein distance to target ≤ 300. |
+| 5 | Assess taxonomic distribution of training data (`results/FBPase/results/taxonomic_distribution_of_train.png`). |
+| 6 | Save training sequences to file with one sequence per line. |
+
+The final unique and filtered training sequences are stored in this file:
+
+```
+results/FBPase/results/train.txt
+```
+
+Next, we supply the prepared training sequences to the evotuning script to adapt the UniRep model to our particular sequence context of interest.
+
+### 3. Evotuning
+
+<a name="topmodel"></a>
+### 4. Fitting a top model
 
 To fit a top model, it is necessary to provide sequences and associated values that are to be improved through directed evolution. Sequences and values should be saved in a tab-delimited format as in _e.g._ `data/dummy.train.tab` (here we look only at the last 60 characters of each line to save space):
 
@@ -48,7 +124,7 @@ For additional options, refer to the help:
 source/train_top_model.py --help
 ```
 
-### Making predictions with the top model
+### 5. Making predictions with the top model
 
 Predictions can be made on sequences in a file with one sequence per line (`data/Syn6803_P73922_FBPase.txt` has only one line, but more are allowed):
 
@@ -78,7 +154,7 @@ For additional options, refer to the help:
 source/top_model_prediction.py --help
 ```
 
-### Performing _in silico_ evolution
+### 6. Performing _in silico_ evolution
 
 The _in silico_ evolution is carried out using a set of evotuned parameters, a top model, and one starting sequence:
 

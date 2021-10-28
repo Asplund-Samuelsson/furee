@@ -9,7 +9,7 @@ outfile = args[2] # A list of sequence IDs
 indata = read.table(infile, sep="", header=F, fill=T, col.names=1:1000)
 indata = indata[,1:19]
 
-# Filter by column 8 (domain E-value)
+# Filter by columns 5 (full sequence E-value) and 8 (best domain E-value)
 indata = subset(indata, X5 < 0.01 & X8 < 0.03)
 
 # Write sequence IDs to file
