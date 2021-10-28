@@ -98,4 +98,8 @@ evotuned_params = ju.fit(
     backend=args.cpu,
 )
 
+# Dump final iteration parameters
 ju.utils.dump_params(evotuned_params, args.outdir, step = 'final')
+
+# Move the evotuning.log file
+os.rename("evotuning.log", os.path.join(args.outdir, "evotuning.log"))

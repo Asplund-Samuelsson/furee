@@ -104,16 +104,10 @@ source/evotune.py \
   results/FBPase/results/train.txt results/FBPase/evotuned
 ```
 
-The new parameters are stored in `results/FBPase/evotuned/iter_final/model_weights.pkl`, and the validation sequences are saved in
-`results/FBPase/evotuned/validation_sequences.txt`.
+The new parameters are stored in `results/FBPase/evotuned/iter_final/model_weights.pkl`, validation sequences are saved in
+`results/FBPase/evotuned/validation_sequences.txt`, and a log file is saved to `results/FBPase/evotuned/evotuning.log`.
 
-There is also an `evotuning.log` file that is hardcoded in JAX-UniRep, so we need to move it to save it for the current evotuning (otherwise it will get overwritten):
-
-```
-mv evotuning.log results/FBPase/evotuned/
-```
-
-Additionally, we may parse the evotuning log to get loss development information that can subsequently be plotted:
+We may parse the evotuning log to get loss development information that can subsequently be plotted:
 
 ```
 (
