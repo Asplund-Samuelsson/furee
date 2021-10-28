@@ -155,7 +155,10 @@ intermediate/train.standard_aa.lengths.tab \
 intermediate/train.length_filtered.txt
 
 # Filter sequences by Levenshtein distance to target
-source/filter_sequences_by_distance.R
+source/filter_sequences_by_distance.R \
+intermediate/train.standard_aa.LD.tab \
+intermediate/train.length_filtered.txt \
+intermediate/train.filtered.txt
 
 source/filter_fasta_by_id.py \
 intermediate/train.standard_aa.fasta \
@@ -176,8 +179,12 @@ source/taxid-to-taxonomy.py \
 -o results/train.filtered.taxonomy.tab
 
 # Plot taxonomic distribution and Levenshtein distances of training data
-source/taxonomic_distribution_of_train.R
-# Makes plot "data/taxonomic_distribution_of_train.png"
+source/taxonomic_distribution_of_train.R \
+results/train.filtered.taxonomy.tab \
+intermediate/train.standard_aa.LD.tab \
+"sp|P73922|FBSB_SYNY3" \
+"Levenshtein distance to Synechocystis FBPase" \
+data/taxonomic_distribution_of_train.png
 
 # Count the number of different unique annotations from UniProt
 grep ">" intermediate/train.filtered.fasta | sed -e 's/ /\t/' -e 's/ OS=/\t/' \

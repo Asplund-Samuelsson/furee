@@ -1,10 +1,16 @@
 #!/usr/bin/env Rscript
 library(tidyverse)
 
-# Define infiles
-taxonomy_file = "results/train.filtered.taxonomy.tab"
-levenshtein_file = "intermediate/train.standard_aa.LD.tab"
+# Define colour palette
 colours_file = "data/colours.txt"
+
+# Read infiles and outfile from command line
+args = commandArgs(trailingOnly=T)
+taxonomy_file  = args[1] # File with taxonomy data from NCBI for each sequence
+levenshtein_file = args[2] # File with Levenshtein distances to target
+target_seqid = args[3] # Target sequence ID
+plot_title = args[4] # Title of final plot
+outfile = args[5] # Output plot file
 
 # Load data
 taxonomy = read_tsv(taxonomy_file)
@@ -13,7 +19,7 @@ colours = scan(colours_file, character())
 
 # Add Levenshtein distance to taxonomy
 taxonomy = levenshtein %>%
-  mutate(identifier = ifelse(SeqA == "sp|P73922|FBSB_SYNY3", SeqB, SeqA)) %>%
+  mutate(identifier = ifelse(SeqA == target_seqid, SeqB, SeqA)) %>%
   select(identifier, LD) %>%
   inner_join(taxonomy)
 
@@ -69,17 +75,6 @@ colour_summary = taxonomy %>%
     Count = length(group), Distance = mean(LD), Colour = unique(Colour)
   ) %>%
   arrange(-Count) %>%
-  # mutate(Colour = colours) %>%
-  # # Change colour for Cyanobacteria
-  # mutate(
-  #   Colour = ifelse(
-  #     Colour == "#5aae61",
-  #     filter(., Organism == "Cyanobacteria")$Colour,
-  #     Colour
-  #   ),
-  #   Colour = ifelse(Organism == "Cyanobacteria", "#5aae61", Colour)
-  # ) %>%
-  # Arrange according to Distance
   arrange(-Distance)
 
 # Organize Organism according to mean distance
@@ -97,7 +92,7 @@ gp = gp + theme(
 )
 gp = gp + coord_flip()
 gp = gp + ylab("Number of sequences")
-gp = gp + scale_fill_manual(values=colour_summary$Colour, guide=F)
+gp = gp + scale_fill_manual(values=colour_summary$Colour, guide="none")
 
 gp1 = gp
 
@@ -114,14 +109,12 @@ gp = gp + theme(
   axis.title = element_text(size=8)
 )
 gp = gp + coord_flip()
-gp = gp + ylab("Levenshtein distance to Synechocystis FBPase")
+gp = gp + ylab(plot_title)
 
 gp2 = gp
 
 # Arrange plot
 library(egg)
-
-outfile = "data/taxonomic_distribution_of_train.png"
 
 png(outfile, width=180/25.4, height=80/25.4, res=200, units="in")
 ggarrange(gp1, gp2, ncol=2)
