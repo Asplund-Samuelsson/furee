@@ -130,3 +130,12 @@ with open(os.path.join(args.outdir, "evotuning.tab"), "w") as tabfile:
 
 # Move the evotuning.log file
 os.rename("evotuning.log", os.path.join(args.outdir, "evotuning.log"))
+
+# Plot the loss development using external script
+os.system(
+    " ".join([
+        os.path.join("source", "inspect_loss.R"),
+        os.path.join(args.outdir, "evotuning.tab"),
+        os.path.join(args.outdir, "evotuning.png")
+    ])
+)

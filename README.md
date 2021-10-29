@@ -98,15 +98,13 @@ source/evotune.py \
   results/FBPase/evotuned
 ```
 
-The new parameters are stored in `results/FBPase/evotuned/iter_final/model_weights.pkl` and the validation sequences are saved in
-`results/FBPase/evotuned/validation_sequences.txt`. A log file is saved to `results/FBPase/evotuned/evotuning.log`, with training and validation loss neatly formatted in `results/FBPase/evotuned/evotuning.tab`.
+The validation sequences are saved in
+`results/FBPase/evotuned/validation_sequences.txt`. A log is saved to `results/FBPase/evotuned/evotuning.log`, with training and validation loss neatly formatted in `results/FBPase/evotuned/evotuning.tab`. The losses are plotted in `results/FBPase/evotuned/evotuning.png`.
 
-We may then plot the loss development during training:
+Most importantly, the new model parameters are saved in this Pickle:
 
 ```
-source/inspect_loss.R \
-results/FBPase/evotuned/evotuning.tab \
-results/FBPase/evotuned/evotuning.png
+results/FBPase/evotuned/iter_final/model_weights.pkl
 ```
 
 With a finished set of evotuned UniRep parameters, we can now move on to fitting a top model, which will allow us to perform the _in silico_ evolution.
