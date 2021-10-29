@@ -101,5 +101,32 @@ evotuned_params = ju.fit(
 # Dump final iteration parameters
 ju.utils.dump_params(evotuned_params, args.outdir, step = 'final')
 
+# Load the evotuning.log life
+evolog = open("evotuning.log").readlines()
+
+# Parse the lines of the log file
+evolog = [
+    [y[7], y[9].strip().strip(".")] for y in
+    [
+        x.replace("Epoch ", ":").split(":") for x in
+        filter(lambda x: "Epoch" in x, evolog)
+    ]
+]
+
+# Make output lines with Epoch, Training, and Validation values
+evolog = [
+    "\t".join(y) + "\n" for y in zip(
+        ["\t".join(x) for x in evolog[::2]],
+        [x[1] for x in evolog[1::2]]
+    )
+]
+
+# Add header
+evolog.insert(0, "Epoch\tTraining\tValidation\n")
+
+# Write to evotuning.tab file
+with open(os.path.join(args.outdir, "evotuning.tab"), "w") as tabfile:
+    tabfile.write("".join(evolog))
+
 # Move the evotuning.log file
 os.rename("evotuning.log", os.path.join(args.outdir, "evotuning.log"))

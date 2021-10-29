@@ -92,29 +92,16 @@ The UniRep model weights, or parameters, must be re-trained, or evotuned, to the
 
 ```
 source/evotune.py \
-  --epochs 100 \
-  --validation 0.05 \
-  --step 1e-5 \
-  --batch 32 \
-  --dumps 1 \
-  results/FBPase/results/train.txt results/FBPase/evotuned
+  --epochs 100 --validation 0.05 \
+  --step 1e-5 --batch 32 --dumps 1 \
+  results/FBPase/results/train.txt \
+  results/FBPase/evotuned
 ```
 
-The new parameters are stored in `results/FBPase/evotuned/iter_final/model_weights.pkl`, validation sequences are saved in
-`results/FBPase/evotuned/validation_sequences.txt`, and a log file is saved to `results/FBPase/evotuned/evotuning.log`.
+The new parameters are stored in `results/FBPase/evotuned/iter_final/model_weights.pkl` and the validation sequences are saved in
+`results/FBPase/evotuned/validation_sequences.txt`. A log file is saved to `results/FBPase/evotuned/evotuning.log`, with training and validation loss neatly formatted in `results/FBPase/evotuned/evotuning.tab`.
 
-We may parse the evotuning log to get loss development information that can subsequently be plotted:
-
-```
-(
-  echo -e "Epoch\tTraining\tValidation"
-  grep "Epoch" results/FBPase/evotuned/evotuning.log | sed -e 's/Epoch /:/' \
-  | tr ":" "\t" | cut -f 8,10 | sed -e 's/. $//' | paste - - | cut -f 1,2,4
-) \
-> results/FBPase/evotuned/evotuning.tab
-```
-
-We then plot the loss development during training:
+We may then plot the loss development during training:
 
 ```
 source/inspect_loss.R \
