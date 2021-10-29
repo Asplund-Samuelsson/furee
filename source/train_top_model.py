@@ -39,7 +39,7 @@ sequences = [x[0] for x in seqdata]
 
 # Load UniRep parameters
 if parameter_dir:
-    params = ju.utils.load_params(folderpath=parameter_dir)[0]
+    params = ju.utils.load_params(folderpath=parameter_dir)[1]
 else:
     params = None
 

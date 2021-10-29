@@ -45,7 +45,7 @@ with open(model_file, 'rb') as i:
 
 # Load UniRep parameters
 if parameter_dir:
-    params = ju.utils.load_params(folderpath=parameter_dir)[0]
+    params = ju.utils.load_params(folderpath=parameter_dir)[1]
 else:
     params = None
 

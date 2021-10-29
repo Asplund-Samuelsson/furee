@@ -65,11 +65,7 @@ data/Syn6803_P73922_FBPase.fasta \
 results/FBPase
 ```
 
-Output from the preparation steps are saved into a log file:
-
-```
-results/FBPase/preparation.log
-```
+Output from the preparation steps are saved into the log file `results/FBPase/preparation.log`.
 
 Preparation of the training sequences involves the following:
 
@@ -148,8 +144,10 @@ CGITPGTLMEGVRFFKGGARTQSLVISSQSQTARFVDTIHMFEEPKVLQLR	0.246331
 To fit the Ridge Regression Sparse Refit top model using evotuned FBPase-specific UniRep parameters for the underlying representations, use the following command:
 
 ```
-source/train_top_model.py -p data/parameters/iter_final \
-data/dummy.train.tab intermediate/dummy.top_model.pkl
+source/train_top_model.py \
+-p results/FBPase/evotuned/iter_final \
+data/dummy.train.tab \
+intermediate/dummy.top_model.pkl
 ```
 
 _NOTE: Using too many input sequences may exhaust the available memory!_
@@ -175,14 +173,16 @@ MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRERMNKIHMRGRIVIGEGERDDAPMLYIGEEVGICTREDA
 To make predictions using an already fitted top model, use the following command:
 
 ```
-source/top_model_prediction.py -p data/parameters/iter_final \
-data/Syn6803_P73922_FBPase.txt intermediate/dummy.top_model.pkl \
-results/Syn6803_P73922_FBPase.prediction.tab
+source/top_model_prediction.py \
+-p results/FBPase/evotuned/iter_final \
+data/Syn6803_P73922_FBPase.txt \
+intermediate/dummy.top_model.pkl \
+results/FBPase/Syn6803_P73922_FBPase.prediction.tab
 ```
 
 _NOTE: Using too many input sequences may exhaust the available memory!_
 
-The prediction for `data/Syn6803_P73922_FBPase.txt` is in `results/Syn6803_P73922_FBPase.prediction.tab` and should be `0.20583862000895214`.
+The prediction for `data/Syn6803_P73922_FBPase.txt` is in `results/FBPase/Syn6803_P73922_FBPase.prediction.tab` and should be `0.1848269612693981`.
 
 For additional options, refer to the help:
 
@@ -195,15 +195,17 @@ source/top_model_prediction.py --help
 The _in silico_ evolution is carried out using a set of evotuned parameters, a top model, and one starting sequence:
 
 ```
-source/in_silico_evolution.py -s 50 -t 15 -p data/parameters/iter_final \
+source/in_silico_evolution.py \
+-s 50 -t 15 \
+-p results/FBPase/evotuned/iter_final \
 data/Syn6803_P73922_FBPase.txt \
 intermediate/dummy.top_model.pkl \
-results/Syn6803_P73922_FBPase.evolved.tab
+results/FBPase/Syn6803_P73922_FBPase.evolved.tab
 ```
 
 _NOTE: Using too many steps may exhaust the available memory!_
 
-The output `results/Syn6803_P73922_FBPase.evolved.tab` contains evolved sequences (column `sequences`), predicted values for each sequence (`scores`), status of acceptance for the next iteration in the evolution algorithm (`accept`), and the step (`step`).
+The output `results/FBPase/Syn6803_P73922_FBPase.evolved.tab` contains evolved sequences (column `sequences`), predicted values for each sequence (`scores`), status of acceptance for the next iteration in the evolution algorithm (`accept`), and the step (`step`).
 
 For additional options, refer to the help:
 
@@ -220,7 +222,7 @@ Evotuning was performed on a GCP VM with two vCPUs, 13 GB RAM, and one NVIDIA Te
 | -------- | ------- | -------------- | --------- |
 | Linux OS | | Ubuntu 18.04.5 LTS and 20.04.1 LTS | |
 | Bash | 4.0 | 4.4.20, 5.0.17 | |
-| Python | 3.7 | 3.7.6, 3.8.3 | BioPython, Levenshtein, jax-unirep, numpy, pandas, scipy, sklearn |
+| Python | 3.7 | 3.7.6, 3.8.3 | BioPython, Levenshtein, jax, jax-unirep, numpy, pandas, scipy, sklearn |
 | R | 3.6.3 | 3.6.3 | tidyverse, phateR, phytools, ggtree, egg |
 | GNU parallel | 20161222 | 20161222 | |
 | hmmer | 3.1b2 | 3.1b2 | |
