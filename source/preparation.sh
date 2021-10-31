@@ -61,7 +61,7 @@ echo -en "\nLOG Step 2: CD-HIT\n" >> $LOGFILE
 
 # Make sequences unique with CD-HIT
 echo -en "\nLOG 2. Making sequences unique\n" >> $LOGFILE
-cd-hit -c 1.0 -T 0 -i ${OUTDIR}/intermediate/train.unfiltered.fasta \
+cd-hit -c 1.0 -T 0 -M 28000 -i ${OUTDIR}/intermediate/train.unfiltered.fasta \
 -o ${OUTDIR}/intermediate/train.unique.fasta >> $LOGFILE 2>&1
 
 # STEP 3
