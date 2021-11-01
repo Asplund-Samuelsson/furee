@@ -118,8 +118,8 @@ echo -en "\nLOG Step 5: Taxonomic distribution\n" >> $LOGFILE
 
 # Obtain taxonomy IDs and taxonomy information
 echo -en "\nLOG 5. Extracting taxonomy IDs\n" >> $LOGFILE
-(grep ">" ${OUTDIR}/intermediate/train.filtered.fasta | tr " " "\n" | \
-grep -P "^>|^OX=" | sed -e 's/^OX=//' | tr ">" "&" | tr "\n" "\t" | \
+(grep ">" ${OUTDIR}/intermediate/train.filtered.fasta | sed -e 's/^>/\&/' | \
+tr " " "\n" | grep -P "^&|^OX=" | sed -e 's/^OX=//' | tr "\n" "\t" | \
 tr "&" "\n" | sed -e 's/\t$//' | grep -v "^$") > \
 ${OUTDIR}/intermediate/train.taxids_from_fasta.tab 2>> $LOGFILE
 
