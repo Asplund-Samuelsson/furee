@@ -19,11 +19,11 @@ This guide describes how to get training data, carry out evotuning, fit a top mo
 
 An already evotuned model for FBPase is provided (`data/parameters/iter_final/`), so if you wish you may skip the first three steps and go directly to [Fitting a top model](#topmodel).
 
-### 1. Obtain target sequences
+### 1. Obtain query sequences
 
-The evotuning training data are UniProt sequences extracted through iterative JackHMMer searches against a small, but diverse, set of target sequences related to the protein to be evolved _in silico_. When preparing the training data in the next step, the input is a FASTA file with such target sequences.
+The evotuning training data are UniProt sequences extracted through iterative JackHMMer searches against a small, but diverse, set of query sequences related to the protein to be evolved _in silico_. When preparing the training data in the next step, the input is a FASTA file with such query sequences.
 
-FUREE offers a programmatic approach to obtaining target sequence suggestions in the form of UniProt sequences representing KEGG orthologs (KOs). The program takes a comma-separated list of KOs (option `-k`) and/or a file with one KO per line (option `-i`) and saves the corresponding UniProt sequences to a FASTA file:
+FUREE offers a programmatic approach to obtaining query sequence suggestions in the form of UniProt sequences representing KEGG orthologs (KOs). The program takes a comma-separated list of KOs (option `-k`) and/or a file with one KO per line (option `-i`) and saves the corresponding UniProt sequences to a FASTA file:
 
 ```
 source/uniprot_sequences_from_KO.sh \
@@ -31,15 +31,15 @@ source/uniprot_sequences_from_KO.sh \
 -o intermediate/FBPase_KOs.fasta
 ```
 
-Since we want to have a manageable number of sequences as targets for the JackHMMer search, we need to reduce them to cluster representatives based on 40% sequence identity:
+Since we want to have a manageable number of sequences as queries for the JackHMMer search, we need to reduce them to cluster representatives based on 50% sequence identity:
 
 ```
-cd-hit -c 0.4 -n 2 \
+cd-hit -c 0.5 -n 2 \
 -i intermediate/FBPase_KOs.fasta \
 -o intermediate/FBPase_KOs.cdhit.fasta
 ```
 
-Finally, we add other target sequences that we think might be particularly important, such as FBPases from _Synechocystis_, _Oligotropha_, and _Ralstonia_:
+Finally, we add other query sequences that we think might be particularly important, such as FBPases from _Synechocystis_, _Oligotropha_, and _Ralstonia_:
 
 ```
 cat \
@@ -49,18 +49,18 @@ data/Oligotropha_OM5_pHCG300410_FBPase.fasta \
 data/Ralstonia_H16_A0999_FBPase.fasta \
 data/Ralstonia_H16_B1390_FBPase.fasta \
 data/Syn6803_P73922_FBPase.fasta \
-> intermediate/FBPase_targets.fasta
+> intermediate/FBPase_queries.fasta
 ```
 
-We are now ready to use the target sequences to prepare the evotuning training data.
+We are now ready to use the query sequences to prepare the evotuning training data.
 
 ### 2. Prepare training data
 
-The target sequences are used for JackHMMer searches against the UniProt sequence database and subsequently filtered (see table below for more details). We run a preparation script with the target sequences, the _in silico_ evolution target sequence, and direct the output to a directory of choice:
+The query sequences are used for JackHMMer searches against the UniProt sequence database and subsequently filtered (see table below for more details). We run a preparation script with the query sequences, the _in silico_ evolution target sequence, and direct the output to a directory of choice:
 
 ```
 source/preparation.sh \
-intermediate/FBPase_targets.fasta \
+intermediate/FBPase_queries.fasta \
 data/Syn6803_P73922_FBPase.fasta \
 results/FBPase
 ```
