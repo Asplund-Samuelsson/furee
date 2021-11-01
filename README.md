@@ -71,7 +71,7 @@ Preparation of the training sequences involves the following:
 
 | # | Description |
 | --- | --- |
-| 1 | JackHMMer at default settings and a maximum of five rounds is used to find candidate UniProt sequences for evotuning. Require full sequence E-value < 0.01 and best 1-domain E-value < 0.03. |
+| 1 | JackHMMer at default settings and a maximum of five iterations is used to find candidate UniProt sequences for evotuning. Require full sequence E-value < 0.01 and best 1-domain E-value < 0.03. |
 | 2 | Use CD-HIT to make identified sequences unique. |
 | 3 | Require that sequences consist of only standard amino acids. |
 | 4 | Require that sequences show length within two standard deviations from the mean, and then Levenshtein distance to target ≤ 300. |
@@ -95,8 +95,10 @@ source/evotune.py \
   --epochs 100 --validation 0.05 \
   --step 1e-5 --batch 32 --dumps 1 \
   results/FBPase/results/train.txt \
-  results/FBPase/evotuned
+  results/FBPase/evotuned &
 ```
+
+_NOTE: If running this on GCP, it is necessary to run `screen` before to be able to disconnect._
 
 The validation sequences are saved in
 `results/FBPase/evotuned/validation_sequences.txt`. A log is saved to `results/FBPase/evotuned/evotuning.log`, with training and validation loss neatly formatted in `results/FBPase/evotuned/evotuning.tab`. The losses are plotted in `results/FBPase/evotuned/evotuning.png`.
