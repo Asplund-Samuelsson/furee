@@ -10,8 +10,8 @@ df = read.table(infile, sep="\t", stringsAsFactors=F, header=F)
 colnames(df) = c("seqid", "length")
 
 # Filter data
-min_length = floor(mean(df$length) - 2*sd(df$length))
-max_length = ceiling(mean(df$length) + 2*sd(df$length))
+min_length = floor(median(df$length) - mad(df$length))
+max_length = ceiling(median(df$length) + mad(df$length))
 
 df_filt = subset(df, length <= max_length & length >= min_length)
 

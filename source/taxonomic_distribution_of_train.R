@@ -63,7 +63,6 @@ colour_summary = taxonomy %>%
     Colour = case_when(
       group == "Cyanobacteria" ~ "#a6dba0",
       group == "Other" ~ default_colour,
-      group == "Viridiplantae" ~ "#5aae61",
       superkingdom == "Bacteria" ~ "#c2a5cf",
       superkingdom == "Archaea" ~ "#9970ab",
       superkingdom == "Eukaryota" ~ "#dfc27d",
