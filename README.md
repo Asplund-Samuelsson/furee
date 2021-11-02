@@ -1,8 +1,8 @@
-![alt text](furee.png "FBPase UniRep Enzyme Engineering")
+![alt text](furee.png "Facilitating UniRep Enzyme Engineering")
 
-# FBPase UniRep Enzyme Engineering
+# Facilitating UniRep Enzyme Engineering
 
-Engineering of the Calvin cycle enzyme fructose-1,6-bisphosphatase/sedoheptulose-1,7-bisphosphatase (FBPase/SBPase) through [UniRep](https://github.com/churchlab/UniRep) machine learning and _in silico_ evolution.
+Engineering of enzymes through [UniRep](https://github.com/churchlab/UniRep) machine learning and _in silico_ evolution, targeting calvin cycle enzymes fructose-1,6-bisphosphatase/sedoheptulose-1,7-bisphosphatase (FBPase/SBPase), ribulose-1,5-bisphosphate carboxylase/oxygenase (Rubisco), and more.
 
 ### Contents
 
