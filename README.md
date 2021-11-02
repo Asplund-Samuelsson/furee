@@ -39,15 +39,11 @@ cd-hit -c 0.5 -n 2 \
 -o intermediate/FBPase_KOs.cdhit.fasta
 ```
 
-Finally, we add other query sequences that we think might be particularly important, such as FBPases from _Synechocystis_, _Oligotropha_, and _Ralstonia_:
+Finally, we add another query sequence, _i.e._ the target FBPase from _Synechocystis_ that we think might be particularly important:
 
 ```
 cat \
 intermediate/FBPase_KOs.cdhit.fasta \
-data/Oligotropha_OM5_c20090_FBPase.fasta \
-data/Oligotropha_OM5_pHCG300410_FBPase.fasta \
-data/Ralstonia_H16_A0999_FBPase.fasta \
-data/Ralstonia_H16_B1390_FBPase.fasta \
 data/Syn6803_P73922_FBPase.fasta \
 > intermediate/FBPase_queries.fasta
 ```
@@ -65,40 +61,37 @@ data/Syn6803_P73922_FBPase.fasta \
 results/FBPase
 ```
 
-Output from the preparation steps are saved into the log file `results/FBPase/preparation.log`.
-
 Preparation of the training sequences involves the following:
 
-| # | Description |
-| --- | --- |
-| 1 | JackHMMer at default settings and a maximum of five iterations is used to find candidate UniProt sequences for evotuning. Require full sequence E-value < 0.01 and best 1-domain E-value < 0.03. |
-| 2 | Use CD-HIT to make identified sequences unique. |
-| 3 | Require that sequences consist of only standard amino acids. |
-| 4 | Require that sequences show length within two standard deviations from the mean, and then Levenshtein distance to target ≤ 300. |
-| 5 | Assess taxonomic distribution of training data (`results/FBPase/results/taxonomic_distribution_of_train.png`). |
-| 6 | Save training sequences to file with one sequence per line. |
+| # | Output | Description |
+| --- | --- | --- |
+| 1 | `jackhmmer/` | Use JackHMMer at default settings and a maximum of five iterations to find candidate UniProt sequences for evotuning. Require full sequence E-value < 0.01, best 1-domain E-value < 0.03, and number of hits within three median absolute deviations from the median (Hampel filter). |
+| 2 | `cdhit/` | Use CD-HIT to make identified sequences unique. |
+| 3 | `aa/` | Require that sequences consist of only standard amino acids. |
+| 4 | `distance/` | Require that sequences show length within one median absolute deviation from the median, and then Levenshtein distance to target ≤ 300. |
+| 5 | `taxonomy/` | Assess taxonomic distribution of training data. |
+| 6 | `train.txt` | Save training sequences to file with one sequence per line. |
 
 The final unique and filtered training sequences are stored in this file:
 
 ```
-results/FBPase/results/train.txt
+results/FBPase/train.txt
 ```
 
 Next, we supply the prepared training sequences to the evotuning script to adapt the UniRep model to our particular sequence context of interest.
 
-### 3. Evotuning
+### 3. Evotune UniRep
 
-The UniRep model weights, or parameters, must be re-trained, or evotuned, to the local evolutionary context of our _in silico_ evolution target sequence. We supply our meticulously prepared training sequences to the evotuning script as such:
+The UniRep model weights, or parameters, must be re-trained, or evotuned, to the local evolutionary context of our _in silico_ evolution target sequence. We supply our meticulously prepared training sequences to the evotuning script as such (**Note that if running this on GCP, it is necessary to run `screen` before to allow continued activity after disconnecting.**):
 
 ```
 source/evotune.py \
   --epochs 100 --validation 0.05 \
   --step 1e-5 --batch 32 --dumps 1 \
-  results/FBPase/results/train.txt \
+  results/FBPase/train.txt \
   results/FBPase/evotuned &
 ```
 
-_NOTE: If running this on GCP, it is necessary to run `screen` before to be able to disconnect._
 
 The validation sequences are saved in
 `results/FBPase/evotuned/validation_sequences.txt`. A log is saved to `results/FBPase/evotuned/evotuning.log`, with training and validation loss neatly formatted in `results/FBPase/evotuned/evotuning.tab`. The losses are plotted in `results/FBPase/evotuned/evotuning.png`.
@@ -112,7 +105,7 @@ results/FBPase/evotuned/iter_final/model_weights.pkl
 With a finished set of evotuned UniRep parameters, we can now move on to fitting a top model, which will allow us to perform the _in silico_ evolution.
 
 <a name="topmodel"></a>
-### 4. Fitting a top model
+### 4. Fit a top model
 
 To fit a top model, it is necessary to provide sequences and associated values that are to be improved through directed evolution. Sequences and values should be saved in a tab-delimited format as in _e.g._ `data/dummy.train.tab` (here we look only at the last 60 characters of each line to save space):
 
@@ -128,7 +121,7 @@ CGITPGSLMEGVRFFGGGARTQSLVISNQSQTARFVDTIHLFDNVKSLQLR	0.173089
 CGITPGTLMEGVRFFKGGARTQSLVISSQSQTARFVDTIHMFEEPKVLQLR	0.246331
 ```
 
-To fit the Ridge Regression Sparse Refit top model using evotuned FBPase-specific UniRep parameters for the underlying representations, use the following command:
+To fit the Ridge Regression Sparse Refit top model using evotuned FBPase-specific UniRep parameters for the underlying representations, use the following command (**Note that too many input sequences may exhaust the available memory!**):
 
 ```
 source/train_top_model.py \
@@ -137,7 +130,6 @@ data/dummy.train.tab \
 intermediate/dummy.top_model.pkl
 ```
 
-_NOTE: Using too many input sequences may exhaust the available memory!_
 
 For additional options, refer to the help:
 
@@ -145,7 +137,7 @@ For additional options, refer to the help:
 source/train_top_model.py --help
 ```
 
-### 5. Making predictions with the top model
+### 5. Make predictions with the top model
 
 Predictions can be made on sequences in a file with one sequence per line (`data/Syn6803_P73922_FBPase.txt` has only one line, but more are allowed):
 
@@ -157,7 +149,7 @@ cat data/Syn6803_P73922_FBPase.txt | cut -c 1-80
 MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRERMNKIHMRGRIVIGEGERDDAPMLYIGEEVGICTREDA
 ```
 
-To make predictions using an already fitted top model, use the following command:
+To make predictions using an already fitted top model, use the following command (**Note that using too many input sequences may exhaust the available memory!**):
 
 ```
 source/top_model_prediction.py \
@@ -167,7 +159,6 @@ intermediate/dummy.top_model.pkl \
 results/FBPase/Syn6803_P73922_FBPase.prediction.tab
 ```
 
-_NOTE: Using too many input sequences may exhaust the available memory!_
 
 The prediction for `data/Syn6803_P73922_FBPase.txt` is in `results/FBPase/Syn6803_P73922_FBPase.prediction.tab` and should be `0.1848269612693981`.
 
@@ -177,9 +168,9 @@ For additional options, refer to the help:
 source/top_model_prediction.py --help
 ```
 
-### 6. Performing _in silico_ evolution
+### 6. Perform _in silico_ evolution
 
-The _in silico_ evolution is carried out using a set of evotuned parameters, a top model, and one starting sequence:
+The _in silico_ evolution is carried out using a set of evotuned parameters, a top model, and one starting sequence (**Note that using too many steps may exhaust the available memory!**):
 
 ```
 source/in_silico_evolution.py \
@@ -190,7 +181,6 @@ intermediate/dummy.top_model.pkl \
 results/FBPase/Syn6803_P73922_FBPase.evolved.tab
 ```
 
-_NOTE: Using too many steps may exhaust the available memory!_
 
 The output `results/FBPase/Syn6803_P73922_FBPase.evolved.tab` contains evolved sequences (column `sequences`), predicted values for each sequence (`scores`), status of acceptance for the next iteration in the evolution algorithm (`accept`), and the step (`step`).
 
