@@ -4,8 +4,9 @@ options(width=100)
 library(tidyverse)
 library(phytools)
 
-# Define infiles
-asr_tree_file = "data/FireProt_Syn6803_ASR.tree"
+args = commandArgs(trailingOnly=T)
+asr_tree_file = args[1] # ASR tree file
+outfile = args[2] # File with tree heights
 
 # Load data
 asr_tree = read.tree(asr_tree_file)
@@ -33,4 +34,4 @@ heights = relations %>%
   ) %>%
   select(-Child)
 
-write_tsv(heights, "data/ancestral_tree_heights.tab")
+write_tsv(heights, outfile)

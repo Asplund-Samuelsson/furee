@@ -234,10 +234,10 @@ A top model leverages the protein representations produced by evotuned UniRep pa
 
 #### Top model training data
 
-To fit a top model, it is necessary to provide sequences and associated values that are to be improved through directed evolution. Sequences and values should be saved in a tab-delimited format as in _e.g._ `data/dummy.train.tab` (here we look only at the last 60 characters of each line to save space):
+To fit a top model, it is necessary to provide sequences and associated values that are to be improved through directed evolution. Sequences and values should be saved in a tab-delimited format as in _e.g._ `data/FBPase_dummy.train.tab` (here we look only at the last 60 characters of each line to save space):
 
 ```
-head -5 data/dummy.train.tab | rev | cut -c 1-60 | rev
+head -5 data/FBPase_dummy.train.tab | rev | cut -c 1-60 | rev
 ```
 
 ```
@@ -258,8 +258,20 @@ We fit the Ridge Regression Sparse Refit top model using evotuned UniRep paramet
 ```
 source/train_top_model.py \
 -p results/FBPase/evotuned/iter_final \
-data/dummy.train.tab \
-intermediate/dummy.top_model.pkl
+data/FBPase_dummy.train.tab \
+intermediate/FBPase_dummy.top_model.pkl
+```
+
+</details>
+
+<details>
+<summary>Rubisco:</summary>
+
+```
+source/train_top_model.py \
+-p results/Rubisco/evotuned/iter_final \
+data/Rubisco_dummy.train.tab \
+intermediate/Rubisco_dummy.top_model.pkl
 ```
 
 </details>
@@ -293,8 +305,34 @@ SSQSSTARFVDTVHMKESPKVIQLH
 source/top_model_prediction.py \
 -p results/FBPase/evotuned/iter_final \
 data/Syn6803_P73922_FBPase.txt \
-intermediate/dummy.top_model.pkl \
+intermediate/FBPase_dummy.top_model.pkl \
 results/FBPase/Syn6803_P73922_FBPase.prediction.tab # Expect 0.1848269612693981
+```
+
+</details>
+
+<details>
+<summary>Rubisco:</summary>
+
+```
+fold -w 80 -s data/Syn6803_P54205_Rubisco.txt
+```
+
+```
+MVQAKAGFKAGVQDYRLTYYTPDYTPKDTDLLACFRMTPQPGVPAEEAAAAVAAESSTGTWTTVWTDNLTDLDRYKGRCY
+DLEAVPNEDNQYFAFIAYPLDLFEEGSVTNVLTSLVGNVFGFKALRALRLEDIRFPVALIKTFQGPPHGITVERDKLNKY
+GRPLLGCTIKPKLGLSAKNYGRAVYECLRGGLDFTKDDENINSQPFMRWRDRFLFVQEAIEKAQAETNEMKGHYLNVTAG
+TCEEMMKRAEFAKEIGTPIIMHDFFTGGFTANTTLARWCRDNGILLHIHRAMHAVVDRQKNHGIHFRVLAKCLRLSGGDH
+LHSGTVVGKLEGERGITMGFVDLMREDYVEEDRSRGIFFTQDYASMPGTMPVASGGIHVWHMPALVEIFGDDSCLQFGGG
+TLGHPWGNAPGATANRVALEACVQARNEGRNLAREGNDVIREACRWSPELAAACELWKEIKFEFEAMDTL
+```
+
+```
+source/top_model_prediction.py \
+-p results/Rubisco/evotuned/iter_final \
+data/Syn6803_P54205_Rubisco.txt \
+intermediate/Rubisco_dummy.top_model.pkl \
+results/Rubisco/Syn6803_P54205_Rubisco.prediction.tab
 ```
 
 </details>
@@ -317,8 +355,22 @@ source/in_silico_evolution.py \
 -s 50 -t 15 \
 -p results/FBPase/evotuned/iter_final \
 data/Syn6803_P73922_FBPase.txt \
-intermediate/dummy.top_model.pkl \
+intermediate/FBPase_dummy.top_model.pkl \
 results/FBPase/Syn6803_P73922_FBPase.evolved.tab
+```
+
+</details>
+
+<details>
+<summary>Rubisco:</summary>
+
+```
+source/in_silico_evolution.py \
+-s 50 -t 15 \
+-p results/Rubisco/evotuned/iter_final \
+data/Syn6803_P54205_Rubisco.txt \
+intermediate/Rubisco_dummy.top_model.pkl \
+results/Rubisco/Syn6803_P54205_Rubisco.evolved.tab
 ```
 
 </details>
@@ -466,8 +518,8 @@ source/evaluate_top_model.R
 ...that generated and evaluated the following height data:
 
 ```
-data/dummy.train.tab
-data/dummy.test.tab
+data/FBPase_dummy.train.tab
+data/FBPase_dummy.test.tab
 ```
 
 #### Top model performance
