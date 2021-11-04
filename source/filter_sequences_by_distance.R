@@ -11,6 +11,12 @@ outfile = args[3] # File with final filtered training sequence IDs
 levenshtein = read_tsv(levenshtein_file, col_names=c("SeqA", "SeqB", "LD"))
 goodlength = scan(goodlength_file, character())
 
+# Target sequence is accepted
+goodlength = c(
+  goodlength,
+  unique(levenshtein$SeqA[levenshtein$SeqA %in% levenshtein$SeqB])
+)
+
 # Filter Levenshtein distances to length-filtered sequences
 levenshtein = filter(levenshtein, SeqA %in% goodlength, SeqB %in% goodlength)
 
