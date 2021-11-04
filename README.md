@@ -166,7 +166,7 @@ results/Rubisco/train.txt
 
 ### 3. Evotune UniRep
 
-The UniRep model weights, or parameters, must be re-trained, or evotuned, to the local evolutionary context of our _in silico_ evolution target sequence. To do se we supply our training sequences to the evotuning script. **Note that if running this on GCP, it is necessary to run `screen` before to allow continued activity after disconnecting.**
+The UniRep model weights, or parameters, must be re-trained, or evotuned, to the local evolutionary context of our _in silico_ evolution target sequence. To do se we supply our training sequences to the evotuning script. **Note that if running this on GCP, it is necessary to run `screen` before to allow continued activity after disconnecting. Use Ctrl-A and Ctrl-D to detach the screen and keep it running.**
 
 <details open>
 <summary>FBPase:</summary>
@@ -174,7 +174,7 @@ The UniRep model weights, or parameters, must be re-trained, or evotuned, to the
 ```
 source/evotune.py \
   --epochs 100 --validation 0.05 \
-  --step 1e-5 --batch 32 --dumps 1 \
+  --step 1e-5 --batch 128 --dumps 1 \
   results/FBPase/train.txt \
   results/FBPase/evotuned &
 ```
@@ -187,7 +187,7 @@ source/evotune.py \
 ```
 source/evotune.py \
   --epochs 100 --validation 0.05 \
-  --step 1e-5 --batch 32 --dumps 1 \
+  --step 1e-5 --batch 128 --dumps 1 \
   results/Rubisco/train.txt \
   results/Rubisco/evotuned &
 ```
