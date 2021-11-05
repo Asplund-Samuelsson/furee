@@ -21,7 +21,7 @@ An already evotuned model for FBPase is provided (`data/parameters/iter_final/`)
 
 ### 1. Obtain query sequences
 
-The evotuning training data are UniProt sequences extracted through iterative JackHMMer searches against a small, but diverse, set of query sequences related to the protein to be evolved _in silico_. When preparing the training data in the next step, the input is a FASTA file with such query sequences.
+The evotuning training data are UniProt sequences extracted through iterative JackHMMer searches with a small, but diverse, set of query sequences related to the protein to be evolved _in silico_. When preparing the training data in the next step, the input is a FASTA file with such query sequences.
 
 #### Download KEGG orthologs
 
@@ -142,14 +142,14 @@ results/Rubisco
 | 1 | `jackhmmer/` | Use JackHMMer at default settings and a maximum of five iterations to find candidate UniProt sequences for evotuning. Require full sequence E-value < 0.01, best 1-domain E-value < 0.03, and number of hits within three median absolute deviations from the median (Hampel filter). |
 | 2 | `cdhit/` | Use CD-HIT to make identified sequences unique. |
 | 3 | `aa/` | Require that sequences consist of only standard amino acids. |
-| 4 | `distance/` | Require that sequences show length within one median absolute deviation from the median, and then Levenshtein distance to target ≤ 300. |
+| 4 | `distance/` | Require that sequences show length within one median absolute deviation from the median, and then Levenshtein distance to target less than or equal to the defined value. |
 | 5 | `taxonomy/` | Assess taxonomic distribution of training data. |
 | 6 | `train.txt` | Save training sequences to file with one sequence per line. |
 |   | `hits.txt` | Summarize UniProt annotations of training sequences. |
 
 #### Training sequences
 
-The final unique and filtered training sequences are stored in the `train.txt` file.
+The final unique and filtered training sequences are stored in the `train.txt` file in the output directory.
 
 <details>
 <summary>FBPase:</summary>
@@ -158,7 +158,7 @@ The final unique and filtered training sequences are stored in the `train.txt` f
 results/FBPase/train.txt
 ```
 
-| Taxonomic distribution and Levenshtein distance to target |
+| Taxonomic distribution and Levenshtein distance to target FBPase |
 | --- |
 | ![alt text](results/FBPase/taxonomy/taxonomic_distribution_of_train.png "Taxonomic distribution of FBPase training sequences") |
 
@@ -171,7 +171,7 @@ results/FBPase/train.txt
 results/Rubisco/train.txt
 ```
 
-| Taxonomic distribution and Levenshtein distance to target |
+| Taxonomic distribution and Levenshtein distance to target Rubisco |
 | --- |
 | ![alt text](results/Rubisco/taxonomy/taxonomic_distribution_of_train.png "Taxonomic distribution of Rubisco training sequences") |
 
@@ -399,7 +399,7 @@ source/in_silico_evolution.py --help
 <a name="requirements"></a>
 ## System requirements
 
-Evotuning was performed on a GCP VM with two vCPUs, 13 GB RAM, and one NVIDIA Tesla T4 GPU with 16 GB VRAM. Other tasks were performed on Linux systems with 16 cores and 128 GB RAM (Ubuntu 18.04.5 LTS) and 12 cores, 32 GB RAM, and an NVIDIA RTX 2070 SUPER GPU with 8 GB VRAM (Ubuntu 20.04.1 LTS).
+Evotuning was performed on a GCP VM with two vCPUs, 13 GB RAM, and one NVIDIA Tesla T4 GPU with 16 GB VRAM. Other tasks were performed on Linux systems with 16 cores and 128 GB RAM (Ubuntu 18.04.5 LTS), and 12 cores, 32 GB RAM, and an NVIDIA RTX 2070 SUPER GPU with 8 GB VRAM (Ubuntu 20.04.1 LTS).
 
 | Software | Version | Tested version | Libraries |
 | -------- | ------- | -------------- | --------- |
@@ -431,7 +431,7 @@ The analysis uses the user-friendly JAX implementation of UniRep named [jax-unir
 pip install jax-unirep
 ```
 
-To enable CUDA GPU support, you may need to install the correct JAX packages; see [instructions in the JAX repository](https://github.com/google/jax#pip-installation).
+To enable CUDA GPU support, you may need to install the correct JAX packages; see [instructions in the JAX repository](https://github.com/google/jax).
 
 ### UniProt database (optional)
 
