@@ -119,9 +119,9 @@ LOGFILE="${OUTDIR}/taxonomy/taxonomy.log" # Logfile
 date > $LOGFILE 2>&1 # Log start time
 
 # Obtain taxonomy IDs and taxonomy information
-(grep ">" ${OUTDIR}/distance/train.filtered.fasta | sed -e 's/^>/\&/' | \
-tr " " "\n" | grep -P "^&|^OX=" | sed -e 's/^OX=//' | tr "\n" "\t" | \
-tr "&" "\n" | sed -e 's/\t$//' | grep -v "^$") > \
+(grep ">" ${OUTDIR}/distance/train.filtered.fasta | tr -d "&" | \
+sed -e 's/^>/\&/' | tr " " "\n" | grep -P "^&|^OX=" | sed -e 's/^OX=//' | \
+tr "\n" "\t" | tr "&" "\n" | sed -e 's/\t$//' | grep -v "^$") > \
 ${OUTDIR}/taxonomy/train.taxids_from_fasta.tab 2>> $LOGFILE
 
 # Get full taxonomy information for the taxonomy IDs
