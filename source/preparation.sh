@@ -3,8 +3,9 @@
 # Read infile, target sequence, and output directory from command line
 INFILE=$1 # FASTA file with JackHMMer targets
 TARGET=$2 # FASTA file with single in silico evolution target sequence
-LEVCUT=$3 # Levenshtein distance to target cutoff
-OUTDIR=$4 # Output directory
+IDNTTY=$3 # Identity cutoff for CD-HIT clustering
+LEVCUT=$4 # Levenshtein distance to target cutoff
+OUTDIR=$5 # Output directory
 
 # Set up preparation log file with time and date
 mkdir -p ${OUTDIR}
@@ -52,7 +53,7 @@ LOGFILE="${OUTDIR}/cdhit/cdhit.log" # Logfile
 date > $LOGFILE 2>&1 # Log start time
 
 # Make sequences unique with CD-HIT
-cd-hit -c 1.0 -T 0 -M 28000 -i ${OUTDIR}/jackhmmer/train.unfiltered.fasta \
+cd-hit -c $IDNTTY -T 0 -M 28000 -i ${OUTDIR}/jackhmmer/train.unfiltered.fasta \
 -o ${OUTDIR}/cdhit/train.unique.fasta >> $LOGFILE 2>&1
 
 ################################################################################
