@@ -3,7 +3,8 @@
 # Read infile, target sequence, and output directory from command line
 INFILE=$1 # FASTA file with JackHMMer targets
 TARGET=$2 # FASTA file with single in silico evolution target sequence
-OUTDIR=$3 # Output directory
+LEVCUT=$3 # Levenshtein distance to target cutoff
+OUTDIR=$4 # Output directory
 
 # Set up preparation log file with time and date
 mkdir -p ${OUTDIR}
@@ -98,6 +99,7 @@ ${OUTDIR}/distance/train.length_filtered.txt >> $LOGFILE 2>&1
 source/filter_sequences_by_distance.R \
 ${OUTDIR}/distance/train.standard_aa.LD.tab \
 ${OUTDIR}/distance/train.length_filtered.txt \
+$LEVCUT \
 ${OUTDIR}/distance/train.filtered.txt >> $LOGFILE 2>&1
 
 # Extract filtered sequences from FASTA
@@ -109,7 +111,7 @@ ${OUTDIR}/distance/train.filtered.fasta >> $LOGFILE 2>&1
 # Summarise hit annotations
 grep ">" ${OUTDIR}/distance/train.filtered.fasta | \
 sed -e 's/ /\t/' -e 's/ OS=/\t/' | cut -f 2 | sort | uniq -c | sort -rn \
-> ${OUTDIR}/hits.txt
+> ${OUTDIR}/hits.txt 2>> $LOGFILE
 
 # Save sequences one per line
 cat ${OUTDIR}/distance/train.filtered.fasta | sed -e '/^>/ s/^>/>\t/' | \

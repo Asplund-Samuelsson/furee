@@ -105,7 +105,7 @@ data/Syn6803_P54205_Rubisco.fasta \
 
 ### 2. Prepare training data
 
-The query sequences are used for JackHMMer searches against the UniProt sequence database and subsequently filtered (see table below for more details). We run a preparation script with the query sequences, the _in silico_ evolution target sequence, and direct the output to a directory of choice.
+The query sequences are used for JackHMMer searches against the UniProt sequence database and subsequently filtered (see table below for more details). We run a preparation script with the query sequences, the _in silico_ evolution target sequence, the Levenshtein distance cutoff, and direct the output to a directory of choice.
 
 <details open>
 <summary>FBPase:</summary>
@@ -114,6 +114,7 @@ The query sequences are used for JackHMMer searches against the UniProt sequence
 source/preparation.sh \
 intermediate/FBPase_queries.fasta \
 data/Syn6803_P73922_FBPase.fasta \
+300 \
 results/FBPase
 ```
 
@@ -126,6 +127,7 @@ results/FBPase
 source/preparation.sh \
 intermediate/Rubisco_queries.fasta \
 data/Syn6803_P54205_Rubisco.fasta \
+400 \
 results/Rubisco
 ```
 
