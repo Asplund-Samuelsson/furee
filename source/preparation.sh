@@ -106,6 +106,11 @@ ${OUTDIR}/aa/train.standard_aa.fasta \
 ${OUTDIR}/distance/train.filtered.txt \
 ${OUTDIR}/distance/train.filtered.fasta >> $LOGFILE 2>&1
 
+# Summarise hit annotations
+grep ">" ${OUTDIR}/distance/train.filtered.fasta | \
+sed -e 's/ /\t/' -e 's/ OS=/\t/' | cut -f 2 | sort | uniq -c | sort -rn \
+> ${OUTDIR}/hits.txt
+
 # Save sequences one per line
 cat ${OUTDIR}/distance/train.filtered.fasta | sed -e '/^>/ s/^>/>\t/' | \
 cut -f 1 | tr -d "\n" | tr ">" "\n" | grep -vP "^$" \
