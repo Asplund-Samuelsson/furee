@@ -1,0 +1,771 @@
+  19442 Inositol-1-monophosphatase
+   9479 Fructose-1,6-bisphosphatase
+   9240 Fructose-1,6-bisphosphatase class 1
+   5447 Inositol monophosphatase
+   5053 Histidinol-phosphatase
+   4279 3'(2'),5'-bisphosphate nucleotidase CysQ
+   3167 Uncharacterized protein
+   2446 Fructose-bisphosphatase
+   1393 Myo-inositol-1(Or 4)-monophosphatase
+   1271 Inositol-phosphate phosphatase
+   1127 Inositol monophosphatase family protein
+    697 Fructose-bisphosphatase (Fragment)
+    589 Class II fructose-bisphosphatase
+    555 Class 1 fructose-bisphosphatase
+    517 Histidinol phosphate phosphatase
+    392 D-fructose-1,6-bisphosphate 1-phosphohydrolase
+    324 Inositol-1-monophosphatase (Fragment)
+    295 Histidinol phosphatase
+    233 Fructose 1,6-bisphosphatase
+    225 Fructose-1,6-bisphosphatase/inositol monophosphatase family enzyme
+    218 Uncharacterized protein (Fragment)
+    190 Histidinol phosphatase-like enzyme (Inositol monophosphatase family)
+    182 Hypothetical protein
+    154 Inositol phosphatase
+    126 Septin-type G domain-containing protein
+    115 MTEF3 factor (Fragment)
+    115 Fructose-1,6-bisphosphatase I
+    113 3'(2'),5'-bisphosphate nucleotidase
+    109 SEPT2 protein (Fragment)
+    108 D-fructose 1,6-bisphosphatase class 2/sedoheptulose 1,7-bisphosphatase
+    104 Histidinol-phosphatase, inositol monophosphatase family
+     93 Inositol monophosphatase/fructose-1,6-bisphosphatase family protein
+     92 Histidinol-phosphate phosphatase
+     89 D-fructose 1,6-bisphosphatase
+     75 Fructose-1,6-bisphosphatase II
+     73 Hypothetical protein (Fragment)
+     72 D-fructose-1,6-bisphosphate 1-phosphohydrolase class 2
+     70 Fructose-1,6-bisphosphatase II / sedoheptulose-1,7-bisphosphatase
+     60 3'(2'), 5'-bisphosphate nucleotidase
+     57 Unannotated protein
+     56 Fructose-1, 6-bisphosphatase/inositol-1-monophosphatase
+     47 Histidinol-phosphatase [alternative form]
+     43 transcription termination factor MTEF1, chloroplastic
+     42 Septin-2
+     40 Sedoheptulose-1,7-bisphosphatase
+     39 Inositol monophosphate family protein
+     38 Phosphatase
+     38 Myo-inositol-1-monophosphatase
+     36 D-fructose-1,6-bisphosphate 1-phosphohydrolase class 2 (Fragment)
+     34 Inositol monophosphatase (Fragment)
+     33 Mitochondrial transcription termination factor 4
+     33 Mitochodrial transcription termination factor-related protein
+     31 Septin-5
+     29 Putative inositol monophosphatase
+     29 mTERF domain-containing protein 2
+     28 3'(2'),5'-bisphosphate nucleotidase 1
+     27 Putative myo-inositol-1(Or 4)-monophosphatase
+     25 Fructose-bisphosphatase class II
+     25 Fructose-1 6-bisphosphatase
+     25 BPNT1 nucleotidase (Fragment)
+     24 transcription termination factor MTEF1, chloroplastic-like
+     24 Fructose-1,6-bisphosphatase/inositol-1-monophosph atase
+     22 Putative transcription regulator mTERF family
+     21 Inositol monophosphatase protein
+     21 Arabinose phosphate phosphatase
+     20 Septin-4 (Fragment)
+     20 Fructose-1,6-bisphosphatase class 2
+     19 Mitochondrial transcription termination factor family protein
+     18 Mitochodrial transcription termination factor-related
+     18 Inositol-phosphate phosphatase (IMPA, suhB)
+     18 Histidinol-phosphatase (Fragment)
+     18 FBPase domain-containing protein
+     17 transcription termination factor MTERF6, chloroplastic/mitochondrial
+     17 Septin-5-like
+     17 Putative inositol-1-monophosphatase
+     17 Adenosine-3'(2'),5'-bisphosphate nucleotidase
+     16 Transcription termination factor MTEF1, chloroplastic
+     16 Fructose-1,6-bisphosphatase class 1 1
+     15 Mitochodrial transcription termination factor
+     15 Class II fructose-bisphosphatase (Fragment)
+     15 Archaeal fructose-1,6-bisphosphatase and related enzymes of inositol monophosphatase family
+     14 Transcription termination factor 4, mitochondrial-like
+     14 Septin 5a
+     14 Septin-2-like
+     14 Fructose-bisphosphatase class II family protein
+     14 Fructose-1,6-bisphosphatase/inositol-1-monophosphatase
+     14 D-fructose-1,6-bisphosphate 1-phosphohydrolase (Fragment)
+     13 Putative inositol monophosphatase family protein
+     13 mTERF domain-containing protein, mitochondrial
+     13 Histidinol-phosphatasee (Alternative form)
+     13 FBPase_C domain-containing protein
+     13 Archaeal fructose-1,6-bisphosphatase
+     12 Septin-2 (Fragment)
+     12 Septin-2B
+     12 Fructose 1,6-bisphosphatase II
+     12 3'-5'-bisphosphate nucleotidase
+     11 Transcription termination factor 4, mitochondrial
+     11 Septin-7
+     11 Predicted protein
+     11 Mitochondrial transcription termination factor 3
+     11 Histidinol-phosphate phosphatase, putative, inositol monophosphatase
+     11 Fructose-bisphosphatase class I
+     11 Fructose-1,6-bisphosphatase, GlpX type
+     11 3'(2'),5'-bisphosphate nucleotidase CysQ (Fragment)
+     10 Zgc:63587
+     10 mTERF domain-containing protein 1, mitochondrial
+     10 Inositol-phosphate phosphatase / L-galactose 1-phosphate phosphatase / histidinol-phosphatase
+     10 Inositol 1-phosphatase protein
+     10 Inorganic polyphosphate kinase
+     10 Histidinol-phosphate phosphatase HisN
+     10 Fructose-1-6-bisphosphatase
+     10 Extragenic suppressor protein suhB
+     10 3'(2'), 5'-bisphosphate nucleotidase/myo-inositol-1(Or 4)-monophosphatase
+      9 transcription termination factor 4, mitochondrial
+      9 Septin 2
+      9 Sedoheptulose-1,7-bisphosphatase, chloroplastic
+      9 Putative Inositol monophosphatase family protein
+      9 Inositol monophosphatase family
+      9 Inositol monophosphatase and related sulfite synthesis enzyme
+      9 Inositol-1(Or 4)-monophosphatase
+      9 Inositol-1-monophosphatase SuhB
+      9 Fructose-1,6-bisphosphatase, cytosolic
+      9 Fructose-1,6-bisphosphatase class 1 2
+      9 3'-phosphoadenosine 5'-phosphosulfate (PAPS) 3'-phosphatase
+      8 Septin-type G domain-containing protein (Fragment)
+      8 Putative inositol monophosphatase protein
+      8 Putative Inositol monophosphatase
+      8 mTERF domain-containing protein 1, mitochondrial (Fragment)
+      8 Class 1 fructose-bisphosphatase (Fragment)
+      8 Carbohydrate phosphatase
+      8 Archaeal fructose-1,6-bisphosphatase or related enzyme of inositol monophosphatase family
+      8 3'(2'), 5'-bisphosphate nucleotidase 1
+      7 Transcription termination factor family protein
+      7 Transcription termination factor 3, mitochondrial
+      7 transcription termination factor 3, mitochondrial
+      7 Septin-5 (Fragment)
+      7 Septin-4
+      7 Putative inositol-phosphate phosphatase
+      7 Myo-inositol-monophosphatase
+      7 Myo-inositol-1(Or 4)-monophosphatase/inositol-phosphate phosphatase / L-galactose 1-phosphate phosphatase / histidinol-phosphatase
+      7 Inositol-phosphate phosphatase (Fragment)
+      7 Inositol monophosphatase 1
+      7 Inositol-1-monophosphatase ImpA
+      7 Inositol-1-monophosphatase/3'(2'),5'-bisphosphate nucleotidase
+      7 Histidinol phosphate phosphatase (Fragment)
+      7 Bifunctional inositol-1 monophosphatase/fructose-1,6-bisphosphatase
+      7 3'(2'),5'-bisphosphate nucleotidase (Fragment)
+      6 Septin 5b
+      6 Septin 4
+      6 SEPT5 protein (Fragment)
+      6 Putative Inositol-phosphate phosphatase
+      6 Nus factor SuhB
+      6 mTERF protein
+      6 mTERF domain-containing protein
+      6 mTERF domain containing 2 (Fragment)
+      6 Monophosphatase-like protein
+      6 Inositol monophosphatase / 5' nucleotidase (Purine nucleoside monophosphate)
+      6 Histidinol-phosphate phosphatase, putative
+      6 Extragenic suppressor
+      5 Zgc:162239
+      5 Yktc1
+      5 transcription termination factor MTERF15, mitochondrial-like
+      5 Transcription termination factor like
+      5 transcription termination factor 4, mitochondrial isoform X2
+      5 Similar to tr|Q4C910|Q4C910_CROWT Inositol-1(Or 4)-monophosphatase
+      5 Septin 5
+      5 Sedoheptulose-bisphosphatase
+      5 Sedoheptulose-1 7-bisphosphatase
+      5 Myo-inositol-1-monophosphatase (Also extragenic suppressor protein SuhB)
+      5 Mitochondrial transcription termination factorfamily protein
+      5 Mitochondrial transcription termination factor 1
+      5 Mitochondrial transcription termination factor
+      5 Inositol monophosphatase family protein (Fragment)
+      5 Inositol monophosphatase 2
+      5 Histidinol phosphatase (Fragment)
+      5 Fructose-1,6-bisphosphatase 1
+      5 CysQ protein
+      5 Archaeal fructose-1,6-bisphosphatase related enzymes of inositol monophosphatase family
+      5 3'-phosphoadenosine 5'-phosphate phosphatase
+      5 3'(2'),5'-bisphosphate nucleotidase 1-like
+      5 3'(2'),5'-bisphosphate nucleotidase 1 (Fragment)
+      4 WRKY domain-containing protein
+      4 Transcription termination factor MTERF6, chloroplastic/mitochondrial
+      4 transcription termination factor MTERF5, chloroplastic-like
+      4 Transcription termination factor MTERF15, mitochondrial
+      4 Transcription termination factor mtef1, chloroplastic
+      4 Transcription termination factor MTEF1
+      4 transcription termination factor 4, mitochondrial-like
+      4 (thale cress) hypothetical protein
+      4 Septin-1 (Fragment)
+      4 Sedoheptulose--bisphosphatase
+      4 Sedoheptulose-1,7 bisphosphatase, putative
+      4 Related to sedoheptulose-1,7-bisphosphatase
+      4 Putative transcription termination factor 4 mitochondrial (Fragment)
+      4 Putative Inositol-1-monophosphatase
+      4 Putative histidinol-phosphatase
+      4 PREDICTED: mRNAion
+      4 PDE191
+      4 Monophosphatase
+      4 Mitochondrial transcription termination factor family protein, putative
+      4 Mitochondrial transcription termination factor 2
+      4 Inositol-1-monophosphatase protein
+      4 Histidinol-phosphate phosphatase HisN, inositol monophosphatase family
+      4 Fructose-bisphosphatase class II (Fragment)
+      4 Fructose-1,6-bisphosphatase, type I
+      4 Fructose-1,6-bisphosphatase type I
+      4 Fructose-1,6-bisphosphatase-like protein
+      4 Fructose-1,6-bisphosphatase isozyme 2
+      4 Fructose 1,6-bisphosphatase (Fragment)
+      4 Fructose-1,6-bisphosphatase, class II
+      4 bifunctional phosphatase IMPL2, chloroplastic-like
+      4 Bifunctional fructose-bisphosphatase/inositol-phosphate phosphatase
+      4 3'(2') 5'-bisphosphate nucleotidase
+      3 transcription termination factor MTERF6, chloroplastic/mitochondrial-like
+      3 Transcription termination factor mtef1 protein
+      3 transcription termination factor MTEF1, chloroplastic isoform X2
+      3 Transcription termination factor 3, mitochondrial (Fragment)
+      3 Transcription termination factor
+      3 Suhb
+      3 Septin-7-like
+      3 Septin 4a
+      3 Septin-1
+      3 SEP2A protein (Fragment)
+      3 Putative transcription termination factor (Fragment)
+      3 Putative transcription termination factor 4 mitochondrial
+      3 Putative phosphatase
+      3 Putative Nus factor SuhB
+      3 Putative monophosphatase
+      3 Putative inorganic polyphosphate/ATP-NAD kinase (IMPA, suhB)
+      3 Putative fructose-1,6-bisphosphatase or related enzymes of inositol monophosphatase family
+      3 Putative fructose-1,6-bisphosphatase
+      3 Putative 3'(2'),5'-bisphosphate nucleotidase
+      3 Protein peanut
+      3 Myo-inositol-1-monophosphotase
+      3 Myo-inositol-1
+      3 mTERF-like protein
+      3 mTERF domain-containing protein 1
+      3 Mitochondrial transcription termination factor, mTERF
+      3 Mitochondrial transcription termination factor family protein isoform 1
+      3 Inositol-phosphate phosphatase/L-galactose 1-phosphate phosphatase/histidinol-phosphatase
+      3 Inositol-1-monophosphatase (IMPase)
+      3 Inorganic polyphosphate/ATP-NAD kinase
+      3 Histidinol-phosphatase, hisN
+      3 Histidinol-phosphatase (Alternative form)
+      3 Fructose-bisphosphatase, class II
+      3 Fructose-1,6-bisphosphatase (Fragment)
+      3 Fructose-1,6-bisphosphatase 1 class 2
+      3 (California timema) hypothetical protein
+      3 Bisphosphate nucleotidase 1
+      3 Bifunctional phosphatase IMPL2, chloroplastic
+      3 Ammonium transport protein
+      3 Agrocinopine catabolism protein
+      3 AccG
+      3 3'-Phosphoadenosine 5'-phosphosulfate (PAPS) 3'-phosphatase
+      3 3'5'-bisphosphate nucleotidase CysQ protein
+      2 YktC (Inositol monophosphatase SuhB)
+      2 YktC
+      2 Transcription termination factor MTERF8, chloroplastic
+      2 transcription termination factor MTERF4, chloroplastic-like
+      2 transcription termination factor MTEF1, chloroplastic-like isoform X1
+      2 Transcription termination factor, mitochondrial/chloroplastic
+      2 transcription termination factor 4, mitochondrial-like isoform X1
+      2 transcription termination factor 4, mitochondrial isoform X4
+      2 Transcription termination factor 4, mitochondrial isoform X2
+      2 transcription termination factor 4, mitochondrial isoform X1
+      2 Transcription termination factor 4
+      2 transcription termination factor 3, mitochondrial isoform X4
+      2 transcription termination factor 3, mitochondrial isoform X3
+      2 transcription termination factor 3, mitochondrial isoform X2
+      2 transcription termination factor 2, mitochondrial isoform X2
+      2 SuhB2
+      2 SuhB
+      2 Septin 7 (Fragment)
+      2 Septin-4-like
+      2 septin-2
+      2 Septin 1
+      2 septin-1
+      2 Sedoheptulose--bisphosphatase protein
+      2 Sedoheptulose-1,7-bisphosphatase-like protein
+      2 Sedoheptulose-1,7-bisphosphatase (Fragment)
+      2 Putative transcription termination factor 3 mitochondrial (Fragment)
+      2 Putative transcription termination factor
+      2 Putative septins p-loop gtpase
+      2 Putative Pentatricopeptide repeat superfamily protein
+      2 Putative ovule protein
+      2 Putative mTERF domain containing protein, identical
+      2 Putative mterf domain-containing protein 1 mitochondrial (Fragment)
+      2 Putative mterf domain-containing protein
+      2 Putative mitochodrial transcription termination factor
+      2 Putative inositol mono-phosphatase (SuhB-like)
+      2 Putative Fructose-bisphosphatase
+      2 Putative extragenic suppressor protein (Inositol monophosphatase family)
+      2 Putative bacterial fructose-1,6-bisphosphatase, glpX-encoded
+      2 N-amidino-scyllo-inosamine-4-phosphate phosphatase
+      2 N-acetylmuramoyl-L-alanine amidase
+      2 Myo-inositol-1(Or 4)-monophosphatase, putative
+      2 mTERF domain-containing protein (Fragment)
+      2 mTERF domain-containing protein 2 (Fragment)
+      2 mTERF
+      2 MTER1 (Fragment)
+      2 Mono-phosphatase
+      2 Mitochondrial transcription termination factor family protein, putative isoform 1
+      2 Mitochondrial transcription termination factor family
+      2 Inositol phosphatase (Fragment)
+      2 Inositol(myo)-1(or 4)-monophosphatase 2
+      2 Inositol monophosphatase synthesis enzyme
+      2 Inositol monophosphatase family domain containing protein
+      2 Inositol monophosphatase domain-containing protein, putative
+      2 Inositol monophosphatase (CysQ, MET22, BPNT1)
+      2 Inositol monophophatase family protein
+      2 Inositol-1-monophosphatase, putative
+      2 Inositol-1-monophosphatase (EC)
+      2 Histidinol-phosphatase HisN
+      2 Histidinol-phosphatase [alternative form] (EC)
+      2 Fructose-bisphosphatase 1
+      2 Fructose-1,6-bisphosphatase/sedoheptulose-1,7-bis phosphatase
+      2 Fructose-1 6-bisphosphatase II
+      2 Fructose-1,6-bisphosphatase, glpx type
+      2 Fructose-1-6-bisphosphatase family protein
+      2 Fructose-1,6-bisphosphatase, active site protein
+      2 Fbp, Fructose-1,6-bisphosphatase
+      2 FBP
+      2 Chloroplast sedoheptulose-1,7-bisphosphatase
+      2 Bifunctional NADP phosphatase/NAD kinase
+      2 Archaeal fructose-16-bisphosphatase and related enzymes of inositol monophosphatase family
+      2 Archaeal fructose-1,6-bisphosphatase and related enzyme of inositol monophosphatase family
+      2 5'-bisphosphate nucleotidase
+      2 3',5'-bisphosphate nucleotidase (Fragment)
+      2 3'(2'),5'-bisphosphate nucleotidase 1 isoform X1
+      2 2-dehydropantoate 2-reductase
+      2 2', 3'-cyclic nucleotide 2'-phosphodiesterase
+      1 Zinc finger AN1-type containing 1
+      1 Zinc-binding dehydrogenase
+      1 YktC (Fragment)
+      1 Yktc1 protein
+      1 Wenxma_14, whole genome shotgun sequence
+      1 Uncharacterized protein ykzC
+      1 Uncharacterized protein MANES_15G124800
+      1 Uncharacterized protein MANES_01G034700
+      1 uncharacterized protein LOC8034908
+      1 uncharacterized protein LOC4817191
+      1 uncharacterized protein LOC118349427
+      1 uncharacterized protein LOC117137618
+      1 uncharacterized protein LOC116210586
+      1 uncharacterized protein LOC116196902
+      1 uncharacterized protein LOC115628554
+      1 uncharacterized protein LOC113786167 isoform X4
+      1 uncharacterized protein LOC113786167 isoform X3
+      1 uncharacterized protein LOC113736722 isoform X2
+      1 uncharacterized protein LOC113733989
+      1 uncharacterized protein LOC113712626
+      1 uncharacterized protein LOC111316399
+      1 uncharacterized protein LOC111309563
+      1 uncharacterized protein LOC111276729 isoform X1
+      1 uncharacterized protein LOC111082530
+      1 uncharacterized protein LOC111076671
+      1 uncharacterized protein LOC111066169
+      1 uncharacterized protein LOC111021035
+      1 uncharacterized protein LOC109721091
+      1 uncharacterized protein LOC108991441 isoform X3
+      1 uncharacterized protein LOC108991441 isoform X2
+      1 uncharacterized protein LOC108984905 isoform X2
+      1 uncharacterized protein LOC108126093
+      1 uncharacterized protein LOC108092381
+      1 uncharacterized protein LOC108079633
+      1 uncharacterized protein LOC108063561
+      1 uncharacterized protein LOC108049592
+      1 uncharacterized protein LOC107990329
+      1 uncharacterized protein LOC107960139
+      1 uncharacterized protein LOC107951569 isoform X2
+      1 uncharacterized protein LOC107951569 isoform X1
+      1 uncharacterized protein LOC107937513
+      1 uncharacterized protein LOC107936120 isoform X2
+      1 uncharacterized protein LOC107931417
+      1 uncharacterized protein LOC107919825
+      1 uncharacterized protein LOC107913811
+      1 uncharacterized protein LOC107898758
+      1 uncharacterized protein LOC107894014
+      1 uncharacterized protein LOC107867596
+      1 uncharacterized protein LOC107855341 isoform X2
+      1 uncharacterized protein LOC107855341 isoform X1
+      1 uncharacterized protein LOC107850284
+      1 uncharacterized protein LOC107830411
+      1 uncharacterized protein LOC107822071
+      1 uncharacterized protein LOC107791224 isoform X2
+      1 uncharacterized protein LOC107791224 isoform X1
+      1 uncharacterized protein LOC107785331
+      1 uncharacterized protein LOC107781555
+      1 uncharacterized protein LOC107780477
+      1 uncharacterized protein LOC107777872 isoform X2
+      1 uncharacterized protein LOC107774787
+      1 uncharacterized protein LOC107761885
+      1 uncharacterized protein LOC107760589
+      1 uncharacterized protein LOC107759882
+      1 uncharacterized protein LOC107496843 isoform X2
+      1 uncharacterized protein LOC107492954
+      1 uncharacterized protein LOC107483630
+      1 uncharacterized protein LOC107430627 isoform X5
+      1 uncharacterized protein LOC107426897
+      1 uncharacterized protein LOC107417253 isoform X2
+      1 Uncharacterized protein LOC105137001 isoform X1
+      1 Uncharacterized protein LOC105109464
+      1 uncharacterized protein LOC105057821 isoform X1
+      1 uncharacterized protein LOC105041767
+      1 uncharacterized protein LOC104246712
+      1 uncharacterized protein LOC104245699
+      1 uncharacterized protein LOC104243458
+      1 uncharacterized protein LOC104235559
+      1 uncharacterized protein LOC104227910
+      1 uncharacterized protein LOC104216057
+      1 uncharacterized protein LOC103510428
+      1 uncharacterized protein LOC103483822
+      1 uncharacterized protein LOC101500785 isoform X3
+      1 uncharacterized protein LOC101499996
+      1 uncharacterized protein LOC101494840
+      1 uncharacterized protein LOC101490165
+      1 Uncharacterized protein, isoform B
+      1 Uncharacterized protein, isoform A
+      1 uncharacterized protein
+      1 Uncharacterized LOC113138650
+      1 UBA domain-containing protein
+      1 TypeI Fructose-1,6-bis phosphatase
+      1 Transcription termination factor mTERF (Fragment)
+      1 transcription termination factor MTERF9, chloroplastic isoform X3
+      1 transcription termination factor MTERF8, chloroplastic-like
+      1 Transcription termination factor mterf6 protein
+      1 Transcription termination factor MTERF6, chloroplastic/mitochondrial-like protein
+      1 transcription termination factor MTERF6, chloroplastic/mitochondrial isoform X1
+      1 Transcription termination factor MTERF6, chloroplastic/mitochondrial isoform A
+      1 Transcription termination factor MTERF6 chloroplastic/mitochondrial
+      1 Transcription termination factor mterf6, chloroplasticmitochondrial
+      1 Transcription termination factor MTERF6
+      1 transcription termination factor MTERF5, chloroplastic-like isoform X2
+      1 transcription termination factor MTERF5, chloroplastic-like isoform X1
+      1 Transcription termination factor mterf5, chloroplastic (Fragment)
+      1 Transcription termination factor MTERF5, chloroplastic
+      1 Transcription termination factor MTERF5
+      1 transcription termination factor MTERF2, chloroplastic-like isoform X2
+      1 transcription termination factor MTERF2, chloroplastic-like
+      1 Transcription termination factor MTERF2 chloroplastic isoform X1
+      1 Transcription termination factor MTERF2 chloroplastic
+      1 transcription termination factor MTERF15, mitochondrial-like isoform X2
+      1 transcription termination factor MTERF15, mitochondrial-like isoform X1
+      1 Transcription termination factor MTERF15 mitochondrial
+      1 transcription termination factor MTEF1, chloroplastic-like isoform X2
+      1 Transcription termination factor MTEF1, chloroplastic-like
+      1 transcription termination factor MTEF1, chloroplastic isoform X3
+      1 Transcription termination factor MTEF1, chloroplastic isoform X1
+      1 transcription termination factor MTEF1, chloroplastic isoform X1
+      1 Transcription termination factor MTEF1, chloroplastic isoform B
+      1 Transcription termination factor MTEF1, chloroplastic isoform A
+      1 Transcription termination factor MTEF1, chloroplastic (Fragment)
+      1 transcription termination factor MTEF18, mitochondrial-like
+      1 Transcription termination factor mitochondrial-like protein
+      1 transcription termination factor, mitochondrial isoform X2
+      1 Transcription termination factor, mitochondrial (Fragment)
+      1 Transcription termination factor, mitochondrial
+      1 Transcription termination factor mitochondrial
+      1 transcription termination factor, mitochondrial
+      1 Transcription termination factor (Fragment)
+      1 Transcription termination factor family protein (Fragment)
+      1 transcription termination factor 4, mitochondrial-like isoform X3
+      1 transcription termination factor 4, mitochondrial-like isoform X2
+      1 transcription termination factor 4, mitochondrial isoform X3
+      1 Transcription termination factor 4, mitochondrial isoform X2 (Fragment)
+      1 Transcription termination factor 4, mitochondrial (Fragment)
+      1 transcription termination factor 3, mitochondrial-like
+      1 transcription termination factor 3, mitochondrial isoform X1
+      1 Transcription termination factor 3-like protein (Fragment)
+      1 Transcription termination factor 3
+      1 Transcription termination factor 2, mitochondrial Mitochondrial transcription termination factor 2
+      1 Transcription termination factor 1
+      1 Transcription factor mTERF2
+      1 Tiorf126 protein
+      1 Suppressor protein suhB
+      1 SuhB protein
+      1 SUHB-LIKE PROTEIN
+      1 SuhB-like protein
+      1 SuhB (Fragment)
+      1 SuhB_3 protein
+      1 Succinyl-CoA ligase ADP-forming subunit beta protein
+      1 SPG23_c9, whole genome shotgun sequence
+      1 SPG23_c14, whole genome shotgun sequence
+      1 Similar to sedoheptulose-1,7-bisphosphatase
+      1 Similar to inositol monophosphatase
+      1 Si:dkeyp-94h10.5
+      1 SFRICE_018043
+      1 Septin Spn3
+      1 Septinlike
+      1 Septin-7, putative
+      1 septin-7-like
+      1 septin-7 isoform X3
+      1 Septin-7 (Fragment)
+      1 Septin 7b
+      1 septin-5 isoform X2
+      1 septin-5 isoform X1
+      1 Septin-5 Cell division control-related protein 1
+      1 septin-4-like isoform X2
+      1 septin-4-like isoform X1
+      1 septin-4-like
+      1 septin-4 isoform X7
+      1 septin-4 isoform X6
+      1 septin-4 isoform X4
+      1 Septin 4b
+      1 septin-4
+      1 Septin-2-like protein (Fragment)
+      1 Septin-2-like isoform X2 (Fragment)
+      1 Septin-2B-like
+      1 Septin-1-like protein (Fragment)
+      1 septin-1-like
+      1 septin-1 isoform X2
+      1 Septin-1 isoform x1
+      1 SEPT7
+      1 SEPT5 (Fragment)
+      1 SEPT4 isoform 22
+      1 Sept2 protein (Fragment)
+      1 SEPALLATA 1/2
+      1 Sedoheptulose-1 family protein
+      1 Sedoheptulose-1,7-chloroplastic
+      1 Sedoheptulose-1,7-bisphosphatase protein
+      1 Sedoheptulose-1,7-bisphosphatase (ISS)
+      1 Sedoheptulose-1,7-bisphosphatase (Fructose-1-6-bisphosphatase)
+      1 sedoheptulose-1,7-bisphosphatase, chloroplastic-like
+      1 sedoheptulose-1,7-bisphosphatase, chloroplastic
+      1 Sedoheptulose-1,7-bisphosphatase, chloroplast
+      1 Sedoheptulose-17-bisphosphatase
+      1 SBPase
+      1 SAYSvFN domain-containing protein 1-like
+      1 RNase H domain-containing protein
+      1 Ribonuclease T(2) (Fragment)
+      1 RE18748p
+      1 RALY heterogeneous nuclear ribonucleoprotein
+      1 Pyr_redox_2 domain-containing protein
+      1 Put. Inositol monophosphatase family protein
+      1 Putative transcription termination factor ixodes scapularis transcription termination factor (Fragment)
+      1 Putative transcription termination factor 4
+      1 Putative sugar-bisphosphatase
+      1 Putative septins p-loop gtpase (Fragment)
+      1 Putative septin-5 isoform X1
+      1 Putative Septin-5
+      1 Putative septin-4-like isoform 5
+      1 Putative septin-2B-like
+      1 Putative sedoheptulose--bisphosphatase protein
+      1 Putative phosphatase protein
+      1 Putative PDE191
+      1 Putative N-amidino-scyllo-inosamine-4-phosphate phosphatase
+      1 Putative myo-inositol 1-monophosphatase
+      1 Putative mterf domain-containing protein mitochondrial ovary overexpressed
+      1 Putative mterf domain-containing protein 2 (Fragment)
+      1 Putative mterf domain-containing protein 2
+      1 Putative mTERF domain-containing protein 1, mitochondrial-like (Fragment)
+      1 Putative monophosphatase protein
+      1 Putative Mono-phosphatase
+      1 Putative mitochondrial transcription termination factor mterf
+      1 Putative mitochondrial transcription termination factor family protein-like
+      1 Putative Mitochondrial transcription termination factor family protein
+      1 Putative mitochondrial transcription termination factor family protein
+      1 Putative mitochondrial protein
+      1 Putative inositol 1-monophosphatase ImpA
+      1 Putative Histidinol-phosphate phosphatase, inositol monophosphatase
+      1 Putative Histidinol-phosphatase
+      1 Putative hexoseP phosphatase
+      1 Putative fructose 1,6-bisphosphatase class II
+      1 Putative Fructose-1,6-bisphosphatase class 1
+      1 Putative fructose-1-6-bisphosphatase
+      1 Putative extragenic suppressor protein (Inositolmonophosphatase family)
+      1 Putative catalytic
+      1 Protein STRUBBELIG-RECEPTOR FAMILY 2
+      1 Protein peanut (Fragment)
+      1 Protein CysQ
+      1 Protein CBR-TAG-231
+      1 Protein agamous-like 30
+      1 Probable myo-inositol monophosphatase protein
+      1 Probable monophosphatase protein
+      1 Probable inositol monophosphatase protein
+      1 Probable inositol monophosphatase family
+      1 Probable inositol-1-monophosphatase SuhB
+      1 Probable inorganic polyphosphate/ATP-NAD kinase (Poly(P)/ATP NAD kinase)
+      1 Probable inorganic polyphosphate/ATP-NAD kinase
+      1 Predicted protein (Fragment)
+      1 PREDICTED: mRNAion termination factor
+      1 PREDICTED: mRNAion termination
+      1 Predicted hexoseP phosphatase
+      1 Possible inositol-phosphate phosphatase
+      1 (pine wood nematode) hypothetical protein
+      1 Phosphatase IMPL1
+      1 Pde191
+      1 Oxidoreductase
+      1 Os12g0490000 protein
+      1 Os11g0206300 protein (Fragment)
+      1 Os08g0515800 protein
+      1 Os06g0224500 protein
+      1 Os03g0785200 protein
+      1 Os03g0360600 protein
+      1 NAF domain-containing protein
+      1 Myo-inositol monophosphatase A3
+      1 Myo-inositol monophosphatase 2 family protein
+      1 Myo-inositol monophosphatase
+      1 Myo-inositol-1or 4-monophosphatase protein
+      1 Myo-inositol-1(Or 4)-monophosphatase/inositol-phosphate phosphatase/L-galactose 1-phosphate phosphatase
+      1 Myo-inositol-1(Or 4)-monophosphatase/inositol-phosphate phosphatase / L-galactose 1-phosphate phosphatase
+      1 Myo-inositol-1(Or 4)-monophosphatase/histidinol-phosphatase
+      1 Myo-inositol-1(Or 4)-monophosphatase (Fragment)
+      1 Myo-inositol 1-monophosphatase
+      1 Myb family transcription factor family protein
+      1 MYB105 protein
+      1 mTERF protein (Fragment)
+      1 mTERF (Fragment)
+      1 mTERF domain-containing protein, putative
+      1 mTERF domain-containing protein, mitochondrial (Fragment)
+      1 Mterf domain-containing protein mitochondrial
+      1 mTERF domain-containing protein mitochondrial
+      1 mTERF domain-containing protein 3, mitochondrial
+      1 mTERF domain-containing protein 2-like (Fragment)
+      1 mTERF domain-containing protein 2-like
+      1 mTERF domain-containing protein 1, mitochondrial-like protein
+      1 mTERF domain-containing protein 1-like protein
+      1 Mterf domain-containing protein
+      1 mTERF domain containing protein
+      1 mTERF domain-containing 1, mitochondrial
+      1 mTERFD3 protein (Fragment)
+      1 mTERF4 isoform 20
+      1 mTERF4 isoform 19 (Fragment)
+      1 mTERF4 isoform 18 (Fragment)
+      1 mTERF4
+      1 MTER2 (Fragment)
+      1 Mitochondrial transcription termination factor-like protein
+      1 Mitochondrial transcription termination factor family protein, putative isoform 2
+      1 Mitochondrial transcription termination factor family protein / mTERF family protein
+      1 Mitochondrial transcription termination factor family protein isoform 2
+      1 Mitochondrial transcription factor 1
+      1 Mitochondrial-like transcription termination factor family protein (Fragment)
+      1 Mitochondrial-like transcription termination factor family protein
+      1 Mitochondrial import receptor subunit TOM22 homolog
+      1 Mg dependent phosphatase
+      1 LOW QUALITY PROTEIN: 3'(2'),5'-bisphosphate nucleotidase 1
+      1 Larp
+      1 Inositol-phosphate phosphatase, myo-inositol-1(Or 4)-monophosphatase
+      1 Inositol phosphatase/fructose-16-bisphosphatase
+      1 Inositol(myo)-1(or 4)-monophosphatase 1
+      1 Inositol monophosphatase ttx-7
+      1 Inositol monophosphatase related Mg++ dependent phosphatase
+      1 Inositol monophosphatase, myo-inositol-1(Or 4)-monophosphatase
+      1 Inositol monophosphatase family histidinol-phosphatase
+      1 Inositol monophosphatase family (Fragment)
+      1 Inositol monophosphatase domain protein
+      1 Inositol monophosphatase 3
+      1 Inositol-1-monophosphotase
+      1 Inositol-1-monophosphatase (IMPA, suhB)
+      1 Inositol-1-monophosphatase (IMPase) (Inositol-1-phosphatase) (I-1-Pase)
+      1 Inositol-1-monophosphatase IMPase
+      1 Inositol1monophosphatase EC 31325 CDS
+      1 Inositol-1-monophosphatase/3'(2'), 5'-bisphosphate nucleotidase
+      1 Inorganic polyphosphate/ATP-NAD kinase (Poly(P)/ATP NAD kinase)
+      1 Importin subunit alpha
+      1 Hypothetical 28.2 kDa protein in hemB 3'region
+      1 Histidinol-phosphate phosphatase, histidinol-phosphatase
+      1 Histidinol-phosphate p
+      1 Histidinol-phosphatase, inositol monophosphatasefamily
+      1 Histidinol-phosphatase [alternative form] (Inositol monophosphatase)
+      1 Histidinolphosphatase alternative form EC 31315
+      1 Heterogeneous nuclear ribonucleoprotein C
+      1 GM18334
+      1 Glycosyltransferase alg8 (Fragment)
+      1 Glucose-1-phosphate thymidylyltransferase
+      1 Glr0190 protein
+      1 GlpX protein
+      1 GL18723
+      1 GH10253
+      1 GD23149
+      1 GD12179
+      1 Fructose-bisphosphatase class I (Fragment)
+      1 Fructose-bisphosphatase 2
+      1 Fructose--bisphosphatase
+      1 Fructose-1-6-bisphosphatase, N-terminal domain
+      1 Fructose-1 6-bisphosphatase-like protein
+      1 Fructose 1,6-bisphosphatase [Lactobacillus sp.]
+      1 Fructose 16-bisphosphatase II
+      1 Fructose-1 6-bisphosphatase I
+      1 Fructose-1,6-bisphosphatase Fbp
+      1 Fructose-1,6-bisphosphatase family enzyme
+      1 Fructose-1,6-bisphosphatase class II glpX
+      1 Fructose-1,6-bisphosphatase, class II (Fragment)
+      1 Fructose-1,6-bisphosphatase class II
+      1 Fructose 1,6-bisphosphatase class II
+      1 fructose-1,6-bisphosphatase class 2-like
+      1 Fructose-1,6-bisphosphatase class 1, related
+      1 Fructose-1,6-bisphosphatase class 1 3
+      1 Fructose-1,6-bisphosphatase 2 class 2
+      1 Fructose-1,6-bisphosphatase-2
+      1 Fructose-1,6 biphosphatase/inositol monophosphatase Yktc
+      1 Fructose-1
+      1 FIG043197 Inositol monophosphatase family protein CDS
+      1 FIG043197: Inositol monophosphatase family protein
+      1 Fbp Fructose-1-6-bisphosphatase
+      1 Fasciclin-like arabinogalactan protein 12
+      1 Extragenic suppressor protein suhB-like protein
+      1 Extragenic suppressor protein suhB homolog
+      1 Extragenic suppressor protein (Inositolmonophosphatase family)
+      1 Exopolysaccharide production protein
+      1 Erlin-2 (Fragment)
+      1 EMB3114
+      1 EG3-1RVC
+      1 EF1_GNE domain-containing protein (Fragment)
+      1 DUF1232 domain-containing protein
+      1 DgyrCDS7385
+      1 Cytosolic non-specific dipeptidase (Fragment)
+      1 Cytokinin riboside 5'-monophosphate phosphoribohydrolase LOG7
+      1 Cytochrome b-c1 complex subunit 7
+      1 Cytidylate kinase (Fragment)
+      1 CysQ protein homolog
+      1 CysQ
+      1 CSON008622 protein
+      1 CSON007304 protein
+      1 Contig000029, whole genome shotgun sequence
+      1 Complex III subunit VII
+      1 CLUMA_CG014487, isoform A
+      1 Chromosome undetermined SCAF2819, whole genome shotgun sequence (Fragment)
+      1 Chromosome 21 SCAF15022, whole genome shotgun sequence (Fragment)
+      1 Chromosome 21 SCAF14577, whole genome shotgun sequence (Fragment)
+      1 Chloroplast sedoheptulose--bisphosphatase
+      1 CGL55f
+      1 CG15390
+      1 CBS domain-containing protein
+      1 By genefinder and genscan
+      1 BnaC09g13930D protein
+      1 BnaC06g42620D protein
+      1 BnaA09g13550D protein
+      1 BnaA06g33880D protein
+      1 BnaA05g09180D protein
+      1 Blast:Septin-1
+      1 Blast:mTERF domain-containing protein 2
+      1 bifunctional phosphatase IMPL2, chloroplastic-like isoform X2
+      1 bifunctional phosphatase IMPL2, chloroplastic-like isoform X1
+      1 bifunctional phosphatase IMPL2, chloroplastic isoform X4
+      1 bifunctional phosphatase IMPL2, chloroplastic isoform X2
+      1 Bifunctional phosphatase
+      1 Bifunctional inositol-1 monophosphatase/fructose-1,6-bisphosphatase (Fragment)
+      1 ATP synthase epsilon chain, chloroplastic
+      1 ATP-synt_C domain-containing protein
+      1 At3g18870
+      1 AT2G36000 protein
+      1 At2g36000/F11F19.9
+      1 Archaeal fructose-1,6-bisphosphatase related enzyme of inositol monophosphatase family protein
+      1 Archaeal fructose-1,6-bisphosphatase related enzyme of inositol monophosphatase family
+      1 Archaeal fructose-1,6-bisphosphatase of inositol monophosphatase family
+      1 Archaeal fructose-1,6-bisphosphatase/inositol-phosphate phosphatase
+      1 Archaeal fructose-1,6-bisphosphatase and relatedenzymes of inositol monophosphatase family
+      1 Archaeal fructose-1
+      1 Ammonium transporter
+      1 Alternative histidinol phosphatase HisH2
+      1 Alcohol dehydrogenase
+      1 AIR carboxylase
+      1 ABC transporter, ATP-binding protein and permease component
+      1 AAEL002179-PA
+      1 7-bisphosphatase
+      1 3'-Phosphoadenosine 5'-phosphosulfate
+      1 3(2)-bisphosphate nucleotidase
+      1 3 (2 )-bisphosphate nucleotidase
+      1 3,2,5-bisphosphate nucleotidase putative
+      1 3'(2'),5'-bisphosphate nucleotidase CysQ-like
+      1 3(2),5-bisphosphate nucleotidase, bacterial
+      1 3'(2'),5'-bisphosphate nucleotidase 1-like protein
+      1 3'(2'),5'-bisphosphate nucleotidase 1-like isoform X2
+      1 3'(2'),5'-bisphosphate nucleotidase 1-like isoform X1
+      1 3'(2'),5'-bisphosphate nucleotidase 1 isoform X2
+      1 3(2),5-bisphosphate nucleotidase
+      1 3 (2),5-bisphosphate nucleotidase
+      1 3 (2 ),5-bisphosphate nucleotidase
+      1 3'(2') 5'-bisphosphate
+      1 2-cysteine peroxiredoxin B

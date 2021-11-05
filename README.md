@@ -145,17 +145,22 @@ results/Rubisco
 | 4 | `distance/` | Require that sequences show length within one median absolute deviation from the median, and then Levenshtein distance to target ≤ 300. |
 | 5 | `taxonomy/` | Assess taxonomic distribution of training data. |
 | 6 | `train.txt` | Save training sequences to file with one sequence per line. |
+|   | `hits.txt` | Summarize UniProt annotations of training sequences. |
 
 #### Training sequences
 
 The final unique and filtered training sequences are stored in the `train.txt` file.
 
-<details open>
+<details>
 <summary>FBPase:</summary>
 
 ```
 results/FBPase/train.txt
 ```
+
+| Taxonomic distribution and Levenshtein distance to target |
+| --- |
+| ![alt text](results/FBPase/taxonomy/taxonomic_distribution_of_train.png "Taxonomic distribution of FBPase training sequences") |
 
 </details>
 
@@ -165,6 +170,10 @@ results/FBPase/train.txt
 ```
 results/Rubisco/train.txt
 ```
+
+| Taxonomic distribution and Levenshtein distance to target |
+| --- |
+| ![alt text](results/Rubisco/taxonomy/taxonomic_distribution_of_train.png "Taxonomic distribution of Rubisco training sequences") |
 
 </details>
 

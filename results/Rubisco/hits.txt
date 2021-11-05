@@ -1,0 +1,311 @@
+   9871 Ribulose bisphosphate carboxylase large chain (Fragment)
+   6764 Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+   2586 Thiamine-phosphate synthase
+   1507 Ribulose-phosphate 3-epimerase
+   1205 Ribulose 1,5-bisphosphate carboxylase
+    909 2,3-diketo-5-methylthiopentyl-1-phosphate enolase
+    738 Ribulose bisphosphate carboxylase
+    726 Ribulose-bisphosphate carboxylase (Fragment)
+    547 Ribulose-1,5-bisphosphate carboxylase/oxygenase form I large subunit (Fragment)
+    433 RubisCO protein (Fragment)
+    388 Ribulose-bisphosphate carboxylase large chain
+    360 Ribulose bisphosphate carboxylase large chain
+    334 Thiamine phosphate synthase
+    315 Ribulose-1,5-bisphosphate carboylase/oxygenase large subunit (Fragment)
+    271 Ribulose-1,5-bisphosphate carboxylase/oxygenase form II large subunit (Fragment)
+    204 Ribulose-1,5-bisphosphate carboxylase/oxygenase (Fragment)
+    198 RuBisCO_large domain-containing protein
+    173 Thiamine-phosphate pyrophosphorylase
+    159 Ribulose-1,5-bisphosphate carboxylase/oxygenase large-subunit (Fragment)
+    152 Uncharacterized protein
+    151 Ribulose 1,5-bisphosphate carboxylase large subunit
+    149 Form II ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+    145 Form ID ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+    142 Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit form II (Fragment)
+    128 Ribulose-bisphosphate carboxylase
+    117 Ribulose 1,5-bisphosphate carboxylase/oxygenase (Fragment)
+    116 Ribulose-bisphosphate carboxylase large subunit (Fragment)
+    108 Ribulose-1,5-bisphosphate carboxylase/oxygenase form IC large subunit (Fragment)
+    104 Ribulose 1,5-bisphosphate carboxylase (Fragment)
+    101 Ribulose-1,5-bisphosphate carboxylase oxygenase large subunit (Fragment)
+     90 RuBisCO long chain, Form III-b (Fragment)
+     88 Putative ribulose-1,5-bisphosphate carboxylase oxygenase form II (Fragment)
+     86 Ribulose 1,5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+     85 Form IB ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+     77 Form I ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+     66 Ribulose bisphosphate carboxylase-like protein 2
+     65 Transcriptional regulator
+     65 RuBisCO_large domain-containing protein (Fragment)
+     64 Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit form I (Fragment)
+     61 Ribulose 1,5-bisphosphate/carboxylase oxygenase large subunit (Fragment)
+     60 Red-like ribulose-1,5-bisphosphate carboxylase/oxygenease form I (Fragment)
+     60 Form IAB ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+     56 Ribulose-1,5-bisphosphate carboxylase/oxygenease form II (Fragment)
+     49 Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit form IA (Fragment)
+     48 Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit
+     48 Form IC ribulose-1,5-bisphosphate carboxylase/oxygenase (Fragment)
+     46 Form IC ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+     44 Ribulose-bisphosphate carboxylase large subunit
+     43 RuBisCO long chain, Form III-b
+     41 Uncharacterized protein (Fragment)
+     39 Ribulose bisphosphate carboxylase-like protein
+     38 Ribulose-1,5-bisphosphate carboxylase/oxygenase form II (Fragment)
+     37 Ribulose-bisphosphate carboxylase large subunit family protein
+     37 Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (RubisCO) form ID (Fragment)
+     36 Ribulose 1,5-bisphosphate carboxylase, large subunit
+     36 Pentose-5-phosphate 3-epimerase
+     34 Form IA ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+     29 Ribulose-1,5-bisphosphate carboxylase large subunit (Fragment)
+     28 Ribulose,1-5,bisphosphate carboxylase oxygenase form I large subunit cbbL (Fragment)
+     24 Ribulose 15-bisphosphate carboxylase/oxygenase (Fragment)
+     23 Thiamine-phosphate diphosphorylase
+     23 Ribulose bisphosphate carboxylase large chain, catalytic domain protein
+     21 Thiamine-phosphate synthase (Fragment)
+     21 RuBisCO long chain, Form III-c
+     21 Green-like ribulose-1,5-bisphosphate carboxylase/oxygenease form I (Fragment)
+     19 Ribulose bisphosphate carboxylase (Rubisco) (Fragment)
+     19 Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit form IC (Fragment)
+     18 RuBisCO long chain, Form III-like (Fragment)
+     18 Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit CbbL (Fragment)
+     18 Putative ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+     17 Thiamine phosphate synthase (Fragment)
+     17 Ribulose bisphosphate carboxylase (Rubisco) green-like (Fragment)
+     17 Ribulose-1,5-bisphosphate carboxylase/oxygenase form I (Fragment)
+     17 Hypothetical protein (Fragment)
+     17 3-oxo-isoapionate-4-phosphate transcarboxylase/hydrolase
+     16 Type III ribulose-bisphosphate carboxylase
+     16 RuBisCO long chain, Form III-like
+     15 Green-like rubisco-1,5-bisphosphate carboxylase/oxygenease form I (Fragment)
+     14 RuBisCO-like protein
+     14 Ribulose-phosphate 3-epimerase (Fragment)
+     14 Ribulose 1,5-bisphosphate carboxylase large subunit (Fragment)
+     14 CbbL (Fragment)
+     13 Ribulose bisphosphate carboxylaseoxygenase large subunit
+     13 Form ID ribulose-1,5-bisphosphate carboxylase/oxygenase (Fragment)
+     13 2,3-diketo-5-methylthiopentyl-1-phosphate enolase (Fragment)
+     12 Uncharacterized ribulose bisphosphate carboxylase-like protein
+     12 RuBisCO large subunit 2 (Fragment)
+     12 Ribulose-1,5-biphosphate carboxylase large subunit (Fragment)
+     10 Type III ribulose-bisphosphate carboxylase (Fragment)
+     10 RuBisCO_large_N domain-containing protein (Fragment)
+     10 Ribulose,1-5,bisphosphate carboxylase oxygenase form II large subunit (Fragment)
+      9 TMP-TENI domain-containing protein
+      9 Thiamine monophosphate synthase
+      9 Ribulose 1,5-bisphosphate carboxylase oxygenase form II (Fragment)
+      9 Red-like rubisco-1,5-bisphosphate carboxylase/oxygenease form I (Fragment)
+      9 Putative ribulose-1,5-bisphosphate carboxylase oxygenase form I (Fragment)
+      8 Ribulose-1, 5-bisphosphate carboxylase/oxygenase large-subunit (Fragment)
+      8 Ribulose 1,5-bisphosphate carboxylase oxygenase large subunit (Fragment)
+      7 RuBisCO long chain, Form IV
+      7 RubisCO form II (Fragment)
+      7 3-hexulose-6-phosphate synthase
+      6 Similar to ribulose-1,5-bisphosphate carboxylase, Type III
+      6 RuBisCO long chain, Form II/III (Fragment)
+      6 RuBisCO long chain, Form II/III
+      6 Ribulose bisphosphate carboxylase large subunit protein
+      6 Ribulose-1,5-bisphosphate-carboxylase (Fragment)
+      6 Ribulose-1,5-bisphophate carboxylase/oxygenase large subunit (Fragment)
+      6 Ribulose-1,5-biphosphate carboxylase/oxygenase large subunit (Fragment)
+      6 Ribulose-1,5-biphosphate carboxylase/oxygenase (Fragment)
+      6 Hypothetical protein
+      6 Form I ribulose bisphosphate carboxylase large subunit (Fragment)
+      6 Form I ribulose bisphosphate carboxylase large subunit
+      5 RuBisCO long chain, Form III-c (Fragment)
+      5 Ribulose bisphosphate carboxylase, type III
+      5 Ribulose bisphosphate carboxylase/oxygenase large subunit (Fragment)
+      5 Ribulose bisphosphate carboxylase/oxygenase (Fragment)
+      5 Ribulose bisphosphate carboxylase-like protein 1
+      5 Ribulose bisphosphate carboxylase large chain 1
+      5 Ribulose-1,5-bisphosphate carboxylase, Type III
+      5 Ribulose1,5 bisphosphate carboxylase/oxygenase large subunit (Fragment)
+      5 Ribulose, 1-5, bisphosphate carboxylase oxygenase form I large subunit (Fragment)
+      5 Ribulose 1,5-bisphosphate carboxylase, large subunit, or a RuBisCO-like protein
+      5 Putative ribulose 1,5-bisphosphate carboxylase/oxygenase form II (Fragment)
+      4 Transcriptional regulator (Fragment)
+      4 RuBisCO_large_N domain-containing protein
+      4 Ribulose bisphosphate carboxylase large chain, N-terminal domain protein
+      4 Ribulose bisphosphate carboxylase (Fragment)
+      4 Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (RubisCO) form IB (Fragment)
+      4 Ribulose-1,5-bisphosphate carboxylase-oxygenase large subunit (Fragment)
+      4 Ribulose-15-bisphosphate carboxylase/oxygenase form II large subunit (Fragment)
+      4 Regulatory protein
+      4 Putative ribulose-bisphosphate carboxylase
+      4 5-methylthioribulose-1-phosphate isomerase
+      4 2,3-diketo-5-methylthiopentyl-1-phosphate enolase (DK-MTP-1-P enolase)
+      3 Thiazole tautomerase (Transcriptional regulator TenI)
+      3 Thiazole tautomerase TenI
+      3 Thiamine monophosphate synthase/TENI family protein
+      3 Ribulose bisphosphate carboxylase/oxygenase-like protein
+      3 Ribulose bisphosphate carboxylase-like protein (RuBisCO type IV-like protein)
+      3 Ribulose bisphosphate carboxylase, large subunit,-like protein
+      3 Ribulose bisphosphate carboxylase large subunit (Fragment)
+      3 Ribulose bisphosphate carboxylase large chain, chromosomal
+      3 Ribulose-1,5-bisphosphate large subunit (Fragment)
+      3 Ribulose-1,5-bisphosphate carboxylase, Type III-like protein
+      3 Ribulose-1,5-bisphosphate carboxylase, type iii
+      3 Ribulose-1,5-bisphosphate carboxylase/oxygenase, large subunit (Fragment)
+      3 Ribulose,1-5,bisphosphate carboxylase/oxygenase form I large subunit (Fragment)
+      3 Ribulose-1,5-bisphosphate carboxylase
+      3 RbcL protein (Fragment)
+      3 Putative ribulose bisphosphate carboxylaseoxygenase,large subunit
+      3 Putative ribulose 1,5-bisphosphate carboxylase/oxygenase form I (Fragment)
+      3 Pentose-5-phosphate-3-epimerase
+      2 ULP_PROTEASE domain-containing protein
+      2 TMP-TENI domain-containing protein (Fragment)
+      2 Thiamine-phosphate pyrophosphorylase (Fragment)
+      2 Similar to ribulose-1,5-bisphosphate carboxylase
+      2 RuBisCO large subunit 1 (Fragment)
+      2 RuBisCO (Fragment)
+      2 RubisCO (Fragment)
+      2 Ribulose phosphate epimerase
+      2 Ribulose-phosphate 3 epimerase family protein
+      2 Ribulose-bisphosphate carboxylase, ribulose-bisphosphate carboxylase large chain
+      2 Ribulose bisphosphate carboxylaseoxygenase,large subunit
+      2 Ribulose-bisphosphate carboxylase-like protein rubisco-like protein
+      2 Ribulose-bisphosphate carboxylase-like protein
+      2 Ribulose bisphosphate carboxylase, large subunit, C-terminal
+      2 Ribulose-bisphosphate carboxylase large chain (Fragment)
+      2 Ribulose bisphosphate carboxylase large chain, catalytic domain
+      2 Ribulose 15-bisphosphate carboxylase large subunit (Fragment)
+      2 Ribulose-1,5 biphosphate carboxylase/oxygenase large subunit (Fragment)
+      2 Ribulose 1,5 biphosphate carboxylase/oxygenase (Fragment)
+      2 Regulatory protein TenI
+      2 Putative ribulose-phosphate 3-epimerase
+      2 Putative ribulose-bisphosphate carboxylase-like protein
+      2 Putative ribulose bisphosphate carboxylase-like protein
+      2 Putative ribulose bisphosphate carboxylase, large subunit
+      2 Putative ribulose bisphosphate carboxylase large chain 1
+      2 Putative 2,3-diketo-5-methylthiopentyl-1-phosphate enolase
+      2 Os01g0791033 protein
+      2 Orotidine 5'-phosphate decarboxylase
+      2 Form II ribulose-1,5-bisphosphate carboxylase/oxygenase (Fragment)
+      2 Cytochrome f
+      2 CYTB_NTER domain-containing protein
+      2 Chloroplast ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+      2 2,3-diketo-5-methylthiopentyl-1-phosphateenolase
+      1 YkrW
+      1 Uncharacterized protein ycf72
+      1 uncharacterized protein LOC111494870
+      1 uncharacterized protein LOC111302700
+      1 Tribulose-1, 5-biphosphate carboxylase/oxygenase large-subunit (Fragment)
+      1 Transcriptional regulator TenI
+      1 Thiazole tautomerase
+      1 Thiamin-phosphate pyrophosphorylase
+      1 Thiamine-phosphate
+      1 Thiamine monophosphate synthase/TENI subfamily, putative
+      1 Similar to ribulose-1,5-bisphosphate carboxylase, Type III (Fragment)
+      1 Similar to ribulose15bisphosphate carboxylase Type III CDS
+      1 RuBisCO_small domain-containing protein
+      1 RuBisCO long chain, Form IV-like
+      1 RuBisCO long chain, Form IV (Fragment)
+      1 Rubisco-like protein Rlp1
+      1 RuBisCo-like protein
+      1 RuBisCO form II (Fragment)
+      1 RuBisCO form I (Fragment)
+      1 RubisCo form I (Fragment)
+      1 Rubisco-1,5-bisphosphate carboxylase/oxygenease form II (Fragment)
+      1 RuBisCO
+      1 Riburose-1,5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+      1 Ribulose-phosphate 3-epimerase, chloroplastic
+      1 Ribulose bisphosphate carboxylase type III RbcL
+      1 Ribulose bisphosphate carboxylase, ribulose-bisphosphate carboxylase large chain
+      1 Ribulose bisphosphate carboxylase-related protein
+      1 Ribulose bisphosphate carboxylase RbcL
+      1 Ribulose bisphosphate carboxylaseoxygenase protein, large subunit
+      1 Ribulose bisphosphate carboxylaseoxygenase, large subunit protein
+      1 Ribulose bisphosphate carboxylase/oxygenase, large subunit
+      1 Ribulose bisphosphate carboxylase oxygenase, large subunit
+      1 Ribulose bisphosphate carboxylase-like protein (RuBisCO type IV)
+      1 Ribulose-bisphosphate carboxylase-like protein rubisco-like protein (Fragment)
+      1 Ribulose-bisphosphate carboxylase-like protein, rubisco-like protein
+      1 Ribulose bisphosphate carboxylase-like protein, large chain
+      1 Ribulose-bisphosphate carboxylase-like protein (Fragment)
+      1 Ribulose bisphosphate carboxylase-like protein (Fragment)
+      1 Ribulose bisphosphate carboxylase, large subunit, C-terminal (Fragment)
+      1 Ribulose bisphosphate carboxylase, large subunit 2
+      1 Ribulose bisphosphate carboxylase large chain (EC)
+      1 Ribulose bisphosphate carboxylase large chain domain protein
+      1 Ribulose bisphosphate carboxylase large chain, catalytic domain family protein
+      1 Ribulose bisphosphate carboxylase, large chain
+      1 Ribulose-bisphosphate carboxylase large
+      1 Ribulose-bisphosphate carboxylase domain protein
+      1 Ribulose bisophosphate carboxylase
+      1 Ribulose biphosphate carboxylase large subunit
+      1 Ribulose-5-phosphate-3-epimerase, chloroplastic
+      1 Ribulose-1 (Chloroplast)
+      1 Ribulose-1,5-carboxylase/oxygenase large subunit (Fragment)
+      1 Ribulose-1,5-bisphosphate carboxynase/oxigenase form II (Fragment)
+      1 Ribulose 1,5-bisphosphate carboxylase (RuBisCO),large subunit
+      1 Ribulose-1,5-bisphosphate carboxylase/oxygenase large unit (Fragment)
+      1 Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit type II (Fragment)
+      1 Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit, plastid
+      1 Ribulose-1,5-bisphosphate carboxylase/oxygenase large Subunit (Fragment)
+      1 Ribulose-1 5-bisphosphate carboxylase/oxygenase large subunit (Fragment)
+      1 Ribulose 1,5-bisphosphate carboxylase/oxygenase, large subunit (Fragment)
+      1 Ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit 2 (Fragment)
+      1 Ribulose 1,5 bisphosphate carboxylase oxygenase (Fragment)
+      1 Ribulose-1,5-bisphosphate carboxylase oxygenase form I type ID large subunit (Fragment)
+      1 Ribulose-1,5-bisphosphate carboxylase/oxygenase form I large subunitt (Fragment)
+      1 Ribulose-1,5-bisphosphate carboxylase oxygenase form I large subunit (Fragment)
+      1 Ribulose 1,5-bisphosphate carboxylase/oxygenase form I large subunit (Fragment)
+      1 Ribulose 1,5 bisphosphate carboxylase-oxygenase chloroplast
+      1 Ribulose-1,5-bisphosphate carboxylase/oxgenase large subunit (Fragment)
+      1 Ribulose-1,5-bisphosphate carboxylase/oxgenase large subunit
+      1 Ribulose-1,5-bisphosphate carboxylase-like protein
+      1 Ribulose-1,5-bisphosphate carboxylase like protein
+      1 Ribulose 15-bisphosphate carboxylase large subunit RbcL
+      1 Ribulose 1,5-bisphosphate carboxylase large subunit-like protein
+      1 Ribulose 1 5-bisphosphate carboxylase large subunit-like protein
+      1 Ribulose 1 5-bisphosphate carboxylase large subunit
+      1 Ribulose-1,5-bisphosphate carboxylase large chain form II
+      1 Ribulose 1,5-bisphosphate carboxylase form II (Fragment)
+      1 Ribulose-1,5-bisphosphate carbolylase/oxygenase large subunit (Fragment)
+      1 Ribulose-1,5-bisphosphate carbolylase/oxygenase large subunit
+      1 Ribulose 1,5-biphosphate carboxylase/oxygenase (Fragment)
+      1 RiBisCO-like protein
+      1 Regulatory protein tenI
+      1 RbcL protein
+      1 Putative uncharacterized mitochondrial protein AtMg00280
+      1 Putative sugar nucleotidyltransferase
+      1 Putative ribulose bisphosphate carboxylase (RuBisCO)
+      1 Putative ribulose bisphosphate carboxylaseoxygenase, large subunit protein
+      1 Putative ribulose bisphosphate carboxylase large chain
+      1 Putative ribulose bisphosphate carboxylase (Fragment)
+      1 Putative ribulose bisphosphate carboxylase
+      1 Putative ribulose bisph
+      1 Putative ribulose-1,5-bisphosphate carboxylase, Type III
+      1 Putative ribulose 1,5-bisphosphate carboxylase (Fragment)
+      1 Putative pentose-5-phosphate-3-epimerase
+      1 Putative 2,3-diketo-5-methylthiopentyl-1-phosphate enolase (DK-MTP-1-P enolase)
+      1 Putative 2 3-diketo-5-methylthiopentyl-1-phosphate enolase
+      1 Protein similar to ribulose-1,5-bisphosphate carboxylase, Type III
+      1 PMD domain-containing protein (Fragment)
+      1 Plastid ribulose-1,5-bisphosphate carboxylase oxygenase (Fragment)
+      1 Phytochrome B (Fragment)
+      1 Photosystem I assembly protein Ycf4
+      1 Pentapeptide repeat protein (Fragment)
+      1 Orf119c
+      1 NAD(P)H-quinone oxidoreductase subunit 1, chloroplastic
+      1 N-acetyltransferase domain-containing protein
+      1 MtnW
+      1 Methionine salvage pathway dehydratase
+      1 Methenyltetrahydrofolate cyclohydrolase
+      1 MacB_PCD domain-containing protein (Fragment)
+      1 Inhibitor of thiaminase TenA
+      1 HTH cro/C1-type domain-containing protein
+      1 Form IAB ribulose-1,5-bisphosphate carboxylase/oxygenase (Fragment)
+      1 DUF561 domain-containing protein (Fragment)
+      1 D-ribulose-5-phosphate 3-epimerase
+      1 DNA-directed RNA polymerase beta chain, putative
+      1 Dihydrodipicolinate synthase family protein
+      1 Dienelactone hydrolase
+      1 Cytokinin dehydrogenase 1
+      1 Cupin domain-containing protein (Fragment)
+      1 CBFD_NFYB_HMF domain-containing protein
+      1 CbbM
+      1 A rubisco-like protein
+      1 Aldehyde ferredoxin oxidoreductase (Fragment)
+      1 3-oxo-isoapionate-4-phosphate decarboxylase
+      1 3-hexulose-6-phosphate synthase (Fragment)
+      1 2,3-diketo-5-methylthiopentyl-1-phosphate enolase family protein
+      1 23-diketo-5-methylthiopentyl-1-phosphate enolase
