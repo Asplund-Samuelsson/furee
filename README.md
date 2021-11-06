@@ -105,7 +105,7 @@ data/Syn6803_P54205_Rubisco.fasta \
 
 ### 2. Prepare training data
 
-The query sequences are used for JackHMMer searches against the UniProt sequence database and subsequently filtered (see table below for more details). We run a preparation script with the query sequences, the _in silico_ evolution target sequence, redundancy-filtering identity fraction, the Levenshtein distance cutoff, and direct the output to a directory of choice.
+The query sequences are used for JackHMMer searches against the UniProt sequence database and subsequently filtered (see table below for more details). We run a preparation script with the query sequences, the _in silico_ evolution target sequence, redundancy-filtering identity fraction, number of MADs defining allowed length range, the Levenshtein distance cutoff, and direct the output to a directory of choice.
 
 <details open>
 <summary>FBPase:</summary>
@@ -115,6 +115,7 @@ source/preparation.sh \
 intermediate/FBPase_queries.fasta \
 data/Syn6803_P73922_FBPase.fasta \
 1.0 \ # CD-HIT identity
+1 \ # Number of MADs allowed around median length
 300 \ # Levenshtein distance to target
 results/FBPase
 ```
@@ -129,6 +130,7 @@ source/preparation.sh \
 intermediate/Rubisco_queries.fasta \
 data/Syn6803_P54205_Rubisco.fasta \
 0.99 \ # CD-HIT identity
+1.5 \ # Number of MADs allowed around median length
 400 \ # Levenshtein distance to target
 results/Rubisco
 ```
@@ -142,7 +144,7 @@ results/Rubisco
 | 1 | `jackhmmer/` | Use JackHMMer at default settings and a maximum of five iterations to find candidate UniProt sequences for evotuning. Require full sequence E-value < 0.01, best 1-domain E-value < 0.03, and number of hits within three median absolute deviations from the median (Hampel filter). |
 | 2 | `cdhit/` | Use CD-HIT to make identified sequences unique. |
 | 3 | `aa/` | Require that sequences consist of only standard amino acids. |
-| 4 | `distance/` | Require that sequences show length within one median absolute deviation from the median, and then Levenshtein distance to target less than or equal to the defined value. |
+| 4 | `distance/` | Require that sequences show length within the defined number of median absolute deviations from the median, and then Levenshtein distance to target less than or equal to the defined value. |
 | 5 | `taxonomy/` | Assess taxonomic distribution of training data. |
 | 6 | `train.txt` | Save training sequences to file with one sequence per line. |
 |   | `hits.txt` | Summarize UniProt annotations of training sequences. |

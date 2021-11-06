@@ -4,8 +4,9 @@
 INFILE=$1 # FASTA file with JackHMMer targets
 TARGET=$2 # FASTA file with single in silico evolution target sequence
 IDNTTY=$3 # Identity cutoff for CD-HIT clustering
-LEVCUT=$4 # Levenshtein distance to target cutoff
-OUTDIR=$5 # Output directory
+LENMAD=$4 # Number of MADs to define allowed length range
+LEVCUT=$5 # Levenshtein distance to target cutoff
+OUTDIR=$6 # Output directory
 
 # Set up preparation log file with time and date
 mkdir -p ${OUTDIR}
@@ -94,6 +95,7 @@ source/lengths_of_sequences.py \
 # Filter sequences by length
 source/filter_sequences_by_length.R \
 ${OUTDIR}/distance/train.standard_aa.lengths.tab \
+$LENMAD \
 ${OUTDIR}/distance/train.length_filtered.txt >> $LOGFILE 2>&1
 
 # Filter sequences by Levenshtein distance to target
