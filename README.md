@@ -6,11 +6,19 @@ Engineering of enzymes through [UniRep](https://github.com/churchlab/UniRep) mac
 
 ### Contents
 
-1. [Usage](#usage)
-2. [System requirements](#requirements)
-3. [Installation](#installation)
-4. [Exploring evotuning of FBPase](#exploring)
-5. [Author](#author)
+1. [Overview](#overview)
+2. [Usage](#usage)
+3. [System requirements](#requirements)
+4. [Installation](#installation)
+5. [Exploring evotuning of FBPase](#exploring)
+6. [Author](#author)
+
+<a name="overview"></a>
+## Overview
+
+| ![alt text](data/furee_overview.png "Overview of the UniRep protein engineering workflow") |
+| --- |
+| **UniRep protein engineering promises computer-guided evolution using as few as 24 characterized proteins.** The workflow involves re-training an AI model with protein sequences closely related to the protein targeted for _in silico_ evolution (**A**). A regression top model utilizes the UniRep sequence representations to guide evolution and suggest improved sequence variants (**B**). |
 
 <a name="usage"></a>
 ## Usage
