@@ -17,7 +17,7 @@ Engineering of enzymes through [UniRep](https://github.com/churchlab/UniRep) mac
 
 This guide describes how to get training data, carry out evotuning, fit a top model, and perform _in silico_ evolution using FUREE.
 
-An already evotuned model for FBPase is provided (`data/parameters/iter_final/`), so if you wish you may skip the first three steps and go directly to [Fitting a top model](#topmodel).
+Evotuned models for FBPase and Rubisco are provided (`results/FBPase/evotuned/iter_final/` and `results/Rubisco/evotuned/iter_final/`), so if you wish you may skip the first three steps and go directly to [Fit a top model](#topmodel).
 
 ### 1. Obtain query sequences
 
@@ -224,12 +224,14 @@ The evotuning produces various metadata, which are listed below.
 
 The evotuned model parameters are saved in a Python Pickle file.
 
-<details open>
+<details>
 <summary>FBPase:</summary>
 
 ```
 results/FBPase/evotuned/iter_final/model_weights.pkl
 ```
+
+![alt text](results/FBPase/evotuned/evotuning.png "FBPase training and validation loss over epochs")
 
 </details>
 
@@ -239,6 +241,8 @@ results/FBPase/evotuned/iter_final/model_weights.pkl
 ```
 results/Rubisco/evotuned/iter_final/model_weights.pkl
 ```
+
+![alt text](results/Rubisco/evotuned/evotuning.png "Rubisco training and validation loss over epochs")
 
 </details>
 
@@ -321,8 +325,10 @@ source/top_model_prediction.py \
 -p results/FBPase/evotuned/iter_final \
 data/Syn6803_P73922_FBPase.txt \
 intermediate/FBPase_dummy.top_model.pkl \
-results/FBPase/Syn6803_P73922_FBPase.prediction.tab # Expect 0.1848269612693981
+results/FBPase/Syn6803_P73922_FBPase.prediction.tab
 ```
+
+The prediction for FBPase is expected to be `0.16359496894461598`.
 
 </details>
 
@@ -349,6 +355,8 @@ data/Syn6803_P54205_Rubisco.txt \
 intermediate/Rubisco_dummy.top_model.pkl \
 results/Rubisco/Syn6803_P54205_Rubisco.prediction.tab
 ```
+
+The prediction for Rubisco is expected to be `0.1516921772674731`.
 
 </details>
 

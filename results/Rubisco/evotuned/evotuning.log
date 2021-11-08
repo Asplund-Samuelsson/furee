@@ -1,0 +1,401 @@
+2021-11-06 10:30:36,059 :: INFO :: Random batching done: All sequences padded to max sequence length of 545
+2021-11-06 10:30:41,197 :: INFO :: Calculations for training set:
+2021-11-06 10:30:41,198 :: INFO :: Epoch 0: Estimated average loss: 0.1752743273973465. 
+2021-11-06 10:30:44,754 :: INFO :: Calculations for holdout set:
+2021-11-06 10:30:44,754 :: INFO :: Epoch 0: Estimated average loss: 0.17349639534950256. 
+2021-11-06 10:50:18,312 :: INFO :: Calculations for training set:
+2021-11-06 10:50:18,313 :: INFO :: Epoch 1: Estimated average loss: 0.0742979422211647. 
+2021-11-06 10:50:21,534 :: INFO :: Calculations for holdout set:
+2021-11-06 10:50:21,534 :: INFO :: Epoch 1: Estimated average loss: 0.07316548377275467. 
+2021-11-06 11:10:08,809 :: INFO :: Calculations for training set:
+2021-11-06 11:10:08,810 :: INFO :: Epoch 2: Estimated average loss: 0.04697772115468979. 
+2021-11-06 11:10:11,977 :: INFO :: Calculations for holdout set:
+2021-11-06 11:10:11,978 :: INFO :: Epoch 2: Estimated average loss: 0.04759414494037628. 
+2021-11-06 11:29:57,448 :: INFO :: Calculations for training set:
+2021-11-06 11:29:57,448 :: INFO :: Epoch 3: Estimated average loss: 0.03963249921798706. 
+2021-11-06 11:30:00,562 :: INFO :: Calculations for holdout set:
+2021-11-06 11:30:00,563 :: INFO :: Epoch 3: Estimated average loss: 0.04113705828785896. 
+2021-11-06 11:49:47,365 :: INFO :: Calculations for training set:
+2021-11-06 11:49:47,365 :: INFO :: Epoch 4: Estimated average loss: 0.03653913736343384. 
+2021-11-06 11:49:50,569 :: INFO :: Calculations for holdout set:
+2021-11-06 11:49:50,570 :: INFO :: Epoch 4: Estimated average loss: 0.03666107356548309. 
+2021-11-06 12:09:39,079 :: INFO :: Calculations for training set:
+2021-11-06 12:09:39,079 :: INFO :: Epoch 5: Estimated average loss: 0.03486199676990509. 
+2021-11-06 12:09:42,285 :: INFO :: Calculations for holdout set:
+2021-11-06 12:09:42,286 :: INFO :: Epoch 5: Estimated average loss: 0.03508098050951958. 
+2021-11-06 12:29:27,848 :: INFO :: Calculations for training set:
+2021-11-06 12:29:27,849 :: INFO :: Epoch 6: Estimated average loss: 0.029485199600458145. 
+2021-11-06 12:29:30,970 :: INFO :: Calculations for holdout set:
+2021-11-06 12:29:30,970 :: INFO :: Epoch 6: Estimated average loss: 0.031943075358867645. 
+2021-11-06 12:49:16,532 :: INFO :: Calculations for training set:
+2021-11-06 12:49:16,532 :: INFO :: Epoch 7: Estimated average loss: 0.03151165321469307. 
+2021-11-06 12:49:19,735 :: INFO :: Calculations for holdout set:
+2021-11-06 12:49:19,735 :: INFO :: Epoch 7: Estimated average loss: 0.0341302715241909. 
+2021-11-06 13:09:07,367 :: INFO :: Calculations for training set:
+2021-11-06 13:09:07,367 :: INFO :: Epoch 8: Estimated average loss: 0.027097385376691818. 
+2021-11-06 13:09:10,487 :: INFO :: Calculations for holdout set:
+2021-11-06 13:09:10,488 :: INFO :: Epoch 8: Estimated average loss: 0.02834339439868927. 
+2021-11-06 13:28:57,141 :: INFO :: Calculations for training set:
+2021-11-06 13:28:57,142 :: INFO :: Epoch 9: Estimated average loss: 0.02586468681693077. 
+2021-11-06 13:29:00,316 :: INFO :: Calculations for holdout set:
+2021-11-06 13:29:00,317 :: INFO :: Epoch 9: Estimated average loss: 0.03094222955405712. 
+2021-11-06 13:48:43,580 :: INFO :: Calculations for training set:
+2021-11-06 13:48:43,581 :: INFO :: Epoch 10: Estimated average loss: 0.025958608835935593. 
+2021-11-06 13:48:46,786 :: INFO :: Calculations for holdout set:
+2021-11-06 13:48:46,787 :: INFO :: Epoch 10: Estimated average loss: 0.026472683995962143. 
+2021-11-06 14:08:29,476 :: INFO :: Calculations for training set:
+2021-11-06 14:08:29,476 :: INFO :: Epoch 11: Estimated average loss: 0.025845462456345558. 
+2021-11-06 14:08:32,630 :: INFO :: Calculations for holdout set:
+2021-11-06 14:08:32,630 :: INFO :: Epoch 11: Estimated average loss: 0.031191131100058556. 
+2021-11-06 14:28:19,356 :: INFO :: Calculations for training set:
+2021-11-06 14:28:19,357 :: INFO :: Epoch 12: Estimated average loss: 0.022467317059636116. 
+2021-11-06 14:28:22,508 :: INFO :: Calculations for holdout set:
+2021-11-06 14:28:22,509 :: INFO :: Epoch 12: Estimated average loss: 0.026778319850564003. 
+2021-11-06 14:48:08,368 :: INFO :: Calculations for training set:
+2021-11-06 14:48:08,369 :: INFO :: Epoch 13: Estimated average loss: 0.022349195554852486. 
+2021-11-06 14:48:11,620 :: INFO :: Calculations for holdout set:
+2021-11-06 14:48:11,620 :: INFO :: Epoch 13: Estimated average loss: 0.03179129213094711. 
+2021-11-06 15:07:58,660 :: INFO :: Calculations for training set:
+2021-11-06 15:07:58,661 :: INFO :: Epoch 14: Estimated average loss: 0.022815994918346405. 
+2021-11-06 15:08:01,785 :: INFO :: Calculations for holdout set:
+2021-11-06 15:08:01,785 :: INFO :: Epoch 14: Estimated average loss: 0.026283729821443558. 
+2021-11-06 15:27:48,318 :: INFO :: Calculations for training set:
+2021-11-06 15:27:48,318 :: INFO :: Epoch 15: Estimated average loss: 0.027849266305565834. 
+2021-11-06 15:27:51,426 :: INFO :: Calculations for holdout set:
+2021-11-06 15:27:51,426 :: INFO :: Epoch 15: Estimated average loss: 0.021854037418961525. 
+2021-11-06 15:47:38,688 :: INFO :: Calculations for training set:
+2021-11-06 15:47:38,689 :: INFO :: Epoch 16: Estimated average loss: 0.02176911197602749. 
+2021-11-06 15:47:41,812 :: INFO :: Calculations for holdout set:
+2021-11-06 15:47:41,813 :: INFO :: Epoch 16: Estimated average loss: 0.025683175772428513. 
+2021-11-06 16:07:27,581 :: INFO :: Calculations for training set:
+2021-11-06 16:07:27,582 :: INFO :: Epoch 17: Estimated average loss: 0.021538661792874336. 
+2021-11-06 16:07:30,719 :: INFO :: Calculations for holdout set:
+2021-11-06 16:07:30,719 :: INFO :: Epoch 17: Estimated average loss: 0.02406325563788414. 
+2021-11-06 16:27:14,887 :: INFO :: Calculations for training set:
+2021-11-06 16:27:14,888 :: INFO :: Epoch 18: Estimated average loss: 0.021744169294834137. 
+2021-11-06 16:27:18,015 :: INFO :: Calculations for holdout set:
+2021-11-06 16:27:18,015 :: INFO :: Epoch 18: Estimated average loss: 0.025408362969756126. 
+2021-11-06 16:47:01,800 :: INFO :: Calculations for training set:
+2021-11-06 16:47:01,800 :: INFO :: Epoch 19: Estimated average loss: 0.0254084300249815. 
+2021-11-06 16:47:04,931 :: INFO :: Calculations for holdout set:
+2021-11-06 16:47:04,932 :: INFO :: Epoch 19: Estimated average loss: 0.023604562506079674. 
+2021-11-06 17:06:48,144 :: INFO :: Calculations for training set:
+2021-11-06 17:06:48,145 :: INFO :: Epoch 20: Estimated average loss: 0.02141577936708927. 
+2021-11-06 17:06:51,268 :: INFO :: Calculations for holdout set:
+2021-11-06 17:06:51,268 :: INFO :: Epoch 20: Estimated average loss: 0.023339897394180298. 
+2021-11-06 17:26:37,222 :: INFO :: Calculations for training set:
+2021-11-06 17:26:37,222 :: INFO :: Epoch 21: Estimated average loss: 0.020273230969905853. 
+2021-11-06 17:26:40,422 :: INFO :: Calculations for holdout set:
+2021-11-06 17:26:40,422 :: INFO :: Epoch 21: Estimated average loss: 0.02480369620025158. 
+2021-11-06 17:46:25,633 :: INFO :: Calculations for training set:
+2021-11-06 17:46:25,634 :: INFO :: Epoch 22: Estimated average loss: 0.018204515799880028. 
+2021-11-06 17:46:28,860 :: INFO :: Calculations for holdout set:
+2021-11-06 17:46:28,860 :: INFO :: Epoch 22: Estimated average loss: 0.022914357483386993. 
+2021-11-06 18:06:15,814 :: INFO :: Calculations for training set:
+2021-11-06 18:06:15,815 :: INFO :: Epoch 23: Estimated average loss: 0.020805299282073975. 
+2021-11-06 18:06:18,960 :: INFO :: Calculations for holdout set:
+2021-11-06 18:06:18,961 :: INFO :: Epoch 23: Estimated average loss: 0.02317294478416443. 
+2021-11-06 18:26:03,596 :: INFO :: Calculations for training set:
+2021-11-06 18:26:03,596 :: INFO :: Epoch 24: Estimated average loss: 0.02285412698984146. 
+2021-11-06 18:26:06,820 :: INFO :: Calculations for holdout set:
+2021-11-06 18:26:06,821 :: INFO :: Epoch 24: Estimated average loss: 0.01804162561893463. 
+2021-11-06 18:45:51,212 :: INFO :: Calculations for training set:
+2021-11-06 18:45:51,213 :: INFO :: Epoch 25: Estimated average loss: 0.022767383605241776. 
+2021-11-06 18:45:54,401 :: INFO :: Calculations for holdout set:
+2021-11-06 18:45:54,402 :: INFO :: Epoch 25: Estimated average loss: 0.020389162003993988. 
+2021-11-06 19:05:39,747 :: INFO :: Calculations for training set:
+2021-11-06 19:05:39,748 :: INFO :: Epoch 26: Estimated average loss: 0.018682321533560753. 
+2021-11-06 19:05:42,884 :: INFO :: Calculations for holdout set:
+2021-11-06 19:05:42,885 :: INFO :: Epoch 26: Estimated average loss: 0.024453820660710335. 
+2021-11-06 19:25:27,779 :: INFO :: Calculations for training set:
+2021-11-06 19:25:27,780 :: INFO :: Epoch 27: Estimated average loss: 0.01715582236647606. 
+2021-11-06 19:25:30,900 :: INFO :: Calculations for holdout set:
+2021-11-06 19:25:30,901 :: INFO :: Epoch 27: Estimated average loss: 0.021174490451812744. 
+2021-11-06 19:45:13,719 :: INFO :: Calculations for training set:
+2021-11-06 19:45:13,719 :: INFO :: Epoch 28: Estimated average loss: 0.01858527772128582. 
+2021-11-06 19:45:16,949 :: INFO :: Calculations for holdout set:
+2021-11-06 19:45:16,950 :: INFO :: Epoch 28: Estimated average loss: 0.020431138575077057. 
+2021-11-06 20:04:58,917 :: INFO :: Calculations for training set:
+2021-11-06 20:04:58,918 :: INFO :: Epoch 29: Estimated average loss: 0.017779719084501266. 
+2021-11-06 20:05:02,123 :: INFO :: Calculations for holdout set:
+2021-11-06 20:05:02,124 :: INFO :: Epoch 29: Estimated average loss: 0.01990249752998352. 
+2021-11-06 20:24:46,013 :: INFO :: Calculations for training set:
+2021-11-06 20:24:46,014 :: INFO :: Epoch 30: Estimated average loss: 0.02034837007522583. 
+2021-11-06 20:24:49,155 :: INFO :: Calculations for holdout set:
+2021-11-06 20:24:49,156 :: INFO :: Epoch 30: Estimated average loss: 0.02386774867773056. 
+2021-11-06 20:44:32,382 :: INFO :: Calculations for training set:
+2021-11-06 20:44:32,383 :: INFO :: Epoch 31: Estimated average loss: 0.02143142931163311. 
+2021-11-06 20:44:35,517 :: INFO :: Calculations for holdout set:
+2021-11-06 20:44:35,518 :: INFO :: Epoch 31: Estimated average loss: 0.018876513466238976. 
+2021-11-06 21:04:17,905 :: INFO :: Calculations for training set:
+2021-11-06 21:04:17,905 :: INFO :: Epoch 32: Estimated average loss: 0.02006887085735798. 
+2021-11-06 21:04:21,026 :: INFO :: Calculations for holdout set:
+2021-11-06 21:04:21,027 :: INFO :: Epoch 32: Estimated average loss: 0.02120082825422287. 
+2021-11-06 21:24:05,044 :: INFO :: Calculations for training set:
+2021-11-06 21:24:05,045 :: INFO :: Epoch 33: Estimated average loss: 0.018073532730340958. 
+2021-11-06 21:24:08,186 :: INFO :: Calculations for holdout set:
+2021-11-06 21:24:08,186 :: INFO :: Epoch 33: Estimated average loss: 0.021086841821670532. 
+2021-11-06 21:43:51,717 :: INFO :: Calculations for training set:
+2021-11-06 21:43:51,718 :: INFO :: Epoch 34: Estimated average loss: 0.020598988980054855. 
+2021-11-06 21:43:54,928 :: INFO :: Calculations for holdout set:
+2021-11-06 21:43:54,929 :: INFO :: Epoch 34: Estimated average loss: 0.01826486550271511. 
+2021-11-06 22:03:39,295 :: INFO :: Calculations for training set:
+2021-11-06 22:03:39,296 :: INFO :: Epoch 35: Estimated average loss: 0.01949833706021309. 
+2021-11-06 22:03:42,460 :: INFO :: Calculations for holdout set:
+2021-11-06 22:03:42,460 :: INFO :: Epoch 35: Estimated average loss: 0.018007181584835052. 
+2021-11-06 22:23:27,520 :: INFO :: Calculations for training set:
+2021-11-06 22:23:27,521 :: INFO :: Epoch 36: Estimated average loss: 0.017299499362707138. 
+2021-11-06 22:23:30,670 :: INFO :: Calculations for holdout set:
+2021-11-06 22:23:30,670 :: INFO :: Epoch 36: Estimated average loss: 0.01750621572136879. 
+2021-11-06 22:43:15,231 :: INFO :: Calculations for training set:
+2021-11-06 22:43:15,231 :: INFO :: Epoch 37: Estimated average loss: 0.01967727579176426. 
+2021-11-06 22:43:18,373 :: INFO :: Calculations for holdout set:
+2021-11-06 22:43:18,373 :: INFO :: Epoch 37: Estimated average loss: 0.024766577407717705. 
+2021-11-06 23:03:03,569 :: INFO :: Calculations for training set:
+2021-11-06 23:03:03,570 :: INFO :: Epoch 38: Estimated average loss: 0.018817156553268433. 
+2021-11-06 23:03:06,733 :: INFO :: Calculations for holdout set:
+2021-11-06 23:03:06,733 :: INFO :: Epoch 38: Estimated average loss: 0.01917010173201561. 
+2021-11-06 23:22:51,954 :: INFO :: Calculations for training set:
+2021-11-06 23:22:51,955 :: INFO :: Epoch 39: Estimated average loss: 0.01899559237062931. 
+2021-11-06 23:22:55,230 :: INFO :: Calculations for holdout set:
+2021-11-06 23:22:55,231 :: INFO :: Epoch 39: Estimated average loss: 0.0245807021856308. 
+2021-11-06 23:42:40,948 :: INFO :: Calculations for training set:
+2021-11-06 23:42:40,948 :: INFO :: Epoch 40: Estimated average loss: 0.018043268471956253. 
+2021-11-06 23:42:44,095 :: INFO :: Calculations for holdout set:
+2021-11-06 23:42:44,096 :: INFO :: Epoch 40: Estimated average loss: 0.021219035610556602. 
+2021-11-07 00:02:33,648 :: INFO :: Calculations for training set:
+2021-11-07 00:02:33,648 :: INFO :: Epoch 41: Estimated average loss: 0.016026588156819344. 
+2021-11-07 00:02:36,786 :: INFO :: Calculations for holdout set:
+2021-11-07 00:02:36,787 :: INFO :: Epoch 41: Estimated average loss: 0.019782692193984985. 
+2021-11-07 00:22:39,204 :: INFO :: Calculations for training set:
+2021-11-07 00:22:39,205 :: INFO :: Epoch 42: Estimated average loss: 0.016449961811304092. 
+2021-11-07 00:22:42,438 :: INFO :: Calculations for holdout set:
+2021-11-07 00:22:42,439 :: INFO :: Epoch 42: Estimated average loss: 0.02114192396402359. 
+2021-11-07 00:42:48,778 :: INFO :: Calculations for training set:
+2021-11-07 00:42:48,778 :: INFO :: Epoch 43: Estimated average loss: 0.017463557422161102. 
+2021-11-07 00:42:51,954 :: INFO :: Calculations for holdout set:
+2021-11-07 00:42:51,954 :: INFO :: Epoch 43: Estimated average loss: 0.01924639753997326. 
+2021-11-07 01:02:56,738 :: INFO :: Calculations for training set:
+2021-11-07 01:02:56,739 :: INFO :: Epoch 44: Estimated average loss: 0.013857156969606876. 
+2021-11-07 01:02:59,884 :: INFO :: Calculations for holdout set:
+2021-11-07 01:02:59,884 :: INFO :: Epoch 44: Estimated average loss: 0.023277834057807922. 
+2021-11-07 01:23:06,053 :: INFO :: Calculations for training set:
+2021-11-07 01:23:06,054 :: INFO :: Epoch 45: Estimated average loss: 0.019140586256980896. 
+2021-11-07 01:23:09,219 :: INFO :: Calculations for holdout set:
+2021-11-07 01:23:09,220 :: INFO :: Epoch 45: Estimated average loss: 0.017113270238041878. 
+2021-11-07 01:43:16,495 :: INFO :: Calculations for training set:
+2021-11-07 01:43:16,495 :: INFO :: Epoch 46: Estimated average loss: 0.016914982348680496. 
+2021-11-07 01:43:19,678 :: INFO :: Calculations for holdout set:
+2021-11-07 01:43:19,678 :: INFO :: Epoch 46: Estimated average loss: 0.016736581921577454. 
+2021-11-07 02:03:28,830 :: INFO :: Calculations for training set:
+2021-11-07 02:03:28,830 :: INFO :: Epoch 47: Estimated average loss: 0.020021500065922737. 
+2021-11-07 02:03:32,073 :: INFO :: Calculations for holdout set:
+2021-11-07 02:03:32,073 :: INFO :: Epoch 47: Estimated average loss: 0.017115464434027672. 
+2021-11-07 02:23:38,857 :: INFO :: Calculations for training set:
+2021-11-07 02:23:38,858 :: INFO :: Epoch 48: Estimated average loss: 0.01758207194507122. 
+2021-11-07 02:23:42,170 :: INFO :: Calculations for holdout set:
+2021-11-07 02:23:42,170 :: INFO :: Epoch 48: Estimated average loss: 0.022152109071612358. 
+2021-11-07 02:43:50,658 :: INFO :: Calculations for training set:
+2021-11-07 02:43:50,658 :: INFO :: Epoch 49: Estimated average loss: 0.016012348234653473. 
+2021-11-07 02:43:53,955 :: INFO :: Calculations for holdout set:
+2021-11-07 02:43:53,956 :: INFO :: Epoch 49: Estimated average loss: 0.02037421241402626. 
+2021-11-07 03:04:03,516 :: INFO :: Calculations for training set:
+2021-11-07 03:04:03,517 :: INFO :: Epoch 50: Estimated average loss: 0.017677567899227142. 
+2021-11-07 03:04:06,840 :: INFO :: Calculations for holdout set:
+2021-11-07 03:04:06,841 :: INFO :: Epoch 50: Estimated average loss: 0.014385968446731567. 
+2021-11-07 03:24:18,344 :: INFO :: Calculations for training set:
+2021-11-07 03:24:18,344 :: INFO :: Epoch 51: Estimated average loss: 0.017796315252780914. 
+2021-11-07 03:24:21,607 :: INFO :: Calculations for holdout set:
+2021-11-07 03:24:21,607 :: INFO :: Epoch 51: Estimated average loss: 0.014425873756408691. 
+2021-11-07 03:44:31,370 :: INFO :: Calculations for training set:
+2021-11-07 03:44:31,370 :: INFO :: Epoch 52: Estimated average loss: 0.01738078147172928. 
+2021-11-07 03:44:34,684 :: INFO :: Calculations for holdout set:
+2021-11-07 03:44:34,685 :: INFO :: Epoch 52: Estimated average loss: 0.017901796847581863. 
+2021-11-07 04:04:44,365 :: INFO :: Calculations for training set:
+2021-11-07 04:04:44,365 :: INFO :: Epoch 53: Estimated average loss: 0.0181661918759346. 
+2021-11-07 04:04:47,578 :: INFO :: Calculations for holdout set:
+2021-11-07 04:04:47,579 :: INFO :: Epoch 53: Estimated average loss: 0.01768057607114315. 
+2021-11-07 04:24:56,078 :: INFO :: Calculations for training set:
+2021-11-07 04:24:56,078 :: INFO :: Epoch 54: Estimated average loss: 0.018447935581207275. 
+2021-11-07 04:24:59,491 :: INFO :: Calculations for holdout set:
+2021-11-07 04:24:59,492 :: INFO :: Epoch 54: Estimated average loss: 0.01987999677658081. 
+2021-11-07 04:45:10,518 :: INFO :: Calculations for training set:
+2021-11-07 04:45:10,518 :: INFO :: Epoch 55: Estimated average loss: 0.018578864634037018. 
+2021-11-07 04:45:13,754 :: INFO :: Calculations for holdout set:
+2021-11-07 04:45:13,754 :: INFO :: Epoch 55: Estimated average loss: 0.019920308142900467. 
+2021-11-07 05:05:26,587 :: INFO :: Calculations for training set:
+2021-11-07 05:05:26,587 :: INFO :: Epoch 56: Estimated average loss: 0.01587931625545025. 
+2021-11-07 05:05:29,811 :: INFO :: Calculations for holdout set:
+2021-11-07 05:05:29,812 :: INFO :: Epoch 56: Estimated average loss: 0.02032477967441082. 
+2021-11-07 05:25:39,550 :: INFO :: Calculations for training set:
+2021-11-07 05:25:39,550 :: INFO :: Epoch 57: Estimated average loss: 0.01604355312883854. 
+2021-11-07 05:25:42,818 :: INFO :: Calculations for holdout set:
+2021-11-07 05:25:42,818 :: INFO :: Epoch 57: Estimated average loss: 0.018391858786344528. 
+2021-11-07 05:45:56,507 :: INFO :: Calculations for training set:
+2021-11-07 05:45:56,508 :: INFO :: Epoch 58: Estimated average loss: 0.017276788130402565. 
+2021-11-07 05:45:59,813 :: INFO :: Calculations for holdout set:
+2021-11-07 05:45:59,813 :: INFO :: Epoch 58: Estimated average loss: 0.01656486466526985. 
+2021-11-07 06:06:11,947 :: INFO :: Calculations for training set:
+2021-11-07 06:06:11,948 :: INFO :: Epoch 59: Estimated average loss: 0.01617366075515747. 
+2021-11-07 06:06:15,130 :: INFO :: Calculations for holdout set:
+2021-11-07 06:06:15,131 :: INFO :: Epoch 59: Estimated average loss: 0.018803562968969345. 
+2021-11-07 06:26:25,074 :: INFO :: Calculations for training set:
+2021-11-07 06:26:25,074 :: INFO :: Epoch 60: Estimated average loss: 0.01595076359808445. 
+2021-11-07 06:26:28,297 :: INFO :: Calculations for holdout set:
+2021-11-07 06:26:28,298 :: INFO :: Epoch 60: Estimated average loss: 0.01811300590634346. 
+2021-11-07 06:46:37,730 :: INFO :: Calculations for training set:
+2021-11-07 06:46:37,731 :: INFO :: Epoch 61: Estimated average loss: 0.01888122223317623. 
+2021-11-07 06:46:41,030 :: INFO :: Calculations for holdout set:
+2021-11-07 06:46:41,030 :: INFO :: Epoch 61: Estimated average loss: 0.017344653606414795. 
+2021-11-07 07:06:47,607 :: INFO :: Calculations for training set:
+2021-11-07 07:06:47,607 :: INFO :: Epoch 62: Estimated average loss: 0.018149588257074356. 
+2021-11-07 07:06:50,802 :: INFO :: Calculations for holdout set:
+2021-11-07 07:06:50,802 :: INFO :: Epoch 62: Estimated average loss: 0.018721675500273705. 
+2021-11-07 07:26:33,991 :: INFO :: Calculations for training set:
+2021-11-07 07:26:33,992 :: INFO :: Epoch 63: Estimated average loss: 0.01866626925766468. 
+2021-11-07 07:26:37,167 :: INFO :: Calculations for holdout set:
+2021-11-07 07:26:37,168 :: INFO :: Epoch 63: Estimated average loss: 0.0194928627461195. 
+2021-11-07 07:46:17,128 :: INFO :: Calculations for training set:
+2021-11-07 07:46:17,129 :: INFO :: Epoch 64: Estimated average loss: 0.01533573679625988. 
+2021-11-07 07:46:20,363 :: INFO :: Calculations for holdout set:
+2021-11-07 07:46:20,363 :: INFO :: Epoch 64: Estimated average loss: 0.018978668376803398. 
+2021-11-07 08:06:01,575 :: INFO :: Calculations for training set:
+2021-11-07 08:06:01,576 :: INFO :: Epoch 65: Estimated average loss: 0.01375627052038908. 
+2021-11-07 08:06:04,723 :: INFO :: Calculations for holdout set:
+2021-11-07 08:06:04,723 :: INFO :: Epoch 65: Estimated average loss: 0.019671384245157242. 
+2021-11-07 08:25:46,841 :: INFO :: Calculations for training set:
+2021-11-07 08:25:46,842 :: INFO :: Epoch 66: Estimated average loss: 0.016996031627058983. 
+2021-11-07 08:25:50,055 :: INFO :: Calculations for holdout set:
+2021-11-07 08:25:50,055 :: INFO :: Epoch 66: Estimated average loss: 0.018125396221876144. 
+2021-11-07 08:45:32,647 :: INFO :: Calculations for training set:
+2021-11-07 08:45:32,648 :: INFO :: Epoch 67: Estimated average loss: 0.015862908214330673. 
+2021-11-07 08:45:35,828 :: INFO :: Calculations for holdout set:
+2021-11-07 08:45:35,828 :: INFO :: Epoch 67: Estimated average loss: 0.017233379185199738. 
+2021-11-07 09:05:16,294 :: INFO :: Calculations for training set:
+2021-11-07 09:05:16,295 :: INFO :: Epoch 68: Estimated average loss: 0.015523141250014305. 
+2021-11-07 09:05:19,463 :: INFO :: Calculations for holdout set:
+2021-11-07 09:05:19,463 :: INFO :: Epoch 68: Estimated average loss: 0.017760608345270157. 
+2021-11-07 09:25:04,090 :: INFO :: Calculations for training set:
+2021-11-07 09:25:04,091 :: INFO :: Epoch 69: Estimated average loss: 0.01710149645805359. 
+2021-11-07 09:25:07,311 :: INFO :: Calculations for holdout set:
+2021-11-07 09:25:07,312 :: INFO :: Epoch 69: Estimated average loss: 0.017301512882113457. 
+2021-11-07 09:44:48,844 :: INFO :: Calculations for training set:
+2021-11-07 09:44:48,845 :: INFO :: Epoch 70: Estimated average loss: 0.016552094370126724. 
+2021-11-07 09:44:52,013 :: INFO :: Calculations for holdout set:
+2021-11-07 09:44:52,014 :: INFO :: Epoch 70: Estimated average loss: 0.019038887694478035. 
+2021-11-07 10:04:35,788 :: INFO :: Calculations for training set:
+2021-11-07 10:04:35,789 :: INFO :: Epoch 71: Estimated average loss: 0.017600124701857567. 
+2021-11-07 10:04:38,949 :: INFO :: Calculations for holdout set:
+2021-11-07 10:04:38,949 :: INFO :: Epoch 71: Estimated average loss: 0.02183760702610016. 
+2021-11-07 10:24:21,770 :: INFO :: Calculations for training set:
+2021-11-07 10:24:21,771 :: INFO :: Epoch 72: Estimated average loss: 0.016746068373322487. 
+2021-11-07 10:24:24,960 :: INFO :: Calculations for holdout set:
+2021-11-07 10:24:24,961 :: INFO :: Epoch 72: Estimated average loss: 0.019458528608083725. 
+2021-11-07 10:44:09,135 :: INFO :: Calculations for training set:
+2021-11-07 10:44:09,135 :: INFO :: Epoch 73: Estimated average loss: 0.015479926951229572. 
+2021-11-07 10:44:12,267 :: INFO :: Calculations for holdout set:
+2021-11-07 10:44:12,267 :: INFO :: Epoch 73: Estimated average loss: 0.02023022249341011. 
+2021-11-07 11:03:54,258 :: INFO :: Calculations for training set:
+2021-11-07 11:03:54,258 :: INFO :: Epoch 74: Estimated average loss: 0.014842580072581768. 
+2021-11-07 11:03:57,404 :: INFO :: Calculations for holdout set:
+2021-11-07 11:03:57,405 :: INFO :: Epoch 74: Estimated average loss: 0.018691841512918472. 
+2021-11-07 11:23:41,468 :: INFO :: Calculations for training set:
+2021-11-07 11:23:41,469 :: INFO :: Epoch 75: Estimated average loss: 0.01593809761106968. 
+2021-11-07 11:23:44,746 :: INFO :: Calculations for holdout set:
+2021-11-07 11:23:44,746 :: INFO :: Epoch 75: Estimated average loss: 0.018896913155913353. 
+2021-11-07 11:43:26,927 :: INFO :: Calculations for training set:
+2021-11-07 11:43:26,927 :: INFO :: Epoch 76: Estimated average loss: 0.016413507983088493. 
+2021-11-07 11:43:30,050 :: INFO :: Calculations for holdout set:
+2021-11-07 11:43:30,051 :: INFO :: Epoch 76: Estimated average loss: 0.01786091923713684. 
+2021-11-07 12:03:12,190 :: INFO :: Calculations for training set:
+2021-11-07 12:03:12,191 :: INFO :: Epoch 77: Estimated average loss: 0.016194894909858704. 
+2021-11-07 12:03:15,355 :: INFO :: Calculations for holdout set:
+2021-11-07 12:03:15,355 :: INFO :: Epoch 77: Estimated average loss: 0.018795225769281387. 
+2021-11-07 12:22:57,722 :: INFO :: Calculations for training set:
+2021-11-07 12:22:57,722 :: INFO :: Epoch 78: Estimated average loss: 0.016004743054509163. 
+2021-11-07 12:23:00,998 :: INFO :: Calculations for holdout set:
+2021-11-07 12:23:00,999 :: INFO :: Epoch 78: Estimated average loss: 0.018868960440158844. 
+2021-11-07 12:42:42,343 :: INFO :: Calculations for training set:
+2021-11-07 12:42:42,343 :: INFO :: Epoch 79: Estimated average loss: 0.014843587763607502. 
+2021-11-07 12:42:45,565 :: INFO :: Calculations for holdout set:
+2021-11-07 12:42:45,566 :: INFO :: Epoch 79: Estimated average loss: 0.018898913636803627. 
+2021-11-07 13:02:25,226 :: INFO :: Calculations for training set:
+2021-11-07 13:02:25,227 :: INFO :: Epoch 80: Estimated average loss: 0.014070536941289902. 
+2021-11-07 13:02:28,412 :: INFO :: Calculations for holdout set:
+2021-11-07 13:02:28,412 :: INFO :: Epoch 80: Estimated average loss: 0.019119566306471825. 
+2021-11-07 13:22:09,005 :: INFO :: Calculations for training set:
+2021-11-07 13:22:09,006 :: INFO :: Epoch 81: Estimated average loss: 0.012320630252361298. 
+2021-11-07 13:22:12,269 :: INFO :: Calculations for holdout set:
+2021-11-07 13:22:12,270 :: INFO :: Epoch 81: Estimated average loss: 0.019859554246068. 
+2021-11-07 13:41:54,120 :: INFO :: Calculations for training set:
+2021-11-07 13:41:54,120 :: INFO :: Epoch 82: Estimated average loss: 0.013730602338910103. 
+2021-11-07 13:41:57,354 :: INFO :: Calculations for holdout set:
+2021-11-07 13:41:57,354 :: INFO :: Epoch 82: Estimated average loss: 0.02039293199777603. 
+2021-11-07 14:01:40,227 :: INFO :: Calculations for training set:
+2021-11-07 14:01:40,228 :: INFO :: Epoch 83: Estimated average loss: 0.012439490295946598. 
+2021-11-07 14:01:43,463 :: INFO :: Calculations for holdout set:
+2021-11-07 14:01:43,464 :: INFO :: Epoch 83: Estimated average loss: 0.020045356824994087. 
+2021-11-07 14:21:23,334 :: INFO :: Calculations for training set:
+2021-11-07 14:21:23,334 :: INFO :: Epoch 84: Estimated average loss: 0.015022785402834415. 
+2021-11-07 14:21:26,493 :: INFO :: Calculations for holdout set:
+2021-11-07 14:21:26,493 :: INFO :: Epoch 84: Estimated average loss: 0.020092114806175232. 
+2021-11-07 14:41:08,728 :: INFO :: Calculations for training set:
+2021-11-07 14:41:08,729 :: INFO :: Epoch 85: Estimated average loss: 0.01677757315337658. 
+2021-11-07 14:41:11,936 :: INFO :: Calculations for holdout set:
+2021-11-07 14:41:11,936 :: INFO :: Epoch 85: Estimated average loss: 0.01850205846130848. 
+2021-11-07 15:00:55,443 :: INFO :: Calculations for training set:
+2021-11-07 15:00:55,444 :: INFO :: Epoch 86: Estimated average loss: 0.013893376104533672. 
+2021-11-07 15:00:58,594 :: INFO :: Calculations for holdout set:
+2021-11-07 15:00:58,595 :: INFO :: Epoch 86: Estimated average loss: 0.016233086585998535. 
+2021-11-07 15:20:41,005 :: INFO :: Calculations for training set:
+2021-11-07 15:20:41,005 :: INFO :: Epoch 87: Estimated average loss: 0.015257000923156738. 
+2021-11-07 15:20:44,288 :: INFO :: Calculations for holdout set:
+2021-11-07 15:20:44,289 :: INFO :: Epoch 87: Estimated average loss: 0.018548686057329178. 
+2021-11-07 15:40:27,499 :: INFO :: Calculations for training set:
+2021-11-07 15:40:27,499 :: INFO :: Epoch 88: Estimated average loss: 0.014361441135406494. 
+2021-11-07 15:40:30,648 :: INFO :: Calculations for holdout set:
+2021-11-07 15:40:30,649 :: INFO :: Epoch 88: Estimated average loss: 0.014515154995024204. 
+2021-11-07 16:00:35,234 :: INFO :: Calculations for training set:
+2021-11-07 16:00:35,234 :: INFO :: Epoch 89: Estimated average loss: 0.015657464042305946. 
+2021-11-07 16:00:38,373 :: INFO :: Calculations for holdout set:
+2021-11-07 16:00:38,373 :: INFO :: Epoch 89: Estimated average loss: 0.016939248889684677. 
+2021-11-07 16:20:48,903 :: INFO :: Calculations for training set:
+2021-11-07 16:20:48,903 :: INFO :: Epoch 90: Estimated average loss: 0.015846338123083115. 
+2021-11-07 16:20:52,079 :: INFO :: Calculations for holdout set:
+2021-11-07 16:20:52,080 :: INFO :: Epoch 90: Estimated average loss: 0.01733577251434326. 
+2021-11-07 16:40:35,804 :: INFO :: Calculations for training set:
+2021-11-07 16:40:35,804 :: INFO :: Epoch 91: Estimated average loss: 0.01317688263952732. 
+2021-11-07 16:40:39,006 :: INFO :: Calculations for holdout set:
+2021-11-07 16:40:39,006 :: INFO :: Epoch 91: Estimated average loss: 0.01797129586338997. 
+2021-11-07 17:00:22,436 :: INFO :: Calculations for training set:
+2021-11-07 17:00:22,436 :: INFO :: Epoch 92: Estimated average loss: 0.014932297170162201. 
+2021-11-07 17:00:25,623 :: INFO :: Calculations for holdout set:
+2021-11-07 17:00:25,623 :: INFO :: Epoch 92: Estimated average loss: 0.019291583448648453. 
+2021-11-07 17:20:09,791 :: INFO :: Calculations for training set:
+2021-11-07 17:20:09,791 :: INFO :: Epoch 93: Estimated average loss: 0.015480183064937592. 
+2021-11-07 17:20:13,095 :: INFO :: Calculations for holdout set:
+2021-11-07 17:20:13,096 :: INFO :: Epoch 93: Estimated average loss: 0.01852518320083618. 
+2021-11-07 17:39:56,407 :: INFO :: Calculations for training set:
+2021-11-07 17:39:56,408 :: INFO :: Epoch 94: Estimated average loss: 0.014993115328252316. 
+2021-11-07 17:39:59,604 :: INFO :: Calculations for holdout set:
+2021-11-07 17:39:59,604 :: INFO :: Epoch 94: Estimated average loss: 0.017652645707130432. 
+2021-11-07 17:59:43,993 :: INFO :: Calculations for training set:
+2021-11-07 17:59:43,994 :: INFO :: Epoch 95: Estimated average loss: 0.01771915704011917. 
+2021-11-07 17:59:47,249 :: INFO :: Calculations for holdout set:
+2021-11-07 17:59:47,249 :: INFO :: Epoch 95: Estimated average loss: 0.019218968227505684. 
+2021-11-07 18:19:29,269 :: INFO :: Calculations for training set:
+2021-11-07 18:19:29,269 :: INFO :: Epoch 96: Estimated average loss: 0.012140093371272087. 
+2021-11-07 18:19:32,423 :: INFO :: Calculations for holdout set:
+2021-11-07 18:19:32,423 :: INFO :: Epoch 96: Estimated average loss: 0.01686752587556839. 
+2021-11-07 18:39:13,872 :: INFO :: Calculations for training set:
+2021-11-07 18:39:13,872 :: INFO :: Epoch 97: Estimated average loss: 0.013874412514269352. 
+2021-11-07 18:39:17,034 :: INFO :: Calculations for holdout set:
+2021-11-07 18:39:17,035 :: INFO :: Epoch 97: Estimated average loss: 0.01753605343401432. 
+2021-11-07 18:59:01,833 :: INFO :: Calculations for training set:
+2021-11-07 18:59:01,834 :: INFO :: Epoch 98: Estimated average loss: 0.014365818351507187. 
+2021-11-07 18:59:04,982 :: INFO :: Calculations for holdout set:
+2021-11-07 18:59:04,983 :: INFO :: Epoch 98: Estimated average loss: 0.015956828370690346. 
+2021-11-07 19:18:50,251 :: INFO :: Calculations for training set:
+2021-11-07 19:18:50,252 :: INFO :: Epoch 99: Estimated average loss: 0.014943873509764671. 
+2021-11-07 19:18:53,476 :: INFO :: Calculations for holdout set:
+2021-11-07 19:18:53,476 :: INFO :: Epoch 99: Estimated average loss: 0.01723986119031906. 
