@@ -34,7 +34,7 @@ sequences = [x.strip() for x in open(sequence_file).readlines()]
 
 # Load UniRep parameters
 if parameter_dir:
-    params = ju.utils.load_params(folderpath=parameter_dir)[0]
+    params = ju.utils.load_params(folderpath=parameter_dir)[1]
 else:
     params = None
 

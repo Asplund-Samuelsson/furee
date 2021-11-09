@@ -254,6 +254,20 @@ results/Rubisco/evotuned/iter_final/model_weights.pkl
 
 </details>
 
+#### How the model sees FBPase and Rubisco
+
+The validation sequences were transformed into UniRep representations (1,900 floating point values per protein) and then subjected to [PHATE](https://github.com/KrishnaswamyLab/PHATE) dimensionality reduction to visualize the "sequence landscape" as seen by the original UniRep model, and the models trained with FBPase and Rubisco sequences. The following scripts made this possible:
+
+```
+source/phate_fbpase_rubisco.sh
+source/get_representations.py
+source/phate_fbpase_rubisco.R
+```
+
+| ![alt text](results/phate_fbpase_rubisco.png "FBPase and Rubisco sequences as seen by differently evotuned UniRep models") |
+| --- |
+| **FBPase and Rubisco sequences as seen by differently evotuned UniRep models.** Each point is one validation sequence. Rows indicate the type of enzyme, either FBPase or Rubisco, and columns indicate the type of parameters, _i.e._ parameters evotuned with FBPase or Rubisco sequences, or the original UniRep parameters. |
+
 <a name="topmodel"></a>
 ### 4. Fit a top model
 
