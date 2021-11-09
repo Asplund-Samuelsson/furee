@@ -277,7 +277,7 @@ CGITPGTLMEGVRFFKGGARTQSLVISSQSQTARFVDTIHMFEEPKVLQLR	0.246331
 
 #### Top model fitting
 
-We fit the Ridge Regression Sparse Refit top model using evotuned UniRep parameters for the underlying representations. **Note that too many input sequences may exhaust the available memory!**
+We fit the Ridge Regression Sparse Refit top model using evotuned UniRep parameters for the underlying representations.
 
 <details open>
 <summary>FBPase:</summary>
@@ -311,7 +311,7 @@ source/train_top_model.py --help
 
 ### 5. Make predictions with the top model
 
-Predictions with an already fitted top model can be made on sequences in a file with one sequence per line. **Note that using too many input sequences may exhaust the available memory!**
+Predictions with an already fitted top model can be made on sequences in a file with one sequence per line.
 
 <details open>
 <summary>FBPase:</summary>
@@ -376,7 +376,7 @@ source/top_model_prediction.py --help
 
 ### 6. Perform _in silico_ evolution
 
-The _in silico_ evolution is carried out using a set of evotuned parameters, a top model, and one starting sequence. **Note that using too many steps may exhaust the available memory!**
+The _in silico_ evolution is carried out using a set of evotuned parameters, a top model, and one starting sequence.
 
 <details open>
 <summary>FBPase:</summary>
