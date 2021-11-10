@@ -7,9 +7,9 @@ Engineering of enzymes through [UniRep](https://github.com/churchlab/UniRep) mac
 ### Contents
 
 1. [Overview](#overview)
-2. [Usage](#usage)
-3. [System requirements](#requirements)
-4. [Installation](#installation)
+2. [System requirements](#requirements)
+3. [Installation](#installation)
+4. [Usage](#usage)
 5. [Exploring evotuning of FBPase](#exploring)
 6. [Author](#author)
 
@@ -19,6 +19,78 @@ Engineering of enzymes through [UniRep](https://github.com/churchlab/UniRep) mac
 | ![alt text](data/furee_overview.png "Overview of the UniRep protein engineering workflow") |
 | --- |
 | **UniRep protein engineering promises computer-guided evolution using as few as 24 characterized proteins.** The workflow involves re-training an AI model with protein sequences closely related to the protein targeted for _in silico_ evolution (**A**). A regression top model utilizes the UniRep sequence representations to guide evolution and suggest improved sequence variants (**B**). |
+
+<a name="requirements"></a>
+## System requirements
+
+Evotuning was performed on a GCP VM with two vCPUs, 13 GB RAM, and one NVIDIA Tesla T4 GPU with 16 GB VRAM. Other tasks were performed on Linux systems with 16 cores and 128 GB RAM (Ubuntu 18.04.5 LTS), and 12 cores, 32 GB RAM, and an NVIDIA RTX 2070 SUPER GPU with 8 GB VRAM (Ubuntu 20.04.3 LTS).
+
+| Software | Version | Tested version | Libraries |
+| -------- | ------- | -------------- | --------- |
+| Linux OS | | Ubuntu 18.04.5 LTS and 20.04.3 LTS | |
+| Bash | 4.0 | 4.4.20, 5.0.17 | |
+| Python | 3.7 | 3.7.6, 3.8.3 | BioPython, Levenshtein, jax, jax-unirep, numpy, pandas, scipy, sklearn |
+| R | 3.6.3 | 3.6.3 | tidyverse, phateR, phytools, ggtree, egg |
+| GNU parallel | 20161222 | 20161222 | |
+| hmmer | 3.1b2 | 3.1b2 | |
+| fasttreeMP | 2.1.11 | 2.1.11 | |
+
+<a name="installation"></a>
+## Installation
+
+### This repository
+
+Download the FUREE repository from GitHub and enter the directory:
+```
+git clone https://github.com/Asplund-Samuelsson/furee.git
+
+cd furee
+```
+
+### JAX-UniRep
+
+The analysis uses the user-friendly JAX implementation of UniRep named [jax-unirep](https://github.com/ElArkk/jax-unirep). It may be installed from PyPI as described below (see the jax-unirep GitHub repository for more details):
+
+```
+pip install jax-unirep
+```
+
+To enable CUDA GPU support, you may need to install the correct JAX packages; see [instructions in the JAX repository](https://github.com/google/jax).
+
+### UniProt database (optional)
+
+Training sequences will be extracted from the UniProt database. Run these commands to download the necessary FASTA files for SwissProt and TrEMBL, constituting UniProt (may take several hours):
+
+```
+cd data/uniprot
+
+wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
+
+wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_trembl.fasta.gz
+
+zcat uniprot_sprot.fasta.gz uniprot_trembl.fasta.gz > uniprot.fasta
+
+rm uniprot_sprot.fasta.gz uniprot_trembl.fasta.gz # Optional cleanup
+
+cd ../..
+```
+
+### NCBI taxonomy database (optional)
+
+This analysis uses the NCBI taxonomy database to assign taxonomic classifications to UniProt sequences. Run these commands to download the necessary `names.dmp` and `nodes.dmp` files:
+
+```
+cd data/ncbi/taxonomy
+
+wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+
+tar -zxvf taxdump.tar.gz names.dmp nodes.dmp
+
+rm taxdump.tar.gz # Optional cleanup
+
+cd ../../..
+```
+
 
 <a name="usage"></a>
 ## Usage
@@ -428,81 +500,12 @@ For additional options, refer to the help:
 source/in_silico_evolution.py --help
 ```
 
-<a name="requirements"></a>
-## System requirements
-
-Evotuning was performed on a GCP VM with two vCPUs, 13 GB RAM, and one NVIDIA Tesla T4 GPU with 16 GB VRAM. Other tasks were performed on Linux systems with 16 cores and 128 GB RAM (Ubuntu 18.04.5 LTS), and 12 cores, 32 GB RAM, and an NVIDIA RTX 2070 SUPER GPU with 8 GB VRAM (Ubuntu 20.04.1 LTS).
-
-| Software | Version | Tested version | Libraries |
-| -------- | ------- | -------------- | --------- |
-| Linux OS | | Ubuntu 18.04.5 LTS and 20.04.1 LTS | |
-| Bash | 4.0 | 4.4.20, 5.0.17 | |
-| Python | 3.7 | 3.7.6, 3.8.3 | BioPython, Levenshtein, jax, jax-unirep, numpy, pandas, scipy, sklearn |
-| R | 3.6.3 | 3.6.3 | tidyverse, phateR, phytools, ggtree, egg |
-| GNU parallel | 20161222 | 20161222 | |
-| hmmer | 3.1b2 | 3.1b2 | |
-| fasttreeMP | 2.1.11 | 2.1.11 | |
-
-<a name="installation"></a>
-## Installation
-
-### This repository
-
-Download the FUREE repository from GitHub and enter the directory:
-```
-git clone https://github.com/Asplund-Samuelsson/furee.git
-
-cd furee
-```
-
-### JAX-UniRep
-
-The analysis uses the user-friendly JAX implementation of UniRep named [jax-unirep](https://github.com/ElArkk/jax-unirep). It may be installed from PyPI as described below (see the jax-unirep GitHub repository for more details):
-
-```
-pip install jax-unirep
-```
-
-To enable CUDA GPU support, you may need to install the correct JAX packages; see [instructions in the JAX repository](https://github.com/google/jax).
-
-### UniProt database (optional)
-
-Training sequences will be extracted from the UniProt database. Run these commands to download the necessary FASTA files for SwissProt and TrEMBL, constituting UniProt (may take several hours):
-
-```
-cd data/uniprot
-
-wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
-
-wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_trembl.fasta.gz
-
-zcat uniprot_sprot.fasta.gz uniprot_trembl.fasta.gz > uniprot.fasta
-
-rm uniprot_sprot.fasta.gz uniprot_trembl.fasta.gz # Optional cleanup
-
-cd ../..
-```
-
-### NCBI taxonomy database (optional)
-
-This analysis uses the NCBI taxonomy database to assign taxonomic classifications to UniProt sequences. Run these commands to download the necessary `names.dmp` and `nodes.dmp` files:
-
-```
-cd data/ncbi/taxonomy
-
-wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
-
-tar -zxvf taxdump.tar.gz names.dmp nodes.dmp
-
-rm taxdump.tar.gz # Optional cleanup
-
-cd ../../..
-```
-
 <a name="exploring"></a>
 ## Exploring evotuning of FBPase
 
 Evotuning using FBPase sequences was performed and evaluated in order to get acquainted with the JAX-UniRep framework and develop the tools in this repository. The steps to acquire example FBPase sequences and then evotune the UniRep model are described in `source/fbpase_evotuning_example.sh`.
+
+**Note that the analysis described below used an earlier version of JAX-UniRep and FUREE, and may be incompatible with the current versions.**
 
 ### Jackhmmer reference sequences
 
