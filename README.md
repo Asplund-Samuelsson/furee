@@ -23,7 +23,7 @@ Engineering of enzymes through [UniRep](https://github.com/churchlab/UniRep) mac
 <a name="requirements"></a>
 ## System requirements
 
-Evotuning was performed on a GCP VM with two vCPUs, 13 GB RAM, and one NVIDIA Tesla T4 GPU with 16 GB VRAM. Other tasks were performed on Linux systems with 16 cores and 128 GB RAM (Ubuntu 18.04.5 LTS), and 12 cores, 32 GB RAM, and an NVIDIA RTX 2070 SUPER GPU with 8 GB VRAM (Ubuntu 20.04.3 LTS).
+Evotuning was performed on a GCP VM with two vCPUs, 13 GB RAM, and one NVIDIA Tesla T4 GPU with 16 GB VRAM. Other tasks were performed on Linux systems with 16 cores and 128 GB RAM (Ubuntu 18.04.5 LTS), and 12 cores, 32 GB RAM, and an NVIDIA RTX 2070 SUPER GPU with 8 GB VRAM (Ubuntu 20.04.3 LTS). Top model fitting and _in silico_ evolution ([Usage steps 4-6]("#topmodel")) may be performed on a regular laptop.
 
 | Software | Version | Tested version | Libraries |
 | -------- | ------- | -------------- | --------- |
