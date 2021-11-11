@@ -40,7 +40,7 @@ Evotuning was performed on a GCP VM with two vCPUs, 13 GB RAM, and one NVIDIA Te
 
 ### This repository
 
-Download the FUREE repository from GitHub and enter the directory:
+Download the FUREE repository from GitHub and enter the directory (should take less than a minute, depending on the internet connection):
 ```
 git clone https://github.com/Asplund-Samuelsson/furee.git
 
@@ -59,7 +59,12 @@ To enable CUDA GPU support, you may need to install the correct JAX packages; se
 
 ### UniProt database (optional)
 
-Training sequences will be extracted from the UniProt database. Run these commands to download the necessary FASTA files for SwissProt and TrEMBL, constituting UniProt (may take several hours):
+Training sequences will be extracted from the UniProt database.
+
+<details>
+<summary>Install the full UniProt database.</summary>
+
+Run these commands to download the necessary FASTA files for SwissProt and TrEMBL, constituting UniProt (may take several hours):
 
 ```
 cd data/uniprot
@@ -75,9 +80,36 @@ rm uniprot_sprot.fasta.gz uniprot_trembl.fasta.gz # Optional cleanup
 cd ../..
 ```
 
+</details>
+
+<details>
+<summary>Install the SwissProt database (recommended for testing).</summary>
+
+Run these commands to download the necessary FASTA file for SwissProt (should take less than a minute):
+
+```
+cd data/uniprot
+
+wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
+
+zcat uniprot_sprot.fasta.gz > uniprot.fasta
+
+rm uniprot_sprot.fasta.gz # Optional cleanup
+
+cd ../..
+```
+
+</details>
+
+
 ### NCBI taxonomy database (optional)
 
-This analysis uses the NCBI taxonomy database to assign taxonomic classifications to UniProt sequences. Run these commands to download the necessary `names.dmp` and `nodes.dmp` files:
+This analysis uses the NCBI taxonomy database to assign taxonomic classifications to UniProt sequences.
+
+<details>
+<summary>Install the NCBI taxonomy database (recommended for testing).</summary>
+
+Run these commands to download the necessary `names.dmp` and `nodes.dmp` files (should take less than a minute):
 
 ```
 cd data/ncbi/taxonomy
@@ -91,6 +123,7 @@ rm taxdump.tar.gz # Optional cleanup
 cd ../../..
 ```
 
+</details>
 
 <a name="usage"></a>
 ## Usage
@@ -186,6 +219,10 @@ data/Syn6803_P54205_Rubisco.fasta \
 ### 2. Prepare training data
 
 The query sequences are used for JackHMMer searches against the UniProt sequence database and subsequently filtered (see table below for more details). We run a preparation script with the query sequences, the _in silico_ evolution target sequence, redundancy-filtering identity fraction, number of MADs defining allowed length range, the Levenshtein distance cutoff, and direct the output to a directory of choice.
+
+**Note 1:** The training data preparation requires the UniProt database (`data/uniprot/uniprot.fasta`) and the NCBI taxonomy database (`names.dmp` and `nodes.dmp` in `data/ncbi/taxonomy/`). See [Installation](#installation).
+
+**Note 2:** Because of JackHMMer, the preparation may take several days if searching the full UniProt database. For testing the preparation script it is recommended to use only SwissProt, which can be searched in just a few minutes. See [Installation](#installation).
 
 <details open>
 <summary>FBPase:</summary>
