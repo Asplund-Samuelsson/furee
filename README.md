@@ -297,7 +297,7 @@ results/Rubisco/train.txt
 
 The UniRep model weights, or parameters, must be re-trained, or evotuned, to the local evolutionary context of our _in silico_ evolution target sequence. To do se we supply our training sequences to the evotuning script.
 
-**Note 1:** Evotuning should be run on a GPU. Training a model using CPU is very slow.
+**Note 1:** Evotuning should be run on a GPU. Training a model using CPU (option `--cpu`) is very slow.
 
 **Note 2:** If running this on GCP, it is necessary to run `screen` before to allow continued activity after disconnecting. Use Ctrl-A and Ctrl-D to detach the screen and keep it running.
 
