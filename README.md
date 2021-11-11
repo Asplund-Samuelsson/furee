@@ -194,9 +194,7 @@ The query sequences are used for JackHMMer searches against the UniProt sequence
 source/preparation.sh \
 intermediate/FBPase_queries.fasta \
 data/Syn6803_P73922_FBPase.fasta \
-1.0 \ # CD-HIT identity
-1 \ # Number of MADs allowed around median length
-300 \ # Levenshtein distance to target
+1.0 1 300 \
 results/FBPase
 ```
 
@@ -209,9 +207,7 @@ results/FBPase
 source/preparation.sh \
 intermediate/Rubisco_queries.fasta \
 data/Syn6803_P54205_Rubisco.fasta \
-0.99 \ # CD-HIT identity
-1.5 \ # Number of MADs allowed around median length
-400 \ # Levenshtein distance to target
+0.99 1.5 400 \
 results/Rubisco
 ```
 
