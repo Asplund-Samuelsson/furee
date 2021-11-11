@@ -34,6 +34,7 @@ Evotuning was performed on a GCP VM with two vCPUs, 13 GB RAM, and one NVIDIA Te
 | GNU parallel | 20161222 | 20161222 | |
 | hmmer | 3.1b2 | 3.1b2 | |
 | fasttreeMP | 2.1.11 | 2.1.11 | |
+| pigz | 2.4 | 2.4 | |
 
 <a name="installation"></a>
 ## Installation
