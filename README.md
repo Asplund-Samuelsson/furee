@@ -30,7 +30,7 @@ Evotuning was performed on a GCP VM with two vCPUs, 13 GB RAM, and one NVIDIA Te
 | Linux OS | | Ubuntu 18.04.5 LTS and 20.04.3 LTS | |
 | Bash | 4.0 | 4.4.20, 5.0.17 | |
 | Python | 3.7 | 3.7.6, 3.8.3 | BioPython, Levenshtein, jax, jax-unirep, numpy, pandas, scipy, sklearn |
-| R | 3.6.3 | 3.6.3 | tidyverse, phateR, phytools, ggtree, egg |
+| R | 3.6.3 | 3.6.3 | tidyverse, phateR, phytools, ggtree, egg, doMC, foreach |
 | GNU parallel | 20161222 | 20161222 | |
 | hmmer | 3.1b2 | 3.1b2 | |
 | fasttreeMP | 2.1.11 | 2.1.11 | |

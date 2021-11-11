@@ -2,7 +2,6 @@
 library(tidyverse)
 library(foreach)
 library(doMC)
-library(outliers)
 
 # Read infile and outfile from command line
 args = commandArgs(trailingOnly=T)
