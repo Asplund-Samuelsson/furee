@@ -23,23 +23,65 @@ Engineering of enzymes through [UniRep](https://github.com/churchlab/UniRep) mac
 <a name="requirements"></a>
 ## System requirements
 
+### Hardware
+
 Evotuning was performed on a GCP VM with two vCPUs, 13 GB RAM, and one NVIDIA Tesla T4 GPU with 16 GB VRAM. Other tasks were performed on Linux systems with 16 cores and 128 GB RAM (Ubuntu 18.04.5 LTS), and 12 cores, 32 GB RAM, and an NVIDIA RTX 2070 SUPER GPU with 8 GB VRAM (Ubuntu 20.04.3 LTS). Top model fitting and _in silico_ evolution ([Usage steps 4-6](#topmodel)) may be performed on a regular laptop.
 
-| Software | Version | Tested version | Libraries |
+### Software
+
+<details>
+<summary>Programs</summary>
+
+| Software | Version | Tested version | Note |
 | -------- | ------- | -------------- | --------- |
 | Linux OS | | Ubuntu 18.04.5 LTS and 20.04.3 LTS | |
 | Bash | 4.0 | 4.4.20, 5.0.17 | |
-| Python | 3.7 | 3.7.6, 3.8.3 | BioPython, Levenshtein, jax, jax-unirep, numpy, pandas, scipy, sklearn |
-| R | 3.6.3 | 3.6.3 | tidyverse, phateR, phytools, ggtree, egg, doMC, foreach |
+| Python | 3.7 | 3.7.6, 3.8.3 | |
+| R | 3.6.3 | 3.6.3, 4.1.1 | |
 | GNU parallel | 20161222 | 20161222 | |
 | hmmer | 3.1b2 | 3.1b2 | |
-| fasttreeMP | 2.1.11 | 2.1.11 | |
-| pigz | 2.4 | 2.4 | |
+| pigz | 2.4 | 2.4 | Optional; Only needed for phateR scripts. |
+| fasttreeMP | 2.1.11 | 2.1.11 | Optional; Not needed for [Usage](#usage). |
+
+</details>
+
+<details>
+<summary>Python libraries</summary>
+
+| Library | Version | Tested version | Note |
+| ------- | ------- | -------------- | ---- |
+| [BioPython](https://biopython.org/) | 1.76 | 1.76, 1.77 | |
+| [python-levenshtein](https://pypi.org/project/python-Levenshtein/) | 0.12.0 | 0.12.0 | |
+| [jax](https://github.com/google/jax) | 0.2.5 | 0.2.5, 0.2.24 | |
+| [jax-unirep](https://github.com/ElArkk/jax-unirep) | 2.1.0 | 2.1.0 | |
+| [numpy](https://numpy.org/) | 1.18.1 | 1.18.1, 1.18.5 | |
+| [pandas](https://pandas.pydata.org/) | 0.25.3 | 0.25.3, 1.0.5 | |
+| [scipy](https://scipy.org/) | 1.4.1 | 1.4.1, 1.5.0 | |
+| [scikit-learn](https://scikit-learn.org/stable/) | 0.22.1 | 0.22.1, 0.23.1 | |
+
+</details>
+
+<details>
+<summary>R libraries</summary>
+
+| Library | Version | Tested version | Note |
+| ------- | ------- | -------------- | ---- |
+| [tidyverse](https://www.tidyverse.org/) | 1.3.1 | 1.3.1 | |
+| [egg](https://cran.r-project.org/web/packages/egg/index.html) | 0.4.5 | 0.4.5 | |
+| [doMC](https://cran.r-project.org/web/packages/doMC/index.html) | 1.3.7 | 1.3.7 | |
+| [foreach](https://cran.r-project.org/web/packages/foreach/index.html) | 1.5.1 | 1.5.1 | |
+| [phateR](https://github.com/KrishnaswamyLab/phateR) | 1.0.7 | 1.0.7 | Optional; Not needed for [Usage](#usage), only phateR scripts. |
+| [phytools](https://cran.r-project.org/web/packages/phytools/index.html) | 0.7-90 | 0.7-90 | Optional; Not needed for [Usage](#usage). |
+| [ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html) | 3.0.4 | 3.0.4 | Optional; Not needed for [Usage](#usage). |
+
+</details>
 
 <a name="installation"></a>
 ## Installation
 
-### This repository
+### Required components
+
+#### This repository
 
 Download the FUREE repository from GitHub and enter the directory (should take less than a minute, depending on the internet connection):
 ```
@@ -48,7 +90,7 @@ git clone https://github.com/Asplund-Samuelsson/furee.git
 cd furee
 ```
 
-### JAX-UniRep
+#### JAX-UniRep
 
 The analysis uses the user-friendly JAX implementation of UniRep named [jax-unirep](https://github.com/ElArkk/jax-unirep). It may be installed from PyPI as described below (see the jax-unirep GitHub repository for more details):
 
@@ -58,12 +100,16 @@ pip install jax-unirep
 
 To enable CUDA GPU support, you may need to install the correct JAX packages; see [instructions in the JAX repository](https://github.com/google/jax).
 
-### UniProt database (optional)
+### Optional components (required for evotuning)
+
+This repository includes two evotuned models, for FBPase (`results/FBPase/evotuned/iter_final`) and Rubisco (`results/Rubisco/evotuned/iter_final`). Therefore the UniProt and NCBI taxonomy databases are only needed if you want to carry out [steps 1-3 in the Usage section](#usage).
+
+#### UniProt database
 
 Training sequences will be extracted from the UniProt database.
 
 <details>
-<summary>Install the full UniProt database.</summary>
+<summary>Install the full UniProt database (required for meaningful evotuning).</summary>
 
 Run these commands to download the necessary FASTA files for SwissProt and TrEMBL, constituting UniProt (may take several hours):
 
@@ -103,7 +149,7 @@ cd ../..
 </details>
 
 
-### NCBI taxonomy database (optional)
+#### NCBI taxonomy database
 
 This analysis uses the NCBI taxonomy database to assign taxonomic classifications to UniProt sequences.
 
@@ -297,10 +343,9 @@ results/Rubisco/train.txt
 
 The UniRep model weights, or parameters, must be re-trained, or evotuned, to the local evolutionary context of our _in silico_ evolution target sequence. To do se we supply our training sequences to the evotuning script.
 
-**Note 1:** Evotuning should be run on a GPU. Training a model using CPU (option `--cpu`) is very slow.
+**Note 1:** Evotuning should be run on a GPU. Training a model using the CPU (option `--cpu`) is very slow, and is even likely to stall, misbehave, or crash.
 
 **Note 2:** If running this on GCP, it is necessary to run `screen` before to allow continued activity after disconnecting. Use Ctrl-A and Ctrl-D to detach the screen and keep it running.
-
 
 <details open>
 <summary>Evotune with FBPase training sequences.</summary>
@@ -544,7 +589,7 @@ source/in_silico_evolution.py --help
 
 Evotuning using FBPase sequences was performed and evaluated in order to get acquainted with the JAX-UniRep framework and develop the tools in this repository. The steps to acquire example FBPase sequences and then evotune the UniRep model are described in `source/fbpase_evotuning_example.sh`.
 
-**Note that the analysis described below used an earlier version of JAX-UniRep and FUREE, and may be incompatible with the current versions.**
+**Note:** The analysis described below used an earlier version of JAX-UniRep and FUREE, and may be incompatible with the current versions.
 
 ### Jackhmmer reference sequences
 
