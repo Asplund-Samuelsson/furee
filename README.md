@@ -95,7 +95,7 @@ cd furee
 The analysis uses the user-friendly JAX implementation of UniRep named [jax-unirep](https://github.com/ElArkk/jax-unirep). It may be installed from PyPI as described below (see the jax-unirep GitHub repository for more details):
 
 ```
-pip install jax-unirep
+pip3 install jax-unirep
 ```
 
 To enable CUDA GPU support, you may need to install the correct JAX packages; see [instructions in the JAX repository](https://github.com/google/jax).
@@ -351,7 +351,7 @@ The UniRep model weights, or parameters, must be re-trained, or evotuned, to the
 <summary>Evotune with FBPase training sequences.</summary>
 
 ```
-source/evotune.py \
+python3 source/evotune.py \
   --epochs 100 --validation 0.05 \
   --step 1e-5 --batch 128 --dumps 1 \
   results/FBPase/train.txt \
@@ -364,7 +364,7 @@ source/evotune.py \
 <summary>Evotune with Rubisco training sequences.</summary>
 
 ```
-source/evotune.py \
+python3 source/evotune.py \
   --epochs 100 --validation 0.05 \
   --step 1e-5 --batch 128 --dumps 1 \
   results/Rubisco/train.txt \
@@ -453,10 +453,10 @@ We fit the Ridge Regression Sparse Refit top model using evotuned UniRep paramet
 <summary>FBPase:</summary>
 
 ```
-source/train_top_model.py \
--p results/FBPase/evotuned/iter_final \
-data/FBPase_dummy.train.tab \
-intermediate/FBPase_dummy.top_model.pkl
+python3 source/train_top_model.py \
+  -p results/FBPase/evotuned/iter_final \
+  data/FBPase_dummy.train.tab \
+  intermediate/FBPase_dummy.top_model.pkl
 ```
 
 </details>
@@ -465,10 +465,10 @@ intermediate/FBPase_dummy.top_model.pkl
 <summary>Rubisco:</summary>
 
 ```
-source/train_top_model.py \
--p results/Rubisco/evotuned/iter_final \
-data/Rubisco_dummy.train.tab \
-intermediate/Rubisco_dummy.top_model.pkl
+python3 source/train_top_model.py \
+  -p results/Rubisco/evotuned/iter_final \
+  data/Rubisco_dummy.train.tab \
+  intermediate/Rubisco_dummy.top_model.pkl
 ```
 
 </details>
@@ -476,7 +476,7 @@ intermediate/Rubisco_dummy.top_model.pkl
 For additional options, refer to the help:
 
 ```
-source/train_top_model.py --help
+python3 source/train_top_model.py --help
 ```
 
 ### 5. Make predictions with the top model
@@ -499,11 +499,11 @@ SSQSSTARFVDTVHMKESPKVIQLH
 ```
 
 ```
-source/top_model_prediction.py \
--p results/FBPase/evotuned/iter_final \
-data/Syn6803_P73922_FBPase.txt \
-intermediate/FBPase_dummy.top_model.pkl \
-results/FBPase/Syn6803_P73922_FBPase.prediction.tab
+python3 source/top_model_prediction.py \
+  -p results/FBPase/evotuned/iter_final \
+  data/Syn6803_P73922_FBPase.txt \
+  intermediate/FBPase_dummy.top_model.pkl \
+  results/FBPase/Syn6803_P73922_FBPase.prediction.tab
 ```
 
 The prediction for FBPase is expected to be `0.16359496894461598`.
@@ -527,11 +527,11 @@ TLGHPWGNAPGATANRVALEACVQARNEGRNLAREGNDVIREACRWSPELAAACELWKEIKFEFEAMDTL
 ```
 
 ```
-source/top_model_prediction.py \
--p results/Rubisco/evotuned/iter_final \
-data/Syn6803_P54205_Rubisco.txt \
-intermediate/Rubisco_dummy.top_model.pkl \
-results/Rubisco/Syn6803_P54205_Rubisco.prediction.tab
+python3 source/top_model_prediction.py \
+  -p results/Rubisco/evotuned/iter_final \
+  data/Syn6803_P54205_Rubisco.txt \
+  intermediate/Rubisco_dummy.top_model.pkl \
+  results/Rubisco/Syn6803_P54205_Rubisco.prediction.tab
 ```
 
 The prediction for Rubisco is expected to be `0.1516921772674731`.
@@ -541,7 +541,7 @@ The prediction for Rubisco is expected to be `0.1516921772674731`.
 For additional options, refer to the help:
 
 ```
-source/top_model_prediction.py --help
+python3 source/top_model_prediction.py --help
 ```
 
 ### 6. Perform _in silico_ evolution
@@ -552,12 +552,12 @@ The _in silico_ evolution is carried out using a set of evotuned parameters, a t
 <summary>FBPase:</summary>
 
 ```
-source/in_silico_evolution.py \
--s 50 -t 15 \
--p results/FBPase/evotuned/iter_final \
-data/Syn6803_P73922_FBPase.txt \
-intermediate/FBPase_dummy.top_model.pkl \
-results/FBPase/Syn6803_P73922_FBPase.evolved.tab
+python3 source/in_silico_evolution.py \
+  -s 50 -t 15 \
+  -p results/FBPase/evotuned/iter_final \
+  data/Syn6803_P73922_FBPase.txt \
+  intermediate/FBPase_dummy.top_model.pkl \
+  results/FBPase/Syn6803_P73922_FBPase.evolved.tab
 ```
 
 </details>
@@ -566,12 +566,12 @@ results/FBPase/Syn6803_P73922_FBPase.evolved.tab
 <summary>Rubisco:</summary>
 
 ```
-source/in_silico_evolution.py \
--s 50 -t 15 \
--p results/Rubisco/evotuned/iter_final \
-data/Syn6803_P54205_Rubisco.txt \
-intermediate/Rubisco_dummy.top_model.pkl \
-results/Rubisco/Syn6803_P54205_Rubisco.evolved.tab
+python3 source/in_silico_evolution.py \
+  -s 50 -t 15 \
+  -p results/Rubisco/evotuned/iter_final \
+  data/Syn6803_P54205_Rubisco.txt \
+  intermediate/Rubisco_dummy.top_model.pkl \
+  results/Rubisco/Syn6803_P54205_Rubisco.evolved.tab
 ```
 
 </details>
@@ -581,7 +581,7 @@ The output tab-delimited file contains evolved sequences (column `sequences`), p
 For additional options, refer to the help:
 
 ```
-source/in_silico_evolution.py --help
+python3 source/in_silico_evolution.py --help
 ```
 
 <a name="exploring"></a>

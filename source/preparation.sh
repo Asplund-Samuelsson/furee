@@ -22,7 +22,8 @@ date > $LOGFILE 2>&1 # Log start time
 N=`(echo 8; grep -c ">" $INFILE) | sort -n | head -1` >> $LOGFILE 2>&1
 
 # Split the targets into separate files
-source/split_fasta.py $INFILE $N ${OUTDIR}/jackhmmer/targets >> $LOGFILE 2>&1
+python3 source/split_fasta.py $INFILE $N ${OUTDIR}/jackhmmer/targets \
+>> $LOGFILE 2>&1
 
 # Search UniProt for related sequences using JackHMMer
 for i in $( eval echo {0..$(($N-1))} ); do
@@ -41,7 +42,7 @@ ${OUTDIR}/jackhmmer \
 ${OUTDIR}/jackhmmer/train.unfiltered.txt >> $LOGFILE 2>&1
 
 # Extract sequences from UniProt fasta
-source/filter_fasta_by_id.py \
+python3 source/filter_fasta_by_id.py \
 data/uniprot/uniprot.fasta \
 ${OUTDIR}/jackhmmer/train.unfiltered.txt \
 ${OUTDIR}/jackhmmer/train.unfiltered.fasta >> $LOGFILE 2>&1
@@ -65,11 +66,11 @@ LOGFILE="${OUTDIR}/aa/aa.log" # Logfile
 date > $LOGFILE 2>&1 # Log start time
 
 # Filter sequences to only standard amino acids
-source/filter_seqids_by_aa.py \
+python3 source/filter_seqids_by_aa.py \
 ${OUTDIR}/cdhit/train.unique.fasta \
 ${OUTDIR}/aa/train.standard_aa.txt >> $LOGFILE 2>&1
 
-source/filter_fasta_by_id.py \
+python3 source/filter_fasta_by_id.py \
 ${OUTDIR}/cdhit/train.unique.fasta \
 ${OUTDIR}/aa/train.standard_aa.txt \
 ${OUTDIR}/aa/train.standard_aa.fasta >> $LOGFILE 2>&1
@@ -82,14 +83,14 @@ LOGFILE="${OUTDIR}/distance/distance.log" # Logfile
 date > $LOGFILE 2>&1 # Log start time
 
 # Calculate Levenshtein distance to target sequence
-source/levenshtein_distance.py \
+python3 source/levenshtein_distance.py \
 $TARGET \
 ${OUTDIR}/aa/train.standard_aa.fasta \
 ${OUTDIR}/distance/train.standard_aa.LD.tab >> $LOGFILE 2>&1
 
 # Calculate lengths of sequences
 cat ${OUTDIR}/aa/train.standard_aa.fasta | \
-source/lengths_of_sequences.py \
+python3 source/lengths_of_sequences.py \
 > ${OUTDIR}/distance/train.standard_aa.lengths.tab 2>> $LOGFILE
 
 # Filter sequences by length
@@ -106,7 +107,7 @@ $LEVCUT \
 ${OUTDIR}/distance/train.filtered.txt >> $LOGFILE 2>&1
 
 # Extract filtered sequences from FASTA
-source/filter_fasta_by_id.py \
+python3 source/filter_fasta_by_id.py \
 ${OUTDIR}/aa/train.standard_aa.fasta \
 ${OUTDIR}/distance/train.filtered.txt \
 ${OUTDIR}/distance/train.filtered.fasta >> $LOGFILE 2>&1
@@ -135,7 +136,7 @@ tr "\n" "\t" | tr "&" "\n" | sed -e 's/\t$//' | grep -v "^$") > \
 ${OUTDIR}/taxonomy/train.taxids_from_fasta.tab 2>> $LOGFILE
 
 # Get full taxonomy information for the taxonomy IDs
-source/taxid-to-taxonomy.py \
+python3 source/taxid-to-taxonomy.py \
 -i ${OUTDIR}/taxonomy/train.taxids_from_fasta.tab \
 -n data/ncbi/taxonomy/names.dmp \
 -d data/ncbi/taxonomy/nodes.dmp \

@@ -8,19 +8,19 @@ split -d -l 64 <(
 # Get representations for each batch
 ls intermediate/validation_batches/batch_* | while read Infile; do
   Outfile=`echo $Infile | sed -e 's/batch_/rep_fbpase_/'`
-  source/get_representations.py -p results/FBPase/evotuned/iter_final \
+  python3 source/get_representations.py -p results/FBPase/evotuned/iter_final \
   $Infile $Outfile
 done
 
 ls intermediate/validation_batches/batch_* | while read Infile; do
   Outfile=`echo $Infile | sed -e 's/batch_/rep_rubisco_/'`
-  source/get_representations.py -p results/Rubisco/evotuned/iter_final \
+  python3 source/get_representations.py -p results/Rubisco/evotuned/iter_final \
   $Infile $Outfile
 done
 
 ls intermediate/validation_batches/batch_* | while read Infile; do
   Outfile=`echo $Infile | sed -e 's/batch_/rep_unirep_/'`
-  source/get_representations.py $Infile $Outfile
+  python3 source/get_representations.py $Infile $Outfile
 done
 
 # Concatenate and gzip all representations
