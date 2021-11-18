@@ -192,8 +192,8 @@ FUREE offers a programmatic approach to obtaining query sequence suggestions in 
 
 ```
 source/uniprot_sequences_from_KO.sh \
--i data/FBPase_KOs.txt \
--o intermediate/FBPase_KOs.fasta
+  -i data/FBPase_KOs.txt \
+  -o intermediate/FBPase_KOs.fasta
 ```
 
 </details>
@@ -203,8 +203,8 @@ source/uniprot_sequences_from_KO.sh \
 
 ```
 source/uniprot_sequences_from_KO.sh \
--k K01601 \
--o intermediate/Rubisco_KOs.fasta
+  -k K01601 \
+  -o intermediate/Rubisco_KOs.fasta
 ```
 
 </details>
@@ -218,8 +218,8 @@ Since we want a manageable number of sequences as queries for the JackHMMer sear
 
 ```
 cd-hit -c 0.5 -n 2 \
--i intermediate/FBPase_KOs.fasta \
--o intermediate/FBPase_KOs.cdhit.fasta
+  -i intermediate/FBPase_KOs.fasta \
+  -o intermediate/FBPase_KOs.cdhit.fasta
 ```
 
 </details>
@@ -229,8 +229,8 @@ cd-hit -c 0.5 -n 2 \
 
 ```
 cd-hit -c 0.7 -n 5 \
--i intermediate/Rubisco_KOs.fasta \
--o intermediate/Rubisco_KOs.cdhit.fasta
+  -i intermediate/Rubisco_KOs.fasta \
+  -o intermediate/Rubisco_KOs.cdhit.fasta
 ```
 
 </details>
@@ -276,10 +276,10 @@ The query sequences are used for JackHMMer searches against the UniProt sequence
 
 ```
 source/preparation.sh \
-intermediate/FBPase_queries.fasta \
-data/Syn6803_P73922_FBPase.fasta \
-1.0 1 300 \
-results/FBPase
+  intermediate/FBPase_queries.fasta \
+  data/Syn6803_P73922_FBPase.fasta \
+  1.0 1 300 \
+  results/FBPase
 ```
 
 </details>
@@ -289,10 +289,10 @@ results/FBPase
 
 ```
 source/preparation.sh \
-intermediate/Rubisco_queries.fasta \
-data/Syn6803_P54205_Rubisco.fasta \
-0.99 1.5 400 \
-results/Rubisco
+  intermediate/Rubisco_queries.fasta \
+  data/Syn6803_P54205_Rubisco.fasta \
+  0.99 1.5 400 \
+  results/Rubisco
 ```
 
 </details>
