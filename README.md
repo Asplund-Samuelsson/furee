@@ -681,4 +681,5 @@ Representations were obtained for five FBPase sequences using original and evotu
 
 <a name="author"></a>
 ## Author
-Johannes Asplund-Samuelsson, KTH (johannes.asplund.samuelsson@scilifelab.se)
+
+Johannes Asplund-Samuelsson (johannes.aspsam@gmail.com)
