@@ -585,6 +585,103 @@ For additional options, refer to the help:
 python3 source/in_silico_evolution.py --help
 ```
 
+#### Using multiple top models
+
+We try to use multiple top models to guide the _in silico_ evolution by extending the function in JAX-UniRep that decides whether a sequence is accepted (`is_accepted`) to an arbitrary number of scores.
+
+First we create tables with mutant data for 15 _Synechocystis_ FBPase sequences from [Feng _et al._ 2013](https://doi.org/10.1111/febs.12657):
+
+```
+python3 source/feng_mutants.py
+```
+
+```
+data/FBPase_km.train.tab
+data/FBPase_kcat.train.tab
+```
+
+Then we train three top models (tree height, km, and kcat):
+
+```
+mkdir intermediate/top_models
+
+python3 source/train_top_model.py \
+  -p results/FBPase/evotuned/iter_final \
+  data/FBPase_dummy.train.tab \
+  intermediate/top_models/height.pkl
+
+python3 source/train_top_model.py \
+  -p results/FBPase/evotuned/iter_final \
+  --max_alpha 3 \
+  data/FBPase_km.train.tab \
+  intermediate/top_models/km.pkl
+
+python3 source/train_top_model.py \
+  -p results/FBPase/evotuned/iter_final \
+  --max_alpha 3 \
+  data/FBPase_kcat.train.tab \
+  intermediate/top_models/kcat.pkl
+```
+
+**Note:** It might be necessary to adjust the regularization alpha range to not over-regularize the top model. This was done for K<sub>m</sub> and k<sub>cat</sub> values in this example by capping regularization at alpha 10<sup>3</sup> instead of the default 10<sup>6</sup>.
+
+Finally, we may perform _in silico_ evolution using three top models simultaneously:
+
+```
+python3 source/in_silico_evolution.py \
+  -s 500 -t 15 -T 0.001 \
+  -p results/FBPase/evotuned/iter_final \
+  data/Syn6803_P73922_FBPase.txt \
+  intermediate/top_models \
+  results/FBPase/Syn6803_P73922_FBPase.multi_evolved.tab
+```
+
+**Note 1:** Numpy might report `RuntimeWarning: overflow encountered in exp` in the `is_accepted` function during the MCMC sampling. This should be fine as it is associated with raising _e_ to the power of a large negative number and will yield `0.0`, which is adequate.
+
+**Note 2:** To make the evolution across multiple top models more even, it might be necessary to modify the MCMC _temperature_ (`-T`) and the number of _steps_ (`-s`).
+
+With some shell code we may take a look at the accepted sequences in the output table, cutting off each column for convenience:
+
+```
+(
+  head -1 results/FBPase/Syn6803_P73922_FBPase.multi_evolved.tab
+  paste \
+    <(
+      grep True results/FBPase/Syn6803_P73922_FBPase.multi_evolved.tab | \
+      awk '{OFS="\t"} {for(i=1;i<=NF;i++) $i=substr($i,1,42)}1' | cut -f 1
+    ) \
+    <(
+      grep True results/FBPase/Syn6803_P73922_FBPase.multi_evolved.tab | \
+      awk '{OFS="\t"} {for(i=1;i<=NF;i++) $i=substr($i,1,6)}1' | cut -f 2-
+    )
+) | column -tn -s $'\t'
+```
+
+```
+sequences                                   km      height  kcat    accept  step
+MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRE  0.4403  0.1635  4.5727  True    0
+MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRE  0.4416  0.1649  4.7796  True    5
+MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRE  0.4712  0.1672  4.9850  True    13
+MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRE  0.4919  0.1692  5.0271  True    42
+MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRE  0.4958  0.1707  5.0537  True    56
+MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRE  0.5016  0.1710  5.0873  True    98
+MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRE  0.5075  0.1761  5.1062  True    116
+MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRE  0.5281  0.1762  5.2091  True    148
+MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRE  0.5307  0.1778  5.2345  True    152
+MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMRE  0.5307  0.1778  5.2345  True    153
+MDSTLGLEIIEVVEQAAIASAKWMGKGEKNTADQVAVEAMIE  0.5476  0.1895  5.2951  True    154
+MDSTLGLEIIEVVEQAAIASAKWMGFGEKNTADQVAVEAMIE  0.5501  0.2217  5.9309  True    161
+MDSTLGLEIIEVVEQAAIASAKWMGFGEKNTADQVAVEAMIE  0.5507  0.2214  6.0149  True    166
+MDSTLGLEIIEVVEQAAIASAKWMGFGEKNTADQVAVEAMIE  0.5554  0.2230  6.0231  True    216
+MDSTLGLEIIEVVEQAAIASAKWMGFGEKNTADQVAVEAMIE  0.5572  0.2255  6.0607  True    233
+MDSTLGLEIIEVVEQAAIASAKWMGFGEKNTADQVAVEAMIE  0.5673  0.2363  6.0729  True    259
+MDSTLGLEIIEVVEQAAIASAKWMGFGEKNTADQVAVEAMIE  0.5675  0.2394  6.0828  True    350
+```
+
+**Note 1:** There are R41I and K26F mutations at steps 154 and 161.
+
+**Note 2:** The first sequence is the wildtype _Synechocystis_ FBPase. It is supposed to have a K<sub>m</sub> of 0.08 and a k<sub>cat</sub> of 10.5, so these top models are clearly performing suboptimally.
+
 <a name="exploring"></a>
 ## Exploring evotuning of FBPase
 

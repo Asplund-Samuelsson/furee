@@ -6,13 +6,7 @@ import pickle
 import argparse
 from copy import deepcopy
 import pandas as pd
-
-model_file = "intermediate/dummy.top_model.pkl"
-sequence_file = "data/Syn6803_P73922_FBPase.txt"
-parameter_dir = "results/evotuned/fbpase/iter_final"
-steps = 50
-trust = 7
-reverse = False
+import os
 
 # Read arguments from the commandline
 parser = argparse.ArgumentParser()
@@ -24,7 +18,7 @@ parser.add_argument(
 )
 parser.add_argument(
     'model', type=str,
-    help='Pickled top model file.'
+    help='Pickled top model file or directory with top models.'
 )
 parser.add_argument(
     'outfile', type=str,
@@ -48,25 +42,35 @@ parser.add_argument(
     '-r', '--reverse', action='store_true', default=False,
     help='Reverse direction of evolution.'
 )
+parser.add_argument(
+    '-T', '--temperature', type=float, default=0.1,
+    help='MCMC temperature; lower is slower [0.1].'
+)
 
 # Parse arguments
 args = parser.parse_args()
 
+steps=50
+trust=15
+parameter_dir="results/FBPase/evotuned/iter_final"
+sequence_file="data/Syn6803_P73922_FBPase.txt"
+model_path="intermediate/top_models"
+outfile="results/FBPase/Syn6803_P73922_FBPase.multi_evolved.tab"
+reverse=False
+temperature=0.001
+
 sequence_file = args.infile
 parameter_dir = args.parameters
-model_file = args.model
+model_path = args.model
 outfile = args.outfile
 steps = args.steps
 trust = args.trust
 reverse = args.reverse
+temperature = args.temperature
 
 # Load target sequence
 with open(sequence_file) as s:
     starting_sequence = s.read().strip()
-
-# Load top model
-with open(model_file, 'rb') as i:
-    top_model = pickle.load(i)
 
 # Load UniRep parameters
 if parameter_dir:
@@ -74,14 +78,58 @@ if parameter_dir:
 else:
     params = None
 
-# Define sequence scoring function
-def scoring_func_forward(sequence: str):
-    reps, _, _ = ju.get_reps(sequence, params=deepcopy(params))
-    return top_model.predict(reps)
+# If there is a single top model
+if not os.path.isdir(model_path):
 
-def scoring_func_reverse(sequence: str):
-    reps, _, _ = ju.get_reps(sequence, params=deepcopy(params))
-    return 1/top_model.predict(reps)
+    # Load top model
+    with open(model_path, 'rb') as i:
+        top_model = pickle.load(i)
+
+    # Define sequence scoring function
+    def scoring_func_forward(sequence: str):
+        reps, _, _ = ju.get_reps(sequence, params=deepcopy(params))
+        return top_model.predict(reps)
+    def scoring_func_reverse(sequence: str):
+        reps, _, _ = ju.get_reps(sequence, params=deepcopy(params))
+        return 1/top_model.predict(reps)
+
+# If there are multiple top models in a directory
+else:
+
+    # Prepare list of top models
+    top_model = []
+    top_model_names = []
+
+    # Load top models
+    for m in os.listdir(model_path):
+        i = open(os.path.join(model_path, m), 'rb')
+        top_model.append(pickle.load(i))
+        i.close()
+        top_model_names.append(m)
+
+    # Define sequence scoring function
+    def scoring_func_forward(sequence: str):
+        reps, _, _ = ju.get_reps(sequence, params=deepcopy(params))
+        return np.array(
+            [x.predict(reps) for x in top_model],
+            # Use 128 bit float to avoid exp warning in is_accepted
+            dtype=np.float128
+        )
+    def scoring_func_reverse(sequence: str):
+        reps, _, _ = ju.get_reps(sequence, params=deepcopy(params))
+        return np.array(
+            [1/x.predict(reps) for x in top_model],
+            # Use 128 bit float to avoid exp warning in is_accepted
+            dtype=np.float128
+        )
+
+    # Patch the is_accepted function to work with multiple scores
+    def ia_patch(best: float, candidate: float, temperature: float) -> bool:
+        c = np.exp((candidate - best) / temperature)
+        p = np.random.uniform(0, 1)
+        return np.all(c >= p)
+    
+    ju.sampler.is_accepted = ia_patch
 
 # Select scoring function based on reverse evolution status
 if reverse:
@@ -92,15 +140,54 @@ else:
 # Perform sampling
 sampled_sequences = ju.sample_one_chain(
     starting_sequence, n_steps=steps, scoring_func=scoring_func,
-    trust_radius=trust
+    trust_radius=trust, is_accepted_kwargs = {'temperature':temperature}
 )
 
-sampled_seqs_df = pd.DataFrame(sampled_sequences)
-sampled_seqs_df['step'] = list(range(0, steps + 1))
+# Check accepted scores
+# np.array(sampled_sequences['scores'])[:,sampled_sequences['accept']]
 
-# Invert scores for reverse evolution
-if reverse:
-    sampled_seqs_df['scores'] = 1 / sampled_seqs_df['scores']
+# If there is a single top model
+if not os.path.isdir(model_path):
+
+    # Create data frame
+    sampled_seqs_df = pd.DataFrame(sampled_sequences)
+
+    # Invert scores for reverse evolution
+    if reverse:
+        sampled_seqs_df['scores'] = 1 / sampled_seqs_df['scores']
+
+# If there are multiple top models
+else:
+    # Extract the scores
+    scores = sampled_sequences.pop('scores')
+
+    # Invert scores for reverse evolution
+    if reverse:
+        scores = 1 / scores
+
+    # Create data frame
+    sampled_seqs_df = pd.DataFrame(sampled_sequences)
+
+    # Add score columns
+    sampled_seqs_df = pd.concat([
+        sampled_seqs_df,
+        pd.DataFrame(
+            dict(zip(
+                [x.replace('.pkl', '') for x in top_model_names],
+                scores
+            ))
+        )],
+        axis=1
+    )
+
+    # Re-order columns
+    cols = sampled_seqs_df.columns.values
+    cols = list(cols[cols != 'accept']) + ['accept']
+
+    sampled_seqs_df = sampled_seqs_df[cols]
+
+# Add step numbers
+sampled_seqs_df['step'] = list(range(0, steps + 1))
 
 # Save sampled sequences
 sampled_seqs_df.to_csv(outfile, '\t', index=False)
