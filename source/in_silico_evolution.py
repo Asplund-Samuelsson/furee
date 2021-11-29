@@ -46,6 +46,10 @@ parser.add_argument(
     '-T', '--temperature', type=float, default=0.1,
     help='MCMC temperature; lower is slower [0.1].'
 )
+parser.add_argument(
+    '-R', '--ratio', action='store_true', default=False,
+    help='Use ratio instead of difference for sequence proposal rejection.'
+)
 
 # Parse arguments
 args = parser.parse_args()
@@ -58,6 +62,7 @@ steps = args.steps
 trust = args.trust
 reverse = args.reverse
 temperature = args.temperature
+ratio = args.ratio
 
 # Load target sequence
 with open(sequence_file) as s:
@@ -99,6 +104,7 @@ def scoring_func_forward(sequence: str):
         # Use 128 bit float to avoid exp warning in is_accepted
         dtype=np.float128
     )
+
 def scoring_func_reverse(sequence: str):
     reps, _, _ = ju.get_reps(sequence, params=deepcopy(params))
     return np.array(
@@ -108,12 +114,23 @@ def scoring_func_reverse(sequence: str):
     )
 
 # Patch the is_accepted function to work with multiple scores
-def ia_patch(best: float, candidate: float, temperature: float) -> bool:
+def ia_patch_diff(best: float, candidate: float, temperature: float) -> bool:
+    # Compare candidate based on difference in scores
     c = np.exp((candidate - best) / temperature)
     p = np.random.uniform(0, 1)
     return np.all(c >= p)
 
-ju.sampler.is_accepted = ia_patch
+def ia_patch_ratio(best: float, candidate: float, temperature: float) -> bool:
+    # Compare candidate based on ratio of scores
+    c = np.exp(np.log(candidate / best) / temperature)
+    p = np.random.uniform(0, 1)
+    return np.all(c >= p)
+
+# Use selected patch (difference or ratio of scores)
+if not ratio:
+    ju.sampler.is_accepted = ia_patch_diff
+else:
+    ju.sampler.is_accepted = ia_patch_ratio
 
 # Select scoring function based on reverse evolution status
 if reverse:

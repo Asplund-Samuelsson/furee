@@ -589,6 +589,8 @@ python3 source/in_silico_evolution.py --help
 
 We try to use multiple top models to guide the _in silico_ evolution by extending the function in JAX-UniRep that decides whether a sequence is accepted (`is_accepted`) to an arbitrary number of scores.
 
+##### Collecting more data for more top models
+
 First we create tables with mutant data for 15 _Synechocystis_ FBPase sequences from [Feng _et al._ 2013](https://doi.org/10.1111/febs.12657):
 
 ```
@@ -624,6 +626,8 @@ python3 source/train_top_model.py \
 ```
 
 **Note:** It might be necessary to adjust the regularization alpha range to not over-regularize the top model. This was done for K<sub>m</sub> and k<sub>cat</sub> values in this example by capping regularization at alpha 10<sup>3</sup> instead of the default 10<sup>6</sup>.
+
+##### Performing _in silico_ evolution with multiple top models
 
 Finally, we may perform _in silico_ evolution using three top models simultaneously:
 
@@ -681,6 +685,26 @@ MDSTLGLEIIEVVEQAAIASAKWMGFGEKNTADQVAVEAMIE  0.5675  0.2394  6.0828  True    350
 **Note 1:** There are R41I and K26F mutations at steps 154 and 161.
 
 **Note 2:** The first sequence is the wildtype _Synechocystis_ FBPase. It is supposed to have a K<sub>m</sub> of 0.08 and a k<sub>cat</sub> of 10.5, so these top models are clearly performing suboptimally.
+
+##### Investigating the score comparison method for multiple top models
+
+Comparing the score(s) of a proposed mutated sequence with the score(s) of the current best sequence is by default done by looking at the difference. This should be fine regardless of score magnitude when using a single score, but might be biasing the evolution progress under multiple scores of different magnitudes. Specifically, even a small fractional reduction in score of a higher magnitude would tend to generate more values close to zero in the _is_accepted_ function (raises _e_ to the power of the difference divided by the temperature). Values close to zero are unlikely to be higher than the randomly sampled value between 0 and 1, which is required for acceptance. In other words, slight score reductions for high magnitude scores are more likely to be rejected than those for low magnitude scores. Therefore the option to use a ratio for comparison (option `--ratio`, `-R`) instead of the difference was introduced.
+
+To investigate the effect of difference and ratio comparison methods, as well as different temperature settings, multiple _in silico_ evolution runs were carried out. Eight replicate _in silico_ evolution chains were performed over 200 steps, with temperatures 0.003, 0.01, 0.03, 0.1, and 0.3, using difference or ratio as the comparison method:
+
+```
+bash source/diff_vs_ratio.sh
+```
+
+The results (`results/diff_vs_ratio/`) were visualized using R:
+
+```
+Rscript source/diff_vs_ratio.R
+```
+
+| ![alt text](results/diff_vs_ratio.png "") |
+| --- |
+| **Effect of different comparison methods and temperatures (T) on _in silico_ evolution trajectories.** Eight replicates per setting (temperature and comparison method) are shown by transparent lines. The mean of the current best sequences at each step is shown by opaque lines. |
 
 <a name="exploring"></a>
 ## Exploring evotuning of FBPase
