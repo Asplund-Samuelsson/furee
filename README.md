@@ -192,7 +192,7 @@ FUREE offers a programmatic approach to obtaining query sequence suggestions in 
 <summary>FBPase:</summary>
 
 ```
-source/uniprot_sequences_from_KO.sh \
+bash source/uniprot_sequences_from_KO.sh \
   -i data/FBPase_KOs.txt \
   -o intermediate/FBPase_KOs.fasta
 ```
@@ -203,7 +203,7 @@ source/uniprot_sequences_from_KO.sh \
 <summary>Rubisco:</summary>
 
 ```
-source/uniprot_sequences_from_KO.sh \
+bash source/uniprot_sequences_from_KO.sh \
   -k K01601 \
   -o intermediate/Rubisco_KOs.fasta
 ```
@@ -276,7 +276,7 @@ The query sequences are used for JackHMMer searches against the UniProt sequence
 <summary>FBPase:</summary>
 
 ```
-source/preparation.sh \
+bash source/preparation.sh \
   intermediate/FBPase_queries.fasta \
   data/Syn6803_P73922_FBPase.fasta \
   1.0 1 300 \
@@ -289,7 +289,7 @@ source/preparation.sh \
 <summary>Rubisco:</summary>
 
 ```
-source/preparation.sh \
+bash source/preparation.sh \
   intermediate/Rubisco_queries.fasta \
   data/Syn6803_P54205_Rubisco.fasta \
   0.99 1.5 400 \

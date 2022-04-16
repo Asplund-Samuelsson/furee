@@ -49,4 +49,4 @@ tr -d "\n" | tr ">" "\n" | grep -v "^$" \
 > intermediate/train.enzyme_seqid_seq.tab
 
 # Perform PHATE analysis of validation sequence representations
-source/phate_fbpase_rubisco.R
+Rscript source/phate_fbpase_rubisco.R

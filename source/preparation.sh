@@ -37,7 +37,7 @@ for i in $( eval echo {0..$(($N-1))} ); do
 done | parallel --no-notice -j $N >> $LOGFILE 2>&1
 
 # Get all sequences that were identified
-source/filter_hmmer_output.R \
+Rscript source/filter_hmmer_output.R \
 ${OUTDIR}/jackhmmer \
 ${OUTDIR}/jackhmmer/train.unfiltered.txt >> $LOGFILE 2>&1
 
@@ -94,13 +94,13 @@ python3 source/lengths_of_sequences.py \
 > ${OUTDIR}/distance/train.standard_aa.lengths.tab 2>> $LOGFILE
 
 # Filter sequences by length
-source/filter_sequences_by_length.R \
+Rscript source/filter_sequences_by_length.R \
 ${OUTDIR}/distance/train.standard_aa.lengths.tab \
 $LENMAD \
 ${OUTDIR}/distance/train.length_filtered.txt >> $LOGFILE 2>&1
 
 # Filter sequences by Levenshtein distance to target
-source/filter_sequences_by_distance.R \
+Rscript source/filter_sequences_by_distance.R \
 ${OUTDIR}/distance/train.standard_aa.LD.tab \
 ${OUTDIR}/distance/train.length_filtered.txt \
 $LEVCUT \
@@ -146,7 +146,7 @@ python3 source/taxid-to-taxonomy.py \
 TARGET_ID=`grep ">" $TARGET | cut -f 1 -d \  | tr -d ">"` >> $LOGFILE 2>&1
 
 # Plot taxonomic distribution and Levenshtein distances of training data
-source/taxonomic_distribution_of_train.R \
+Rscript source/taxonomic_distribution_of_train.R \
 ${OUTDIR}/taxonomy/train.filtered.taxonomy.tab \
 ${OUTDIR}/distance/train.standard_aa.LD.tab \
 "$TARGET_ID" \
